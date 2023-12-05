@@ -1,9 +1,17 @@
+:root {
+  --colorPrincipal: #f16642;
+  --colorSecundario: #f18b42;
+  --colorTerciario: #f19842;
+  --colorFondo: #2c3e50;
+}
+
 body {
-    max-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: "Karla", sans-serif;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
