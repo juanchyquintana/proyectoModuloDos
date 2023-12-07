@@ -16,6 +16,11 @@ main {
   flex-grow: 1;
 }
 
+h5 {
+  font-family: 'Kalam', cursive;
+  color: var(--colorSecundario);
+}
+
 nav {
   border-bottom: 2px solid var(--colorPrincipal);
 }
@@ -76,6 +81,10 @@ nav {
 
 .focusNaranja:checked {
   color: var(--colorPrincipal);
+}
+
+.footerBorder {
+  border-top: 2px solid var(--colorPrincipal);
 }
 
 @media all and (min-width: 992px) {
