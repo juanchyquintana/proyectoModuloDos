@@ -7,13 +7,18 @@
 
 body {
   font-family: "Karla", sans-serif;
-  max-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 main {
   flex-grow: 1;
+}
+
+h5 {
+  font-family: 'Kalam', cursive;
+  color: var(--colorSecundario);
 }
 
 nav {
@@ -76,6 +81,10 @@ nav {
 
 .focusNaranja:checked {
   color: var(--colorPrincipal);
+}
+
+.footerBorder {
+  border-top: 2px solid var(--colorPrincipal);
 }
 
 @media all and (min-width: 992px) {
