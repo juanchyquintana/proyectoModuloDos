@@ -36,8 +36,99 @@
     <title>Ritmo Web - Inicio</title>
   </head>
   <body data-bs-theme="dark">
-    <header></header>
-    <main>
+    <header>
+      <nav class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh" data-bs-theme="dark">
+        <div class="container">
+          <div class="rotate-center">
+            <a href="./index.html">
+              <img
+              src="../img/logoSinBarras.png"
+              alt="Logo"
+              class="img-fluid logoWidth"
+            />
+            </a>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse mt-sm-3" id="navbarSupportedContent">
+
+            <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+              <input
+                class="form-control me-2 focusNaranja"
+                type="search"
+                placeholder="Buscar una canción"
+                aria-label="Search"
+              />
+              <button class="btn colorPrincipal botonBusqueda" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+              <li class="nav-item">
+                <a class="nav-link text-uppercase fw-bold hoverLinks colorPrincipal lineaHover" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#">Catalogo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#">Premium</a>
+              </li>
+
+              <li class="nav-item dropdown text-center">
+                <a
+                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                Biblioteca
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Música</a></li>
+                  <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Podcast</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="./acercaNosotros.html">Nosotros</a>
+              </li>
+
+              <li class="nav-item dropdown text-center">
+                <a
+                  class="nav-link dropdown-toggle hoverLinks"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                <i class="bi bi-person-fill fs-4 hoverLinks"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                  <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Iniciar Sesión</a></li>
+                  <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Registrarse</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="mt-4">
       <section class="container">
         <h1 class="text-center" id="acercaNosotrosTitulo">
           Acerca de nosotros
