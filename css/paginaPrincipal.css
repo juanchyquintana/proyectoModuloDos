@@ -1,4 +1,4 @@
-/*Banner Principal*/
+/*----Banner Principal----*/
 
 #imgC{
     height: 100vh;
@@ -45,7 +45,7 @@
     font-weight: bold;
 }
 
-/*Artitas Populares*/
+/*----Artitas Populares----*/
 
 #textArtistas{
     /*font-family: 'Kanit', sans-serif;*/
@@ -137,7 +137,7 @@
     height: 15px;
   }
 
-  /*Álbumes*/
+  /*----Álbumes----*/
 
   .albumPrincipal{
     height: 100%;
@@ -161,6 +161,7 @@
     flex: 1 1 250px;
     margin: 1em;
     border-radius: 5px;
+    transition: all 0.5s;
 }
 
 .audio img{
@@ -190,7 +191,7 @@
     transform: translateY(-4%);
 }
 
-/*Podcast*/
+/*----Podcast----*/
 
 .audio2{
     width: 250px;
@@ -207,6 +208,7 @@
     flex: 1 1 250px;
     margin: 1em;
     border-radius: 5px;
+    transition: all 0.5s;
 }
 
 .audio2 img{
@@ -236,7 +238,7 @@
     transform: translateY(-4%);
 }
 
-/*Canciones*/
+/*----Canciones----*/
 
 .imgCancion{
     display: flex;
@@ -246,6 +248,7 @@
     border-radius: 8px;
     overflow: hidden;
     width: 85%;
+    transition: all 0.5s;
 }
 
 .imgCancion:hover{
@@ -277,8 +280,9 @@
     cursor: pointer;   
 }
 
-/*media queries*/
+/*----media queries----*/
 @media all and (max-width: 767px){
+    /*----Banner principal----*/
     #imgC .img-container h2 {
         font-size: 2rem;
       
@@ -295,9 +299,9 @@
         font-size: 28px;
     }
 
+    /*----Canciones mas escuchadas----*/
     .imgCancion{
-        width: 80%;
-        
+        width: 80%;        
     }
     .small-img img{
         width: 60px;
@@ -311,6 +315,43 @@
     .small-img .play-btn{
         width: 20px;
     }
+
+    /*----Artistas populares----*/
+    .swiper-button-next,
+    .swiper-button-prev{
+    width:16px;
+    height: 16px;    
+  }
+
+   .swiper-button-next::after,
+   .swiper-button-prev::after {
+    font-size: 6px;
+  }
+  
+  .swiper-button-next:hover {
+    transform: scale(1.2) translateX(60%);
+  }
+
+  .swiper-button-prev:hover {
+    transform: scale(1.2) translateX(-60%);
+  }
+
+  .swiper-button-next {
+    transform: translateX(80%);
+  }
+
+  .swiper-button-prev {
+    transform: translateX(-80%);
+  }
+
+  .swiper-pagination {
+    transform: translateY(30%);
+  }
+  .swiper-pagination-bullet {
+    background: #fff;
+    width: 10px;
+    height: 10px;
+  }
 
 
 }
