@@ -96,7 +96,9 @@ nav {
 #acercaNosotrosInfo{
   font-family: "Karla", sans-serif;
   text-align: center;
+  color: black;
   margin: 3px 0px 3px 0px;
+  font-size: 20px;
 }
 
 .rotate-center:hover {
@@ -129,9 +131,13 @@ nav {
             transform: rotate(360deg);
   }
 }
-
+.div-nosotros{
+  width: 100%
+}
 .imgEquipo{
-  height: 200px;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
 
 #nuestroEquipo{
