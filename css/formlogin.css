@@ -143,6 +143,7 @@ h3{
   color:black;
   box-shadow: 0 0 5px var(--colorPrincipal);
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
 
 } 
 
@@ -160,7 +161,7 @@ flex-direction: column;
 }
 
 .input-group .btn-light i {
-margin-top: 5px; 
+margin-top: 2px; 
 font-size: 12px;
 }
 
