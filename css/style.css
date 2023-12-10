@@ -108,7 +108,8 @@ nav {
 
 .cardNosotros{
   font-family: "Karla", sans-serif;
-  color: var(--colorSecundario);
+  color: white;
+  font-size: 15px;
 }
 
 @-webkit-keyframes rotate-center {
@@ -140,6 +141,8 @@ nav {
 .div-nosotros:hover {
   border: 1px solid black;
   transform: scale(1.05);
+  box-shadow: 10px 10px 20px #f18b42;
+  transform: translateY(-4%);
 }
 
 .div-nosotros:active {
