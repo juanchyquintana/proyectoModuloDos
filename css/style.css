@@ -115,3 +115,130 @@ nav {
     }
   }
 }
+
+.error{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  color: aliceblue;
+  background-color: rgba(62, 60, 59, 0.5);
+}
+
+.error p{
+  font-family: 'Karla', sans-serif;
+  text-align: center;
+}
+
+.error h1{
+  margin-bottom: 0.5em;
+  font-family: 'Kanit', sans-serif;
+  font-size: 4em;
+}
+
+.boton-error{
+  color: aliceblue;
+  font-family: 'Karla', sans-serif;
+  display: inline-block;
+  border: none;
+  height: 45px;
+  border-radius: 30px;
+  padding: 10px 0;
+  width: 15%;
+  background-color:#f16642;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 150ms;
+  text-align: center;
+  margin-top: 2em;
+  text-decoration: none;
+}
+
+
+.boton-error:hover{
+  transform: translate(0, -5px);
+}
+
+
+
+
+#hero{
+  min-height: 100vh;
+  position: relative;
+
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.capa{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+
+
+
+
+@media all and  (max-width: 767px){
+
+  .error p{
+      max-width: 80%;
+      font-family: 'Karla', sans-serif;
+      text-align: center;
+      font-size: 0.9em;
+  }
+  
+  .error h1{
+      font-family: 'Kanit', sans-serif;
+      font-size: 2em;
+  }
+
+  .boton-error {
+    width: 60%; 
+    max-width: 200px; 
+    font-size: 13px;
+    margin-top: 0.7em;
+  }
+
+
+
+}
+
+@media all and (min-width:767px) and (max-width:992px){
+
+  .error p{
+      max-width: 90%;
+      font-size: 1em;
+  }
+  
+  .error h1{
+      font-family: 'Kanit', sans-serif;
+      font-size: 2em;
+      margin-bottom: 0.5em;
+  }
+
+  .boton-error{
+      width: 20%;
+      font-size: 13px;
+      margin-top: 2em;
+  }
+
+}
+
+
