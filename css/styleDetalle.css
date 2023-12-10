@@ -1,0 +1,75 @@
+:root {
+  --colorPrincipal: #f16642;
+  --colorSecundario: #f18b42;
+  --colorTerciario: #f19842;
+  --colorFondo: #2c3e50;
+}
+
+.fondoImgCancion {
+  border-radius: 12px;
+}
+.tamanioImgCancion {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-color: #f16642;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.playerBotones {
+  width: 95%;
+}
+.playerBtn {
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+.playerInput {
+  appearance: none;
+  width: 80%;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.playerInput::-webkit-slider-runnable-track {
+  background: var(--colorPrincipal);
+  height: 6px;
+  border-radius: 3px;
+}
+.playerInput::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--colorFondo);
+  border-radius: 50px;
+  margin-top: -6px;
+}
+.playerDuracionAudio {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 78%;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--colorFondo);
+}
+.playerBtnMediano {
+  align-items: center;
+  font-size: 30px;
+  min-height: 70px;
+  max-width: 70px;
+}
+
+@media (min-width: 576px) {
+  .tamanioImgCancion {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-color: #f16642;
+  }
+}
