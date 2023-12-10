@@ -236,3 +236,44 @@
     transform: translateY(-4%);
 }
 
+/*Canciones*/
+
+.imgCancion{
+    display: flex;
+    background:#272727 ;
+    margin: 20px 0;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 85%;
+}
+
+.imgCancion:hover{
+    transform: translateY(-8%);
+}
+
+.small-img{
+    position: relative;
+}
+.small-img img{
+    width: 110px;
+}
+
+.imgCancion p{
+    color: white;
+    font-size: 16px;
+}
+
+.small-img .play-btn{
+    width: 35px;
+}
+
+.small-img .play-btn{
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;   
+}
+
