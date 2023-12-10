@@ -137,7 +137,7 @@
     height: 15px;
   }
 
-  /*Albums*/
+  /*Álbumes*/
 
   .albumPrincipal{
     height: 100%;
@@ -261,7 +261,7 @@
 
 .imgCancion p{
     color: white;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .small-img .play-btn{
@@ -276,4 +276,43 @@
     transform: translate(-50%,-50%);
     cursor: pointer;   
 }
+
+/*media queries*/
+@media all and (max-width: 767px){
+    #imgC .img-container h2 {
+        font-size: 2rem;
+      
+    }
+    #imgC .img-container p{
+        font-size: 12px;
+        -webkit-text-stroke-width: 0.2px;
+        -webkit-text-stroke-color: black;
+    }
+    .btn-primary{
+        font-size: 10px;
+    }
+    #textArtistas{
+        font-size: 28px;
+    }
+
+    .imgCancion{
+        width: 80%;
+        
+    }
+    .small-img img{
+        width: 60px;
+    }
+    .imgCancion p{
+        font-size: 10px;
+    }
+    .small-img .play-btn{
+        width: 25px;
+    }
+    .small-img .play-btn{
+        width: 20px;
+    }
+
+
+}
+    
 
