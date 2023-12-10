@@ -26,6 +26,10 @@ nav {
   border-bottom: 2px solid var(--colorPrincipal);
 }
 
+.backgroundTerciario {
+  background-color: var(--colorTerciario);
+}
+
 .hoverLinks:hover {
   color: var(--colorPrincipal);
   border-bottom: var(--colorSecundario);
