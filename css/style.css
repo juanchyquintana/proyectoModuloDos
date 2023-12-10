@@ -113,6 +113,13 @@ nav {
 
 #admin-titulo {
   color: var(--colorPrincipal);
+  font-family: "kanit", sans-serif;
+}
+.color-input:focus{
+  color: var(--colorSecundario);
+}
+.color-input::placeholder{
+  color: #ffffff;
 }
 @-webkit-keyframes rotate-center {
   0% {
