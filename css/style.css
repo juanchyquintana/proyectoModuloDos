@@ -132,8 +132,20 @@ nav {
   }
 }
 .div-nosotros{
-  width: 100%
+  width: 100%;
+  transition: all 0.5s;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
 }
+
+.div-nosotros:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.div-nosotros:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
 .imgEquipo{
   height: 250px;
   width: 100%;
@@ -144,6 +156,8 @@ nav {
   font-family: 'Kalam', cursive;
   color: var(--colorSecundario);
 }
+
+
 
 @media all and (min-width: 992px) {
    .rotate-center:hover {
