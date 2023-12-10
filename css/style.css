@@ -91,6 +91,9 @@ nav {
 #acercaNosotrosTitulo{
   font-family: 'Kalam', cursive;
   color: var(--colorPrincipal);
+  font-size: 3rem;
+    -webkit-text-stroke-width: 0.01px;
+    -webkit-text-stroke-color: white;
 }
 
 #acercaNosotrosInfo{
