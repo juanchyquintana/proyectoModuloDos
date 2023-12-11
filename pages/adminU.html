@@ -189,26 +189,57 @@
             >
             <input
               type="text"
+              id="nombre"
               class="form-control bg-black color-input"
               placeholder="titulo de la musica"
               minlength="1"
-              maxlength="70"
+              maxlength="100"
+              autocomplete="off"
               required
             />
           </div>
           <div class="my-3">
-            <label class="form-label text-light" for="nombre"
-              >nombre de la cancion</label
-            >
+            <label class="form-label text-light" for="autor">autor</label>
             <input
               type="text"
+              id="autor"
               class="form-control bg-black color-input"
-              placeholder="nombre de la musica"
+              placeholder="nombre de la banda o del artista"
               minlength="1"
               maxlength="70"
+              autocomplete="off"
               required
             />
           </div>
+          <div class="my-3">
+            <label class="form-label text-light" for="categoria"
+              >categoria</label
+            >
+            <input
+              type="text"
+              id="categoria"
+              class="form-control bg-black color-input"
+              placeholder="categoria de la musica"
+              minlength="1"
+              maxlength="70"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label class="form-label text-light" for="musica">insertar Musica</label>
+            <input
+              type="file"
+              id="musica"
+              class="form-control bg-black color-input"
+              accept=".wap , .mp3"
+              placeholder=""
+              required
+            />
+          </div>
+          <button type="submit" class="boton mt-4" id="boton-editar">
+            <span class="bn39span">Editar</span>
+          </button>
         </form>
       </section>
     </main>
