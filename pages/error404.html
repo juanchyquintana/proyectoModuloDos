@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ritmo Web es un servicio de música digital que te da acceso a millones de canciones." />
+  <meta name="keywords"
+    content="música, discos, artistas, musicos, playlists, cumbia, pop, cuarteto, reggeaton, punk" />
+  <meta name="author"
+    content="Cristian Julian Aballay, Sheyla Astorga, Thiago Benjamín Fiol, Natalia del Valle Morales, Juan Diego Quintana, Verónica Daniela Soria" />
+  <link rel="shortcut icon" href="./img/iconoRitmo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="../css/error404.css" />
+  <title>Ritmo Web - Inicio</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh" data-bs-theme="dark">
+      <div class="container">
+        <div class="rotate-center">
+          <a href="error404.html">
+            <img src="../img/logoSinBarras.png" alt="Logo" class="img-fluid logoWidth" />
+          </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse mt-sm-3" id="navbarSupportedContent">
+
+          <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+            <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción"
+              aria-label="Search" />
+            <button class="btn colorPrincipal botonBusqueda" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-uppercase fw-bold hoverLinks colorPrincipal lineaHover" aria-current="page"
+                href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#">Catalogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#">Premium</a>
+            </li>
+
+            <li class="nav-item dropdown text-center">
+              <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Biblioteca
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Música</a></li>
+                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Podcast</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#">Nosotros</a>
+            </li>
+
+            <li class="nav-item dropdown text-center">
+              <a class="nav-link dropdown-toggle hoverLinks" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-person-fill fs-4 hoverLinks"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg-end">
+                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Iniciar Sesión</a>
+                </li>
+                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Registrarse</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="error">
+        <h1>ERROR 404 </h1>
+        <p>
+          "¡Uh-oh! Parece que te has perdido en el compás. 🎵 Vuelve al ritmo de la fiesta haciendo clic en pagina
+          principal.
+        </p>
+        <a href="../index.html" class="boton-error">Pagina Principal</a>
+      </div>
+      <video muted autoplay loop>
+        <source src="../video/142052 (720p).mp4" type="video/mp4">
+      </video>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

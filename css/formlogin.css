@@ -1,0 +1,112 @@
+
+h3{
+  font-family: 'Kanit', sans-serif;
+  color:var(--colorPrincipal);
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.6); 
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px #f18b42;
+  text-align: center;
+  font-size: 13px;
+  width: 100%;
+}
+
+.login-container img{
+ width: 25%;
+}
+
+
+ .login-container .inputMod {
+  color:black;
+  box-shadow: 0 0 5px var(--colorPrincipal);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+
+} 
+
+.input-group {
+position: relative;
+}
+
+.input-group .btn-light {
+position: absolute;
+right: 10px;
+top: 30%;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+}
+
+.input-group .btn-light i {
+margin-top: 2px; 
+font-size: 12px;
+}
+
+
+
+
+
+.btn-naranja{
+  background-color: var(--colorPrincipal);
+  transition: 0.5ms;
+}
+
+.btn-naranja:hover{
+  background-color: var(--colorSecundario);
+} 
+
+a {
+  color:#f19842; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+a:hover {
+  color:#f04b21;
+}
+
+a:active {
+  color:#f16642;
+}
+
+
+ .login-container label {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+} 
+
+
+#recordarlabel{
+  margin-top: 0.6em;
+  margin-left: 0.5em;
+  font-size: 13px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked {
+  background-color: orange;
+  border-color: orange;
+}
+
+.olvideContraseña p{
+  color: var(--colorPrincipal);
+}
+
+.redesSociales a{
+  width: 30%;
+}
