@@ -15,7 +15,11 @@
       name="author"
       content="Cristian Julian Aballay, Sheyla Astorga, Thiago Benjamín Fiol, Natalia del Valle Morales, Juan Diego Quintana, Verónica Daniela Soria"
     />
-    <link rel="shortcut icon" href="../img/iconoRitmo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../img/iconoRitmo.png"
+      type="image/x-icon"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -33,7 +37,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styleDetalle.css" />
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Ritmo Web - Detalle</title>
   </head>
   <body>
@@ -175,43 +179,66 @@
 
     <main>
       <section class="container mt-2 mt-sm-5">
-        <div class="row justify-content-center m-2">
-          <div class="col-12 col-md-6 player p-0 m-0 fondoImgCancion">
+        <div class="row  m-2">
+          <div class="col-12 col-md-6 player p-2 p-md-4 m-0 fondoImgCancion">
             <img
-              src="../img/logoConBarras.png"
-              class="tamanioImgCancion"
-              alt=""
+              src="../img/lover-taylorswift.png"
+              class="tamanioImgCancion "
+              alt="img-album"
             />
           </div>
-          <div class="col-12 col-md-6 text-center player px-0 mt-4 mt-md-0">
-            <h4 class="fw-bold mb-0">Nombre</h4>
-            <h6 class="">Artista</h6>
-            <h6 class="">Categoria</h6>
-            <input
-              type="range"
-              class="playerInput"
-              min="0"
-              step="1"
-              value="0"
-            />
-            <div class="playerDuracionAudio">
-              <div class="comienzoAudio">00:00</div>
-              <div class="finAudio">00:00</div>
+          <div class="col-12 col-md-6 d-flex justify-content-around flex-column p-2 p-md-4 mt-4 mt-md-0">
+            <div>
+              <h2 class="fw-bold mb-1">Nombre</h2>
+              <div class="mb-1">
+                <h4 class="d-inline">Artista</h4>
+                <h4 class="d-inline">/</h4>
+                <h4 class="d-inline">Album</h4>
+                <h4 class="d-inline">/</h4>
+                <h4 class="d-inline">Año</h4>
+              </div>
+              <h6 class="mb-1">Categoria</h6>
             </div>
-            <audio class="d-none" id="audio" controls>
-              <source src="" type="audio/mpeg" class="" />
-            </audio>
-            <div class="container">
-              <div class="row justify-content-evenly mb-2">
-                <div class="playerBtn playerBtnMediano">
-                  <i class="fa-solid fa-backward"></i>
+            <div class="d-flex align-items-center flex-column">
+              <div class="container mt-5 px-0">
+                <div class="row mb-2">
+                  <div class="col-6 playerBtn justify-content-start px-0 playerBtnPequenio">
+                    <i class="fa-regular fa-heart ms-3"></i>
+                    <i class="fa-solid fa-heart ms-3 d-none"></i>
+                  </div>
+                  <div class="col-6 playerBtn justify-content-end px-0 playerBtnPequenio">
+                    <i class="fa-solid fa-volume-high me-3"></i>
+                    <i class="fa-solid fa-repeat me-3"></i>
+                    <i class="fa-solid fa-shuffle me-3"></i>
+                  </div>
                 </div>
-                <div class="playerBtn playerBtnMediano">
-                  <i class="fa-solid fa-play text-center"></i>
-                  <i class="fa-solid fa-pause pauseBtn d-none"></i>
-                </div>
-                <div class="playerBtn playerBtnMediano">
-                  <i class="fa-solid fa-forward"></i>
+              </div>
+              <input
+                type="range"
+                class="playerInput"
+                min="0"
+                step="1"
+                value="0"
+              />
+              <div class="playerDuracionAudio">
+                <div class="comienzoAudio">00:00</div>
+                <div class="finAudio">00:00</div>
+              </div>
+              <audio class="d-none" id="audio" controls>
+                <source src="" type="audio/mpeg" class="" />
+              </audio>
+              <div class="container">
+                <div class="row justify-content-evenly mb-2">
+                  <div class="playerBtn playerBtnMediano">
+                    <i class="fa-solid fa-backward"></i>
+                  </div>
+                  <div class="playerBtn playerBtnMediano">
+                    <i class="fa-solid fa-play text-center"></i>
+                    <i class="fa-solid fa-pause pauseBtn d-none"></i>
+                  </div>
+                  <div class="playerBtn playerBtnMediano">
+                    <i class="fa-solid fa-forward"></i>
+                  </div>
                 </div>
               </div>
             </div>

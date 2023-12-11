@@ -9,17 +9,16 @@
   border-radius: 12px;
 }
 .tamanioImgCancion {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-color: #f16642;
 }
-.player {
+/* .player {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
+  justify-content:space-around;
+} */
 .playerBotones {
   width: 95%;
 }
@@ -31,7 +30,8 @@
 }
 .playerInput {
   appearance: none;
-  width: 80%;
+  background: #B6B8B9;
+  width: 100%;
   outline: none;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -64,12 +64,22 @@
   min-height: 70px;
   max-width: 70px;
 }
+.playerBtnPequenio {
+  font-size: 20px;
+}
 
-@media (min-width: 576px) {
-  .tamanioImgCancion {
-    width: 500px;
-    height: 500px;
+@media (min-width: 576px){
+  /* .tamanioImgCancion {
+    width: 80%;
+    height: 100%;
     object-fit: cover;
     border-color: #f16642;
-  }
+  } */
+  /* .playerInput {
+    appearance: none;
+    width: 80%;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  } */
 }
