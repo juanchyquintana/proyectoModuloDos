@@ -93,7 +93,7 @@ nav {
   color: var(--colorPrincipal);
   font-size: 3rem;
     -webkit-text-stroke-width: 0.01px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
 }
 
 #acercaNosotrosInfo{
@@ -163,6 +163,10 @@ nav {
   color: var(--colorSecundario);
 }
 
+
+/* @media all and (min-width: 577px ) and (max-width: 768px){
+
+} */
 
 
 @media all and (min-width: 992px) {
