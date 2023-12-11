@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Ritmo Web es un servicio de música digital que te da acceso a millones de canciones." />
+    <meta name="keywords"
+        content="música, discos, artistas, musicos, playlists, cumbia, pop, cuarteto, reggeaton, punk" />
+    <meta name="author"
+        content="Cristian Julian Aballay, Sheyla Astorga, Thiago Benjamín Fiol, Natalia del Valle Morales, Juan Diego Quintana, Verónica Daniela Soria" />
+    <link rel="shortcut icon" href="../img/iconoRitmo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/formlogin.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Ritmo Web - Inicio</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh" data-bs-theme="dark">
+            <div class="container">
+                <div class="rotate-center">
+                    <a href="./index.html">
+                        <img src="../img/logoSinBarras.png" alt="Logo" class="img-fluid logoWidth" />
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse mt-sm-3" id="navbarSupportedContent">
+
+                    <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+                        <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción"
+                            aria-label="Search" />
+                        <button class="btn colorPrincipal botonBusqueda" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase fw-bold hoverLinks colorPrincipal lineaHover"
+                                aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#">Catalogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#">Premium</a>
+                        </li>
+
+                        <li class="nav-item dropdown text-center">
+                            <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Biblioteca
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                                        href="#">Música</a></li>
+                                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                                        href="#">Podcast</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#">Nosotros</a>
+                        </li>
+
+                        <li class="nav-item dropdown text-center">
+                            <a class="nav-link dropdown-toggle hoverLinks" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-fill fs-4 hoverLinks"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-lg-end">
+                                <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#"
+                                    data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</a>
+                                <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#"
+                                    data-bs-toggle="modal" data-bs-target="#registerModal">Registrarse</a>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="modal" tabindex="-1" id="loginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <section class="container d-md-flex justify-content-md-center mt-3 p-lg-2">
+                            <div class="login-container h-auto p-lg-4 form-container" id="loginForm">
+                                <div class="d-md-flex justify-content-md-center align-items-md-center">
+                                    <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
+                                    <h3>Iniciar sesión</h3>
+                                </div>
+                                <form class="mt-md-4">
+                                    <label for="usuario">Usuario:</label>
+                                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana23" type="text" id="usuario"
+                                        minlength="7" maxlength="20" required>
+                                    <label class="mt-1" for="contrasena">Contraseña:</label>
+                                    <div class="input-group">
+                                        <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana24d" type="password"
+                                            id="contrasena1" minlength="4" maxlength="10" required>
+                                        <div class="input-group-append">
+                                            <span class="btn-light toggle-password" data-target="contrasena1">
+                                                <i class="bi bi-eye-fill"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-check  d-flex p-0 mt-2 ">
+                                        <input class="mt-2 " type="checkbox">
+                                        <label class=" form-check-label" id="recordarlabel" for="recordar">Recordar
+                                            usuario</label>
+                                    </div>
+                                    <button class="btn btn-naranja text-white p-2 w-50 my-3" type="submit">Iniciar
+                                        sesión</button>
+                                </form>
+                                <div class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center">
+                                    <a href="#">¿Olvidaste tu contraseña?</a>
+                                    <a href="#">¿No eres usuario? ¡Regístrate!</a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="registerModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <section class="container d-md-flex justify-content-md-center mt-2 p-lg-2">
+                            <div class="login-container h-auto p-lg-4 form-container" id="registerForm">
+                                <div class="d-md-flex justify-content-md-center align-items-md-center">
+                                    <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
+                                    <h3>Registrarse</h3>
+                                </div>
+                                <form class="mt-md-4">
+                                    <label for="nombre">Nombre:</label>
+                                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="luis mario alberto" type="text" id="nombre"
+                                        minlength="10" maxlength="20" required>
+
+                                    <label class="mt-1" for="email">Correo electrónico:</label>
+                                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="albertoluismario@gmail.com" type="email" minlength="20"
+                                        maxlength="35" id="email" required>
+
+                                    <label class="mt-1" for="contrasena">Contraseña:</label>
+                                    <div class="input-group mt-2">
+                                        <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
+                                            id="contrasena2" minlength="4" maxlength="10" required>
+                                        <div class="input-group-append">
+                                            <span class="btn-light toggle-password" data-target="contrasena2">
+                                                <i class="bi bi-eye-fill"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <label class="mt-1" for="contrasena">Confirmar contraseña:</label>
+                                    <div class="input-group mt-2">
+                                        <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
+                                            id="contrasena2" minlength="4" maxlength="10" required>
+                                        <div class="input-group-append">
+                                            <span class="btn-light toggle-password" data-target="contrasena2">
+                                                <i class="bi bi-eye-fill"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check d-flex p-0 mt-2">
+                                        <input class="mt-2" type="checkbox" id="recordar" required>
+                                        <label class="form-check-label" id="recordarlabel" for="recordar">Acepto los
+                                            términos y
+                                            condiciones</label>
+                                    </div>
+                                    <button class="btn btn-naranja text-white p-2 w-50 my-3"
+                                        type="submit">Registrarse</button>
+                                </form>
+                                <div class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center">
+                                    <p>o regístrate con:</p>
+                                    <div class="redesSociales d-lg-flex flex-lg-row w-100 justify-content-center mb-3">
+                                        <a href="#" class="btn btn-primary text-white me-lg-2 d-none d-md-inline"><i
+                                                class="bi bi-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-danger btn-google text-white d-none d-md-inline"> <i
+                                                class="bi bi-google"></i> Google</a>
+                                        <a href="#" class="btn btn-primary text-white me-lg-3 d-inline d-md-none"><i
+                                                class="bi bi-facebook"></i></a>
+                                        <a href="#" class="btn btn-danger btn-google d-inline d-md-none"><i
+                                                class="bi bi-google"></i></a>
+                                    </div>
+                                    <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark shadow mt-5 py-5 footerBorder" data-bs-theme="dark">
+        <section class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-lg-3 text-center text-lg-start my-3 mb-lg-0">
+                    <img src="../img/logoSinBarras.png" alt="logo de la empresa" class="logoWidth" />
+                </div>
+
+                <div class="col-md-6 col-lg-2 text-center text-md-center mb-3">
+                    <h5 class="fw-bold">Compañía</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">Acerca de
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">Empleo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">For the Record
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-2 text-center text-md-center mb-3">
+                    <h5 class="fw-bold">Comunidades</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">Para artistas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">Desarrolladores
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">Publicidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">Inversionistas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">Provedores
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-2 text-center text-md-center mb-3">
+                    <h5 class="fw-bold">Enlaces Útiles</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">Ayuda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">Reproductor Web
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">App móvil gratis
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-3 text-center text-md-center mb-3">
+                    <h5 class="fw-bold">Redes Sociales</h5>
+                    <ul class="list-unstyled d-flex justify-content-center gap-4">
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pages/error404.html" class="link-secondary text-decoration-none">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-top">
+                <p class="text-secondary text-center py-3">Todos los Derechos Reservados &copy; 2023 - Ritmo Web</p>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="../js/formlogin.js"></script>
+</body>
+
+</html>
