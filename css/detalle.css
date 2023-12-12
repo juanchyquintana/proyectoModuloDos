@@ -1,0 +1,97 @@
+:root {
+  --colorPrincipal: #f16642;
+  --colorSecundario: #f18b42;
+  --colorTerciario: #f19842;
+  --colorFondo: #2c3e50;
+}
+
+.fondoImgCancion {
+  border-radius: 12px;
+}
+.tamanioImgCancion {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.playerBotones {
+  width: 95%;
+}
+.playerBtn {
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+.playerBtnMediano {
+  align-items: center;
+  font-size: 30px;
+  min-height: 70px;
+  max-width: 70px;
+}
+.playerBtnMediano i:hover{
+  font-size: 35px;
+  color: var(--colorPrincipal);
+}
+.playerBtnPequenio {
+  font-size: 20px;
+}
+.playerBtnPequenio i:hover{
+  color: var(--colorPrincipal);
+}
+.estiloDetalle{
+  text-decoration: none;
+}
+.estiloDetalle:hover{
+  text-decoration: underline;
+  color: var(--colorPrincipal);
+}
+.botonCompartir{
+  background-color: var(--colorFondo);
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: white;
+}
+.playerInput {
+  appearance: none;
+  background: #B6B8B9;
+  width: 100%;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.playerInput::-webkit-slider-runnable-track {
+  background: var(--colorPrincipal);
+  height: 6px;
+  border-radius: 3px;
+}
+.playerInput::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--colorFondo);
+  border-radius: 50px;
+  margin-top: -6px;
+}
+.playerDuracionAudio {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--colorFondo);
+}
+
+@media all and (min-width: 576px){
+  .bordePlayer{
+    box-shadow: 2px 2px 15px 2px #f1654262;
+    border-radius: 10px;
+  }
+  .botonCompartir{
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-size: 15px;
+  }
+}
