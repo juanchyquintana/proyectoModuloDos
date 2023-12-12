@@ -58,4 +58,15 @@ export default class Musica {
   set duracion(nuevaDuracion) {
     this.#duracion = nuevaDuracion;
   }
+
+  toJSON() {
+    return {
+      id: this.id,
+      titulo: this.titulo,
+      artista: this.artista,
+      categoria: this.categoria,
+      imagen: this.imagen,
+      duracion: this.duracion,
+    };
+  }
 }
