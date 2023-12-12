@@ -37,7 +37,7 @@ const crearMusica = (e) => {
 
     limparFormularioMusicaAdmin();
 
-    crearCampoNuevo(musicaNueva, musica.length)
+    crearCampoNuevo(musicaNueva, musica.length);
   }
 };
 
@@ -49,7 +49,46 @@ const limparFormularioMusicaAdmin = () => {
   formularioAgregarMusica.reset();
 };
 
-const crearCampoNuevo = () => {}
-const cargaInicial = () => {};
+const crearCampoNuevo = (musica, fila) => {
+  const tablaMusica = document.querySelector("#");
+  tablaMusica.innerHTML += `
+    <tr>
+        <td>${fila}</td>
+        <td>${musica.nombreCancion}</td>
+        <td>${musica.artista}</td>
+        <td>${musica.duracion}</td>
+    <td class="d-sm-flex">
+      <a 
+        type="button" 
+        class="boton m-2" 
+        id="boton-editar" 
+        href="./adminU.html"
+        >
+            <span class="bn39span">Editar</span>
+      </a>
+
+      <button type="button" class="boton m-2" id="boton-borrar">
+        <span class="bn39span">Borrar</span>
+      </button>
+
+      <a 
+        type="button" 
+        class="boton m-2" 
+        id="boton-verMas" 
+        href="#"
+        >
+            <span class="bn39span">Ver mas</span>
+      </a>
+    </td>
+  </tr>
+    `;
+};
+
+const cargaInicial = () => {
+    if(musica.length > 0) {
+        musica.map((musica, posicion) => crearCampoNuevo(musica, posicion + 1))
+    }
+};
 
 formularioAgregarMusica.addEventListener("submit", crearMusica);
+cargaInicial();
