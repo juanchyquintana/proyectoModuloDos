@@ -19,8 +19,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
     rel="stylesheet" />
-    <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="../css/error404.css" />
+  <link rel="stylesheet" href="../css/formlogin.css">
   <title>Ritmo Web - Error 404</title>
 </head>
 
@@ -68,8 +69,10 @@
                 Biblioteca
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="./error404.html">Música</a></li>
-                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="./error404.html">Podcast</a></li>
+                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                    href="./error404.html">Música</a></li>
+                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                    href="./error404.html">Podcast</a></li>
               </ul>
             </li>
 
@@ -83,9 +86,10 @@
                 <i class="bi bi-person-fill fs-4 hoverLinks"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg-end">
-                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Iniciar Sesión</a>
-                </li>
-                <li><a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#">Registrarse</a></li>
+                <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#" data-bs-toggle="modal"
+                  data-bs-target="#loginModal">Iniciar Sesión</a>
+                <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#" data-bs-toggle="modal"
+                  data-bs-target="#registerModal">Registrarse</a>
               </ul>
             </li>
           </ul>
@@ -108,6 +112,122 @@
         <source src="../video/142052 (720p).mp4" type="video/mp4">
       </video>
     </section>
+    <section class="modal" tabindex="-1" id="loginModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <section class="container d-md-flex justify-content-md-center mt-3 p-lg-2">
+              <div class="login-container h-auto p-lg-4 form-container" id="loginForm">
+                <div class="d-md-flex justify-content-md-center align-items-md-center">
+                  <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
+                  <h3>Iniciar sesión</h3>
+                </div>
+                <form class="mt-md-4">
+                  <label for="usuario">Usuario:</label>
+                  <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana23" type="text" id="usuario"
+                    minlength="7" maxlength="20" required>
+                  <label class="mt-1" for="contrasena">Contraseña:</label>
+                  <div class="input-group">
+                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana24d" type="password"
+                      id="contrasena1" minlength="4" maxlength="10" required>
+                    <div class="input-group-append">
+                      <span class="btn-light toggle-password" data-target="contrasena1">
+                        <i class="bi bi-eye-fill"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form-check  d-flex p-0 mt-2 ">
+                    <input class="mt-2 " type="checkbox">
+                    <label class=" form-check-label" id="recordarlabel" for="recordar">Recordar
+                      usuario</label>
+                  </div>
+                  <button class="btn btn-naranja text-white p-2 w-50 my-3" type="submit">Iniciar
+                    sesión</button>
+                </form>
+                <div class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center">
+                  <a href="#">¿Olvidaste tu contraseña?</a>
+                  <a href="#">¿No eres usuario? ¡Regístrate!</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal" tabindex="-1" id="registerModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <section class="container d-md-flex justify-content-md-center mt-2 p-lg-2">
+              <div class="login-container h-auto p-lg-4 form-container" id="registerForm">
+                <div class="d-md-flex justify-content-md-center align-items-md-center">
+                  <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
+                  <h3>Registrarse</h3>
+                </div>
+                <form class="mt-md-4">
+                  <label for="nombre">Nombre:</label>
+                  <input class="inputMod border-0 w-100 p-2 rounded" placeholder="luis mario alberto" type="text"
+                    id="nombre" minlength="10" maxlength="20" required>
+
+                  <label class="mt-1" for="email">Correo electrónico:</label>
+                  <input class="inputMod border-0 w-100 p-2 rounded" placeholder="albertoluismario@gmail.com"
+                    type="email" minlength="20" maxlength="35" id="email" required>
+
+                  <label class="mt-1" for="contrasena">Contraseña:</label>
+                  <div class="input-group mt-2">
+                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
+                      id="contrasena2" minlength="4" maxlength="10" required>
+                    <div class="input-group-append">
+                      <span class="btn-light toggle-password" data-target="contrasena2">
+                        <i class="bi bi-eye-fill"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <label class="mt-1" for="contrasena">Confirmar contraseña:</label>
+                  <div class="input-group mt-2">
+                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
+                      id="contrasena2" minlength="4" maxlength="10" required>
+                    <div class="input-group-append">
+                      <span class="btn-light toggle-password" data-target="contrasena2">
+                        <i class="bi bi-eye-fill"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="form-check d-flex p-0 mt-2">
+                    <input class="mt-2" type="checkbox" id="recordar" required>
+                    <label class="form-check-label" id="recordarlabel" for="recordar">Acepto los
+                      términos y
+                      condiciones</label>
+                  </div>
+                  <button class="btn btn-naranja text-white p-2 w-50 my-3" type="submit">Registrarse</button>
+                </form>
+                <div class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center">
+                  <p>o regístrate con:</p>
+                  <div class="redesSociales d-lg-flex flex-lg-row w-100 justify-content-center mb-3">
+                    <a href="#" class="btn btn-primary text-white me-lg-2 d-none d-md-inline"><i
+                        class="bi bi-facebook"></i> Facebook</a>
+                    <a href="#" class="btn btn-danger btn-google text-white d-none d-md-inline"> <i
+                        class="bi bi-google"></i> Google</a>
+                    <a href="#" class="btn btn-primary text-white me-lg-3 d-inline d-md-none"><i
+                        class="bi bi-facebook"></i></a>
+                    <a href="#" class="btn btn-danger btn-google d-inline d-md-none"><i class="bi bi-google"></i></a>
+                  </div>
+                  <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -115,6 +235,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="./js/app.js"></script>
+  <script src="../js/formlogin.js"></script>
 </body>
 
 </html>
