@@ -17,9 +17,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
-        rel="stylesheet" />
+
+    href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/paginaPrincipal.css">
     <title>Ritmo Web - Inicio</title>
 </head>
 <body>
@@ -74,7 +78,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#">Nosotros</a>
+                          <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="./pages/acercaNosotros.html">Nosotros</a>
                         </li>
 
                         <li class="nav-item dropdown text-center">
@@ -95,7 +99,297 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
+      <!--Banner Principal-->
+      <section id="imgC">
+        <div class="img-container">
+          <h2>Música para todos</h2>
+          <p>Escuchá tu música cuando quieras, donde quieras.</p>
+          <p>Creá tu lista</p>
+          <button class="btn-primary">Mi lista</button>
+        </div>
+      </section>
+
+      <!--Artistas Populares-->
+      <section class="container my-5">
+        <h2 class="text-center mb-5" id="textArtistas">Artistas Populares</h2>
+        <div class="swiper-container">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="image">
+                    <img
+                      src="./img/paginaPrincipal/413nQjwXixL._UX420_FMwebp_QL85_.webp"
+                      alt="Imagen Artista 1"
+                    />
+                  </div>
+                  <h3>Manuel Turizo</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="image">
+                    <img
+                      src="./img/paginaPrincipal/41QhNlLnDuL._UX358_FMwebp_QL85_.webp"
+                      alt="Imagen Artista 2"
+                    />
+                  </div>
+                  <h3>Bad Bunny</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="image">
+                    <img
+                      src="./img/paginaPrincipal/61CKyiwrYJL._UX420_FMwebp_QL85_.webp"
+                      alt="Imagen Artista 3"
+                    />
+                  </div>
+                  <h3>Shakira</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="image">
+                    <img
+                      src="./img/paginaPrincipal/71aNY1AW30L._UX420_FMwebp_QL85_.webp"
+                      alt="Imagen Artista 4"
+                    />
+                  </div>
+                  <h3>Aitana</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="image">
+                    <img
+                      src="./img/paginaPrincipal/81oBWagwQKL._UX358_FMwebp_QL85_.webp"
+                      alt="Imagen Artista 5"
+                    />
+                  </div>
+                  <h3>María Becerra</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="image">
+                    <img
+                      src="./img/paginaPrincipal/91guj3jRBdL._UX358_FMwebp_QL85_.webp"
+                      alt="Imagen Artista 6"
+                    />
+                  </div>
+                  <h3>Rauw Alejandro</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+
+      <!--Álbumes-->
+      <section class="container-fluid">
+        <h2 class="my-4 ms-4" id="textArtistas">Álbumes</h2>
+       
+        <div class="albumPrincipal">
+          <div class="audio audio1 dark">
+            <img src="./img/paginaPrincipal/abel-pintos.jpg" alt="Abel Pintos"/>
+            <h2>Abel Pintos</h2>
+            <p>Artista</p>
+          </div>
+          <div class="audio audio1 dark">
+            <img src="img/paginaPrincipal/alicia-keys.jpg" alt="Alicia Keys"/>
+            <h2>Alicia Keys</h2>
+            <p>Artista</p>
+          </div>
+          <div class="audio audio1 dark">
+            <img src="./img/paginaPrincipal/babasonicos.jpg" alt="Babasónicos"/>
+            <h2>Babasónicos</h2>
+            <p>Artista</p>
+          </div>
+          <div class="audio audio1 dark">
+            <img src="./img/paginaPrincipal/best2023poplatino.jpg" alt="Pop Latino 2023"/>
+            <h2>Best of 2023:POP LATINO</h2>
+            <p>
+              Nuestra selección de las mejores canciones de pop latino de 2023
+            </p>
+          </div>
+          <div class="audio dark">
+            <img src="./img/paginaPrincipal/imagine-dragons.jpg" alt="Imagine Dragons"/>
+            <h2>Imagine Dragons</h2>
+            <p>Artista</p>
+          </div>
+          <div class="audio audio1 dark">
+            <img src="./img/paginaPrincipal/loescuchadohoy.jpg" alt="Hits de hoy"/>
+            <h2>Hits de hoy</h2>
+            <p>Las canciones más escuchadas</p>
+          </div>
+          <div class="audio dark">
+            <img src="./img/paginaPrincipal/maria-becerra.jpg" alt="Maria Becerra"/>
+            <h2>María Becerra</h2>
+            <p>Artista</p>
+          </div>
+          <div class="audio audio1 dark">
+            <img src="./img/paginaPrincipal/bad-bunny.jpg" alt="Bad Bunny"/>
+            <h2>Bad Bunny</h2>
+            <p>Artista</p>
+          </div>
+          <div class="audio audio1 dark">
+            <img src="./img/paginaPrincipal/clasicos90.jpg" alt="Clasicos de los 90"/>
+            <h2>Clásicos españoles de los 90</h2>
+            <p>
+              Una selección con las mejores canciones españolas de la década de
+              los 90
+            </p>
+          </div>
+          <div class="audio dark">
+            <img src="./img/paginaPrincipal/pablo-lopez.jpg" alt="Pablo Lopez"/>
+            <h2>Pablo Lopez</h2>
+            <p>Artista</p>
+          </div>
+          <div class="audio audio1 dark">
+            <img src="./img/paginaPrincipal/love80s.jpg" alt="80s Love Songs"/>
+            <h2>REDISCOVER The '80s: Love Songs</h2>
+            <p>Get lost in love with the most romantic songs of the '80s</p>
+          </div>
+          <div class="audio dark">
+            <img src="./img/paginaPrincipal/tini-triple-t.jpg" alt="Tini"/>
+            <h2>Tini</h2>
+            <p>Artista</p>
+          </div>
+          <div class="audio audio1 dark">
+            <img src="./img/paginaPrincipal/ariana-grande.jpg" alt="Ariana Grande"/>
+            <h2>Ariana Grande</h2>
+            <p>Artista</p>
+          </div>
+          <div class="audio dark">
+            <img src="./img/paginaPrincipal/mix-kepers-lakonga-luckra.jpg" alt="Mix Cuarteto"/>
+            <h2>Mix Cuarteto</h2>
+            <p>Lo más escuchado</p>
+          </div>
+          <div class="audio audio1 dark">
+            <img src="./img/paginaPrincipal/mixnavideño.jpg" alt="Mix Navideño"/>
+            <h2>Mix Navideño</h2>
+            <p>Éxitos navideños y nuevos hits envueltos para regalo</p>
+          </div>
+        </div>
+      </section>
+
+      <!--Las canciones más escuchadas-->
+      <section class="container my-5">
+        <h2 class="text-center my-4" id="textArtistas">Las canciones más escuchadas</h2>
+        <div class="row ms-5">
+            <div class="col">
+                <div class="imgCancion">
+                    <div class="small-img">
+                        <img src="./img/paginaPrincipal/cancion1.jpg" alt="Portada cancion 1">
+                        <img src="./img/paginaPrincipal/play.svg" class="play-btn" alt="Logo play">
+                    </div>                    
+                        <p class="m-3">Si no Estás - Iñigo Quintero</p>    
+                </div>
+                <div class="imgCancion">
+                    <div class="small-img">
+                        <img src="./img/paginaPrincipal/cancion2.jpg" alt="Portada cancion 2">
+                        <img src="./img/paginaPrincipal/play.svg" class="play-btn" alt="Logo play">
+                    </div>
+                    <p class="m-3">Bailando Bachata - Chayanne</p>                    
+                </div>
+                <div class="imgCancion">
+                    <div class="small-img">
+                        <img src="./img/paginaPrincipal/cancion3.jpg" alt="Portada cancion 3">
+                        <img src="./img/paginaPrincipal/play.svg" class="play-btn" alt="Logo play">
+                    </div>
+                    <p class="m-3">Así es la Vida - Enrique Iglesias & María Becerra</p>                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="imgCancion">
+                    <div class="small-img">
+                        <img src="./img/paginaPrincipal/cancion4.jpg" alt="Portada cancion 4">
+                        <img src="./img/paginaPrincipal/play.svg" class="play-btn" alt="Logo play">
+                    </div>
+                    <p class="m-3">Acróstico - Shakira</p>                    
+                </div>
+                <div class="imgCancion">
+                    <div class="small-img">
+                        <img src="./img/paginaPrincipal/cancion5.jpg" alt="Portada cacnion 5">
+                        <img src="./img/paginaPrincipal/play.svg" class="play-btn" alt="Logo play">
+                    </div>
+                    <p class="m-3">Mentirosa Remix - Ráfaga & María Becerra</p>                    
+                </div>
+                <div class="imgCancion">
+                    <div class="small-img">
+                        <img src="./img/paginaPrincipal/cancion6.jpg" alt="Portada cancion 6">
+                        <img src="./img/paginaPrincipal/play.svg" class="play-btn" alt="Logo play">
+                    </div>
+                    <p class="m-3">Beso - Rosalía & Rauw Alejandro</p>                    
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!--PODCAST-->
+      <section class="container-fluid">
+        <h2 class="mb-5 ms-4" id="textArtistas">Podcast del momento</h2>
+             
+        <div class="albumPrincipal">
+          <div class="audio2 audio1 dark">
+            <img src="./img/paginaPrincipal/podcast1.jpg" alt="Mario Alonso Puig"/>
+            <h2>Dr Mario Alonso Puig</h2>
+            <p>Mario Alonso Puig</p>
+          </div>
+          <div class="audio2 audio1 dark">
+            <img src="./img/paginaPrincipal/podcast2.jpg" alt="No es el fin del mundo"/>
+            <h2>No es el fin del mundo</h2>
+            <p>El orden mundial</p>
+          </div>
+          <div class="audio2 audio1 dark">
+            <img src="./img/paginaPrincipal/podcast3.jpg" alt="3+1 Tu Podcast NBA"/>
+            <h2>3 + 1 - Tu Podcast NBA</h2>
+            <p>Drafteados</p>
+          </div>
+          <div class="audio2 audio1 dark">
+            <img src="./img/paginaPrincipal/podcast4.jpg" alt="Biciescapa"/>
+            <h2>Biciescapa</h2>
+            <p>Biciescapa</p>
+          </div>
+          <div class="audio2 dark">
+            <img src="./img/paginaPrincipal/podcast5.jpg" alt="Muy Historia"/>
+            <h2>Muy Historia - Grandes reportajes</h2>
+            <p>Muy Interesante</p>
+          </div>
+          <div class="audio2 audio1 dark">
+            <img src="./img/paginaPrincipal/podcast6.jpg" alt="Locura Compartida"/>
+            <h2>Locura Compartida</h2>
+            <p>Noemi Oleva</p>
+          </div>
+          <div class="audio2 dark">
+            <img src="./img/paginaPrincipal/podcast7.jpg" alt="Un tema Al Día"/>
+            <h2>Un tema Al Día</h2>
+            <p>elDiario.es</p>
+          </div>
+          <div class="audio2 audio1 dark">
+            <img src="./img/paginaPrincipal/podcast8.jpeg" alt="Somos estupendas"/>
+            <h2>Somos Estupendas</h2>
+            <p>Somos estupendas</p>
+          </div>
+          <div class="audio2 audio1 dark">
+            <img src="./img/paginaPrincipal/podcast9.jpg" alt="Un dia eres joven"/>
+            <h2>Un día eres joven</h2>
+            <p>Cloe Pueyo y Ana de la Haz</p>
+          </div>
+          <div class="audio2 dark">
+            <img src="./img/paginaPrincipal/podcast10.jpg" alt="Universo Alex"/>
+            <h2>Universo Álex</h2>
+            <p>Abbcast</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="bg-dark shadow mt-5 py-5 footerBorder" data-bs-theme="dark">
         <section class="container">
@@ -195,10 +489,13 @@
         </section>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="./js/app.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/principal.js"></script>
+    
+  </body>
 </html>
