@@ -7,11 +7,7 @@
 
 body {
   font-family: "Karla", sans-serif;
-<<<<<<< HEAD
-  background-color: #B6B8B9;
-=======
   background-color: #b6b8b9;
->>>>>>> 8745359621f4863f4c28e33b823240bb888b315d
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,11 +18,7 @@ main {
 }
 
 h5 {
-<<<<<<< HEAD
-  font-family: 'Kalam', cursive;
-=======
   font-family: "Kalam", cursive;
->>>>>>> 8745359621f4863f4c28e33b823240bb888b315d
   color: var(--colorSecundario);
 }
 
@@ -34,8 +26,6 @@ nav {
   border-bottom: 2px solid var(--colorPrincipal);
 }
 
-<<<<<<< HEAD
-=======
 .tituloPremium {
   font-family: 'Kalam', cursive;
 }
@@ -44,7 +34,6 @@ nav {
   background-color: var(--colorTerciario);
 }
 
->>>>>>> 8745359621f4863f4c28e33b823240bb888b315d
 .hoverLinks:hover {
   color: var(--colorPrincipal);
   border-bottom: var(--colorSecundario);
@@ -170,7 +159,7 @@ nav {
   display: flex;
   justify-content: center;
   height: 100%;
-  transition: background 0.5s ease;
+  transition: 0.5s ease;
   width: 100%;
 }
 
@@ -200,7 +189,7 @@ nav {
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
-
+  }
 
   .heartbeat:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
