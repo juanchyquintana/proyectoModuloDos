@@ -36,13 +36,14 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/detalle.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Ritmo Web - Premium</title>
+    <title>Ritmo Web - Detalle</title>
   </head>
   <body>
     <header>
       <nav
-        class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh"
+        class="navbar bg-dark navbar-light navbar-expand-lg shadow"
         data-bs-theme="dark"
       >
         <div class="container">
@@ -55,7 +56,6 @@
               />
             </a>
           </div>
-
           <button
             class="navbar-toggler"
             type="button"
@@ -102,7 +102,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover colorPrincipal"
+                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
                   href="./premium.html"
                   >Premium</a
                 >
@@ -154,7 +154,7 @@
                 >
                   <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-lg-end">
+                <ul class="dropdown-menu">
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
@@ -178,196 +178,80 @@
     </header>
 
     <main>
-      <section class="backgroundTerciario py-5">
-        <div class="container">
-            <div >
-                <h2 class="fw-bold display-5 tituloPremium">Escuchá música in límites...</h2>
-                <p class="fs-4 lead ">
-                  Reproducí millones de canciones sin anuncios, on-demand y en modo
-                  offline.
-                </p>
-            </div>
-
-          <div class="d-flex flex-column flex-md-row pb-3 gap-3">
-            <a href="./error404.html" class="btn btn-dark mb-2">Empezar</a>
-            <a href="./error404.html" class="btn btn-outline-light mb-2">Ver Planes</a>
+      <section class="container mt-4 mt-sm-5">
+        <div class="row m-2 p-sm-3 bordePlayer">
+          <div class="col-12 col-md-6 p-2 p-md-4 m-0">
+            <img
+              src="../img/imgAlbum.png"
+              class="tamanioImgCancion rounded-4"
+              alt="img-album"
+            />
           </div>
-
-          <div class="terminosFuente">
-            <a href="./error404.html" class="link-light text-decoration-none">Se aplican Términos y Condiciones</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-white py-5">
-        <div class="pb-5">
-          <h2 class="text-center fw-bold display-5 tituloPremium">Beneficios de Premium</h2>
-        </div>
-
-        <div class="container">
-
-          <div class="row">
-
-            <div class="col-md-6 mb-5 d-flex justify-content-center heartbeat">
-              <div class="d-flex gap-3">
-                <div><i class="bi bi-download display-4 p-3 backgroundTerciario rounded-circle"></i></div>
-                <div>
-                  <h5>Descargá tu música</h5>
-                  <p>Escuchala donde quieras.</p>
+          <div class="col-12 col-md-6 d-flex justify-content-around flex-column p-2 p-md-4 mt-4 mt-md-0">
+            <div>
+              <div class="d-flex justify-content-between">
+                <h2 class="fw-bold mb-1">Nombre</h2>
+                <div class="playerBtnPequenio">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-heart d-none"></i>
+                </div>
+              </div>
+              <div class="mb-1">
+                <a href="./error404.html" class="h5 estiloDetalle">Artista</a>
+                <p class="h5 d-inline">/</p>
+                <a href="./error404.html" class="h5 estiloDetalle">Album</a>
+                <p class="h5 d-inline">/</p>
+                <p class="h5 d-inline">Año</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <h6 class="mb-1">Pop</h6>
+                <button class="botonCompartir fw-bold"><i class="fa-solid fa-share me-1"></i>Compartir</button>
+              </div>
+            </div>
+            <div class="d-flex align-items-center flex-column">
+              <div class="container mt-5 px-0">
+                <div class="row mb-2">
+                  <div class="col-6 playerBtn justify-content-start px-0 playerBtnPequenio">
+                    <i class="fa-solid fa-circle-plus ms-3"></i>
+                    <i class="fa-solid fa-circle-check ms-3 d-none"></i>
+                  </div>
+                  <div class="col-6 playerBtn justify-content-end px-0 playerBtnPequenio">
+                    <i class="fa-solid fa-volume-high me-3"></i>
+                    <i class="fa-solid fa-repeat me-3"></i>
+                    <i class="fa-solid fa-shuffle me-3"></i>
+                  </div>
+                </div>
+              </div>
+              <input
+                type="range"
+                class="playerInput"
+                min="0"
+                step="1"
+                value="0"
+              />
+              <div class="playerDuracionAudio">
+                <div class="comienzoAudio">00:00</div>
+                <div class="finAudio">00:00</div>
+              </div>
+              <audio class="d-none" id="audio" controls>
+                <!-- agregar audio -->
+                <source src="#" type="audio/mpeg"/>
+              </audio>
+              <div class="container">
+                <div class="row justify-content-evenly mb-2">
+                  <div class="playerBtn playerBtnMediano">
+                    <i class="fa-solid fa-backward"></i>
+                  </div>
+                  <div class="playerBtn playerBtnMediano">
+                    <i class="fa-solid fa-play text-center"></i>
+                    <i class="fa-solid fa-pause pauseBtn d-none"></i>
+                  </div>
+                  <div class="playerBtn playerBtnMediano">
+                    <i class="fa-solid fa-forward"></i>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="col-md-6 mb-5 d-flex justify-content-center heartbeat">
-              <div class="d-flex gap-3">
-                <div><i class="bi bi-phone display-4 p-3 backgroundTerciario rounded-circle"></i></div>
-                <div>
-                  <h5>Escuchá música sin anuncios.</h5>
-                  <p>Disfrutá de tu música sin interrupciones.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mb-5 d-flex justify-content-center heartbeat">
-              <div class="d-flex gap-3">
-                <div><i class="bi bi-earbuds display-4 p-3 backgroundTerciario rounded-circle"></i></div>
-                <div>
-                  <h5>Escuchá la canción que quieras.</h5>
-                  <p>Incluso en dispositivos móviles.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mb-5 d-flex justify-content-center heartbeat">
-              <div class="d-flex gap-3">
-                <div><i class="bi bi-music-note-list display-4 p-3 backgroundTerciario rounded-circle"></i></div>
-                <div>
-                  <h5>Saltos ilimitados de canciones</h5>
-                  <p>Solo pasá a la siguiente.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section class="py-5">
-
-        <div class="pb-5 text-center">
-          <h2 class="fw-bold display-5 tituloPremium">Elegí tu plan Premium</h2>
-          <p>Escuchá contenido sin límites en tu celular, parlante y otros dispositivos.</p>
-          <img src="../img/todos-medios-pago.png" alt="medios de pagos" class="metodosPagos">
-        </div>
-
-        <div class="container">
-          <div class="row">
-
-            <div class="col-md-6 mb-5">
-              <div class="card py-3 h-100 w-100">
-
-                <div class="card-header">
-                  <h3>Individual</h3>
-                  <p>$599,00 al mes</p>
-                  <span>1 cuenta</span>
-                </div>
-
-                <div class="card-body">
-                  <ul>
-                    <li>Música sin anuncios</li>
-                    <li>Escuchá tus canciones en cualquier lugar, incluso sin conexion</li>
-                    <li>Reproducción on-demand</li>
-                    <li>Prepagá o suscribite</li>
-                  </ul>
-
-                </div>
-
-                <div class="card-footer">
-                  <a href="./error404.html" class="btn btn-dark w-100">Empezar</a>
-
-                  <p class="terminosFuente mt-2">***$ 599,00 al mes + impuestos aplicables.<a href="./error404.html" class="text-decoration-none">Se aplican Términos y Condiciones.</a></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mb-5">
-              <div class="card py-3 h-100 w-100">
-
-                <div class="card-header">
-                  <h3>Duo</h3>
-                  <p>$799,00 al mes</p>
-                  <span>2 cuentas</span>
-                </div>
-
-                <div class="card-body">
-                  <ul>
-                    <li>2 cuentas Premium para parejas que conviven</li>
-                    <li>Reproducción de música en modo offline, sin anuncios y on-demand</li>
-                    <li>Prepagá o suscribite</li>
-                  </ul>
-                </div>
-
-                <div class="card-footer">
-                  <a href="./error404.html" class="btn btn-dark w-100">Empezar</a>
-
-                  <p class="terminosFuente mt-2">***$ 799,00 al mes + impuestos aplicables.<a href="./error404.html" class="text-decoration-none">Se aplican Términos y Condiciones.</a></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mb-5">
-              <div class="card py-3 h-100 w-100">
-
-                <div class="card-header">
-                  <h3>Familiar</h3>
-                  <p>$999,00 al mes</p>
-                  <span>Hasta 6 cuentas</span>
-                </div>
-
-                <div class="card-body">
-                  <ul>
-                    <li>6 cuentas Premium para familiares que viven en el mismo domicilio</li>
-                    <li>Bloqueo de música con contenido explícito</li>
-                    <li>reproducción de música en modo offline, sin anuncios y on-demand</li>
-                    <li>Spotify Kids: una aplicacion independiente creada solo para niños</li>
-                    <li>Prepagá o suscribite</li>
-                  </ul>
-                </div>
-
-                <div class="card-footer">
-                  <a href="./error404.html" class="btn btn-dark w-100">Empezar</a>
-
-                  <p class="terminosFuente mt-2">***$ 999,00 al mes + impuestos aplicables.<a href="./error404.html" class="text-decoration-none">Se aplican Términos y Condiciones.</a></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mb-5">
-              <div class="card py-3 h-100 w-100">
-
-                <div class="card-header">
-                  <h3>Estudiantes</h3>
-                  <p>$329,00 al mes</p>
-                  <span>1 cuenta</span>
-                </div>
-
-                <div class="card-body">
-                  <ul>
-                    <li>Descuento especial para estudiantes universitarios que cumplan con los requisitos</li>
-                    <li>Música sin anuncios</li>
-                    <li>Escuchá tus canciones en cualquier lugar, incluso sin conexion</li>
-                    <li>Reproducción on-demand</li>
-                  </ul>
-                </div>
-
-                <div class="card-footer">
-                  <a href="./error404.html" class="btn btn-dark w-100">Empezar</a>
-
-                  <p class="terminosFuente mt-2">***$ 329,00 al mes + impuestos aplicables. El plan solo está disponible para estudiantes de instituciones de educación superior aprobadas. <a href="./error404.html" class="text-decoration-none">Se aplican Términos y Condiciones.</a></p>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
@@ -459,21 +343,21 @@
             <ul class="list-unstyled">
               <li>
                 <a
-                  href="./error404.html"
+                  href="../pages/error404.html"
                   class="link-secondary text-decoration-none"
                   >Ayuda
                 </a>
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../pages/error404.html"
                   class="link-secondary text-decoration-none"
                   >Reproductor Web
                 </a>
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../pages/error404.html"
                   class="link-secondary text-decoration-none"
                   >App móvil gratis
                 </a>
@@ -486,7 +370,7 @@
             <ul class="list-unstyled d-flex justify-content-center gap-4">
               <li>
                 <a
-                  href="./error404.html"
+                  href="../pages/error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-facebook"></i>
@@ -494,7 +378,7 @@
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../pages/error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-twitter-x"></i>
@@ -502,7 +386,7 @@
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../pages/error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-instagram"></i>
@@ -525,6 +409,10 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8d7d957392.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
