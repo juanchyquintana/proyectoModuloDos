@@ -96,28 +96,13 @@ nav {
   border-top: 2px solid var(--colorPrincipal);
 }
 
-#acercaNosotrosTitulo {
-  font-family: "Kalam", cursive;
-  color: var(--colorPrincipal);
-}
 
-#acercaNosotrosInfo {
-  font-family: "Karla", sans-serif;
-  text-align: center;
-  color: black;
-  margin: 3px 0px 3px 0px;
-  font-size: 20px;
-}
-
-.rotate-center:hover {
-  -webkit-animation: rotate-center 0.6s ease-in-out both;
-  animation: rotate-center 0.6s ease-in-out both;
-}
-
-.cardNosotros {
-  font-family: "Karla", sans-serif;
-  color: var(--colorSecundario);
-}
+@media all and (min-width: 992px) {
+   .rotate-center:hover {
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out both;
+   }
+  }
 
 #admin-titulo {
   color: var(--colorPrincipal);
@@ -133,38 +118,7 @@ nav {
 .color-input:not(:focus) {
   color: #ffffff;
 }
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-.div-nosotros {
-  width: 100%;
-}
-.imgEquipo {
-  height: 250px;
-  width: 100%;
-  object-fit: cover;
-}
-#nuestroEquipo {
-  font-family: "Kalam", cursive;
-  color: var(--colorSecundario);
-}
+
 #boton-editar {
   background-image: linear-gradient(135deg, #ff9900, #ad1919);
 }
@@ -177,6 +131,7 @@ nav {
 #boton-agregar{
   background-image: linear-gradient(135deg, #f16642, #1600df);
 }
+
 .boton {
   border-radius: 6px;
   box-sizing: border-box;
@@ -204,7 +159,7 @@ nav {
   display: flex;
   justify-content: center;
   height: 100%;
-  transition: background 0.5s ease;
+  transition: 0.5s ease;
   width: 100%;
 }
 
@@ -234,7 +189,7 @@ nav {
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
-
+  }
 
   .heartbeat:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
