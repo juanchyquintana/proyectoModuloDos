@@ -1,12 +1,13 @@
-import Musica from "./classMusica.js";
+import Musica from './classMusica.js';
 
 const musica = JSON.parse(localStorage.getItem("musicaKey")) || [];
-const formularioAgregarMusica = document.querySelector("#");
-const nombreCancion = document.querySelector("#");
+const formularioAgregarMusica = document.querySelector("#formularioMusica");
+const nombreCancion = document.querySelector("#nombre");
 const artista = document.querySelector("#autor");
 const categoria = document.querySelector("#categoria");
-const imagen = document.querySelector("#");
-const duracion = document.querySelector("#");
+const imagen = document.querySelector("#musica");
+const duracion = document.querySelector("#duracion");
+let patronDuracionCancion = /^(?:(?:(?:(?:[0-5]?[0-9]):)?[0-5]?[0-9])|(?:(?:[0-5]?[0-9])s))$/;
 
 const crearMusica = (e) => {
   e.preventDefault();
@@ -20,13 +21,18 @@ const crearMusica = (e) => {
     duracion.value
   );
 
+  if(!patronDuracionCancion.test(duracion.value)) {
+    alert('no es un numero valido')
+    return
+  }
+
   if (
     [
       nombreCancion.value,
       artista.value,
       categoria.value,
       imagen.value,
-      duracion.value,
+      duracion.value
     ].includes("")
   ) {
     alert("Todos los campos son obligatorios");
@@ -50,11 +56,11 @@ const limparFormularioMusicaAdmin = () => {
 };
 
 const crearCampoNuevo = (musica, fila) => {
-  const tablaMusica = document.querySelector("#");
+  const tablaMusica = document.querySelector("#tablaMusica");
   tablaMusica.innerHTML += `
     <tr>
         <td>${fila}</td>
-        <td>${musica.nombreCancion}</td>
+        <td>${musica.titulo}</td>
         <td>${musica.artista}</td>
         <td>${musica.duracion}</td>
     <td class="d-sm-flex">

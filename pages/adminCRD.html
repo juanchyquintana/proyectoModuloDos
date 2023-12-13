@@ -204,39 +204,12 @@
                 <th>Acción</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="tablaMusica">
               <tr>
                 <td>1</td>
                 <td>Nombre de la Canción 1</td>
                 <td>Autor 1</td>
                 <td>3:45</td>
-                <td class="d-sm-flex">
-                  <a
-                    type="button"
-                    class="boton m-2"
-                    id="boton-editar"
-                    href="./adminU.html"
-                  >
-                    <span class="bn39span">Editar</span>
-                  </a>
-                  <button type="button" class="boton m-2" id="boton-borrar">
-                    <span class="bn39span">Borrar</span>
-                  </button>
-                  <a
-                    type="button"
-                    class="boton m-2"
-                    id="boton-verMas"
-                    href="#"
-                  >
-                    <span class="bn39span">Ver más</span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Nombre de la Canción 2</td>
-                <td>Autor 2</td>
-                <td>4:20</td>
                 <td class="d-sm-flex">
                   <a
                     type="button"
@@ -432,7 +405,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="formularioMusica">
               <div class="my-3">
                 <label class="form-label text-light" for="nombre"
                   >Nombre de la Canción</label
@@ -477,6 +450,21 @@
                 />
               </div>
               <div class="my-3">
+                <label class="form-label text-light" for="categoria"
+                  >Duración</label
+                >
+                <input
+                  type="text"
+                  id="duracion"
+                  class="form-control bg-black color-input"
+                  placeholder="Categoría de la Música"
+                  minlength="5"
+                  maxlength="5"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="my-3">
                 <label class="form-label text-light" for="musica">Insertar Música</label>
                 <input
                   type="file"
@@ -484,7 +472,6 @@
                   class="form-control bg-black color-input"
                   accept=".wap , .mp3"
                   placeholder=""
-                  required
                 />
               </div>
               <button type="submit" class="boton mt-4" id="boton-agregar">
@@ -501,6 +488,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/app.js"></script>
+    <script src="../js/crud.js" type="module"></script>
   </body>
 </html>
