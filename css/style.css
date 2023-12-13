@@ -7,7 +7,11 @@
 
 body {
   font-family: "Karla", sans-serif;
+<<<<<<< HEAD
   background-color: #B6B8B9;
+=======
+  background-color: #b6b8b9;
+>>>>>>> 8745359621f4863f4c28e33b823240bb888b315d
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +22,11 @@ main {
 }
 
 h5 {
+<<<<<<< HEAD
   font-family: 'Kalam', cursive;
+=======
+  font-family: "Kalam", cursive;
+>>>>>>> 8745359621f4863f4c28e33b823240bb888b315d
   color: var(--colorSecundario);
 }
 
@@ -26,6 +34,17 @@ nav {
   border-bottom: 2px solid var(--colorPrincipal);
 }
 
+<<<<<<< HEAD
+=======
+.tituloPremium {
+  font-family: 'Kalam', cursive;
+}
+
+.backgroundTerciario {
+  background-color: var(--colorTerciario);
+}
+
+>>>>>>> 8745359621f4863f4c28e33b823240bb888b315d
 .hoverLinks:hover {
   color: var(--colorPrincipal);
   border-bottom: var(--colorSecundario);
@@ -88,120 +107,175 @@ nav {
   border-top: 2px solid var(--colorPrincipal);
 }
 
+
 @media all and (min-width: 992px) {
    .rotate-center:hover {
     -webkit-animation: rotate-center 0.6s ease-in-out both;
     animation: rotate-center 0.6s ease-in-out both;
+   }
   }
-  
-  body {
-    font-family: "Karla", sans-serif;
-    background-color: #B6B8B9;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+
+#admin-titulo {
+  color: var(--colorPrincipal);
+  font-family: "kanit", sans-serif;
+}
+.color-input {
+  transition: color 0.5s ease;
+}
+.color-input:focus {
+  color: var(--colorSecundario);
+}
+.color-input::placeholder,
+.color-input:not(:focus) {
+  color: #ffffff;
+}
+
+#boton-editar {
+  background-image: linear-gradient(135deg, #ff9900, #ad1919);
+}
+#boton-borrar {
+  background-image: linear-gradient(135deg, #d82e2e, #690000);
+}
+#boton-verMas {
+  background-image: linear-gradient(135deg, #2bdddd, #1600df);
+}
+#boton-agregar{
+  background-image: linear-gradient(135deg, #f16642, #1600df);
+}
+
+.boton {
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  height: 50px;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 5em;
+  z-index: 2;
+  border: 0px;
+}
+
+.boton:hover {
+  color: #fff;
+}
+
+.boton .bn39span {
+  align-items: center;
+  background: #0e0e10;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.boton:hover .bn39span {
+  background: transparent;
+}
+.terminosFuente {
+  font-size: 10px;
+}
+
+.metodosPagos {
+  width: 150px;
+}
+
+@media all and (min-width: 992px) {
+  .rotate-center:hover {
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out both;
   }
-  
-  main {
-    flex-grow: 1;
-  }
-  
-  h5 {
-    font-family: 'Kalam', cursive;
-    color: var(--colorSecundario);
-  }
-  
-  nav {
-    border-bottom: 2px solid var(--colorPrincipal);
-  }
-  
-  .hoverLinks:hover {
-    color: var(--colorPrincipal);
-    border-bottom: var(--colorSecundario);
-  }
-  
-  .lineaHover {
-    position: relative;
-  }
-  
-  .lineaHover::before,
-  .lineaHover::after {
-    content: "";
-    border-bottom: 2px solid var(--colorPrincipal);
-    position: absolute;
-    opacity: 0;
-    transition: 0.2s;
-  }
-  
-  .lineaHover::before {
-    bottom: 5px;
-    width: 90%;
-    right: 0;
-  }
-  
-  .lineaHover::after {
-    bottom: -1px;
-    width: 60%;
-    left: 0;
-  }
-  
-  .lineaHover:hover::before {
-    width: 70%;
-    opacity: 1;
-  }
-  
-  .lineaHover:hover::after {
-    width: 40%;
-    opacity: 1;
-  }
-  
-  .logoWidth {
-    width: 150px;
-  }
-  
-  .colorPrincipal {
-    color: var(--colorPrincipal);
-  }
-  
-  .botonBusqueda:hover {
-    color: white;
-    border: var(--colorPrincipal) solid 1px;
-    background-color: var(--colorSecundario);
-  }
-  
-  .focusNaranja:checked {
-    color: var(--colorPrincipal);
-  }
-  
-  .footerBorder {
-    border-top: 2px solid var(--colorPrincipal);
-  }
-  
-  @media all and (min-width: 992px) {
-     .rotate-center:hover {
-      -webkit-animation: rotate-center 0.6s ease-in-out both;
-      animation: rotate-center 0.6s ease-in-out both;
+
+  @-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
     }
-  
-    @-webkit-keyframes rotate-center {
-      0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-      }
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
     }
-    @keyframes rotate-center {
-      0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-      }
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
+
+
+  .heartbeat:hover {
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+            animation: heartbeat 1.5s ease-in-out infinite both;
+    cursor: pointer;
+  }
+
+  @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
     }
   }
   
+}
