@@ -35,7 +35,13 @@ const crearMusica = (e) => {
       duracion.value
     ].includes("")
   ) {
-    alert("Todos los campos son obligatorios");
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "Campos Vacios",
+      showConfirmButton: false,
+      timer: 1500
+    });
   } else {
     musica.push(musicaNueva);
 
@@ -44,6 +50,23 @@ const crearMusica = (e) => {
     limparFormularioMusicaAdmin();
 
     crearCampoNuevo(musicaNueva, musica.length);
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      }
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Agregado Correctamente"
+    });
+
   }
 };
 
