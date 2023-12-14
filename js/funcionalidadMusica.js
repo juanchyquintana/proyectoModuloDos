@@ -18,3 +18,16 @@ const inciarPausar = () => {
         controlIcono.classList.remove("fa-play")
     }
 }
+
+if(musica.play()){
+    setInterval(() => {
+        progresoMusica.value = musica.currentTime;
+    }, 500)
+}
+
+progresoMusica.onchange = () => {
+    musica.play()
+    musica.currentTime = progresoMusica.value;
+    controlIcono.classList.add("fa-pause")
+    controlIcono.classList.remove("fa-play")
+}
