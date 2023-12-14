@@ -1,4 +1,4 @@
-const form = document.querySelector("form"),
+const form = document.getElementById("formA"),
   nombre = document.getElementById("nombre"),
   autor = document.getElementById("autor"),
   categoria = document.getElementById("categoria"),
