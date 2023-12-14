@@ -77,3 +77,37 @@ const limparFormularioMusicaAdmin = () => {
 };
 
 formularioAgregarMusica.addEventListener("submit", crearMusica);
+
+
+const cargaInicial = () => {
+  const musicaAlmacenada = JSON.parse(localStorage.getItem("musicaKey")) || [];
+
+  if (musicaAlmacenada.length > 0) {
+    musicaAlmacenada.map((cancion, posicion) =>
+      crearFila(cancion, posicion + 1)
+    );
+  }
+};
+
+const crearFila = (cancion, fila) => {
+  const tablaMusica = document.querySelector("#tablaMusica");
+  tablaMusica.innerHTML += `<tr>
+    <th scope="row">${fila}</th>
+    <td>${cancion.titulo}</td>
+    <td>${cancion.artista}</td>
+    <td>${cancion.duracion}</td>
+    <td class= "d-md-flex gap-3">
+     <button class="boton" id="boton-borrar" onclick="eliminarCancion('${cancion.id}')">
+     <span class="bn39span">Borrar</span>
+     </button>
+     <button class="boton" id="boton-editar" onclick="eliminarCancion('${cancion.id}')">
+     <span class="bn39span">editar</span>
+     </button>
+     <button class="boton" id="boton-verMas" onclick="eliminarCancion('${cancion.id}')">
+     <span class="bn39span">Ver mas</span>
+     </button>
+    </td>
+  </tr>`;
+};
+
+document.addEventListener("DOMContentLoaded", cargaInicial);
