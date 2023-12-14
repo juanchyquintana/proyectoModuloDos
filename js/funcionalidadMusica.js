@@ -1,7 +1,8 @@
-const progresoMusica = document.querySelector('#progresoMusica')
 const musica = document.querySelector('#audio')
+const progresoMusica = document.querySelector('#progresoMusica')
 const controlIcono = document.querySelector('#controlIcon')
 const tiempoInput = document.querySelector('#tiempoInput')
+const iconoMuted = document.querySelector('#iconoMuted')
 
 musica.onloadedmetadata = () => {
     progresoMusica.max = musica.duration;
@@ -34,7 +35,19 @@ progresoMusica.onchange = () => {
     controlIcono.classList.remove("fa-play")
 }
 
-function formatearTiempo(tiempo) {
+const mutearCancion = () => {
+    if(iconoMuted.classList.contains("fa-volume-xmark")) {
+        musica.muted = false;
+        iconoMuted.classList.remove("fa-volume-xmark")
+        iconoMuted.classList.add("fa-volume-high")
+    } else {
+        musica.muted = true
+        iconoMuted.classList.add("fa-volume-xmark")
+        iconoMuted.classList.remove("fa-volume-high")
+    }
+}
+
+const formatearTiempo = (tiempo) => {
     const minutos = Math.floor(tiempo / 60);
     const segundos = Math.floor(tiempo % 60);
     return `${minutos < 10 ? '0' : ''}${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;

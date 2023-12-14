@@ -38,8 +38,9 @@
     />
     <link rel="stylesheet" href="../css/detalle.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Ritmo Web - Detalle</title>
+    <title>Ritmo Web - Reproductor de Música</title>
   </head>
+  
   <body>
     <header>
       <nav
@@ -182,7 +183,7 @@
         <div class="row m-2 p-sm-3 bordePlayer">
           <div class="col-12 col-md-6 p-2 p-md-4 m-0">
             <img
-              src="../img/PandaRitmoWeb.png"
+              src="../img/paginaPrincipal/cancion1.jpg"
               class="tamanioImgCancion rounded-4"
               alt="img-album"
             />
@@ -191,18 +192,18 @@
           <div class="col-12 col-md-6 d-flex justify-content-around flex-column p-2 p-md-4 mt-4 mt-md-0">
             <div>
               <div class="d-flex justify-content-between">
-                <h2 class="fw-bold mb-1">Nombre</h2>
+                <h2 class="fw-bold mb-1">Si No Estás</h2>
                 <div class="playerBtnPequenio">
                   <i class="fa-regular fa-heart"></i>
                   <i class="fa-solid fa-heart d-none"></i>
                 </div>
               </div>
               <div class="mb-1">
-                <a href="./error404.html" class="h5 estiloDetalle">Artista</a>
+                <a href="./error404.html" class="h5 estiloDetalle">Iñigo Quintero</a>
                 <p class="h5 d-inline">/</p>
                 <a href="./error404.html" class="h5 estiloDetalle">Album</a>
                 <p class="h5 d-inline">/</p>
-                <p class="h5 d-inline">Año</p>
+                <p class="h5 d-inline">2023</p>
               </div>
               <div class="d-flex justify-content-between">
                 <h6 class="mb-1">Pop</h6>
@@ -217,9 +218,9 @@
                     <i class="fa-solid fa-circle-check ms-3 d-none"></i>
                   </div>
                   <div class="col-6 playerBtn justify-content-end px-0 playerBtnPequenio">
-                    <i class="fa-solid fa-volume-high me-3"></i>
-                    <i class="fa-solid fa-repeat me-3"></i>
-                    <i class="fa-solid fa-shuffle me-3"></i>
+                    <i class="fa-solid fa-volume-high me-3" id="iconoMuted" onclick="mutearCancion()"></i>
+                    <i class="fa-solid fa-repeat me-3 text-secondary"></i>
+                    <i class="fa-solid fa-shuffle me-3 text-secondary"></i>
                   </div>
                 </div>
               </div>
@@ -234,13 +235,13 @@
 
               <div class="playerDuracionAudio">
                 <div class="comienzoAudio" id="tiempoInput">00:00</div>
-                <div class="finAudio">03:08</div>
+                <div class="finAudio">03:04</div>
               </div>
 
-              <audio id="audio" autoplay="false">
-                <!-- agregar audio -->
-                <source src="../assets/cancionUno.mp3" type="audio/mpeg"/>
+              <audio id="audio" autoplay="false" preload="auto">
+                <source src="../assets/siNoEstasIñigo.mp3" type="audio/mpeg"/>
               </audio>
+
               <div class="container">
                 <div class="row justify-content-evenly mb-2">
                   <div class="playerBtn playerBtnMediano">
