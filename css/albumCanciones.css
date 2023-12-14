@@ -1,0 +1,11 @@
+#fondoAlbum{
+    background: #ffcd9f;
+  }
+
+  #iHeart{
+    color:#f16642;
+  }
+
+  #iHeart:hover{
+    transform: translateY(-10%);
+  }
