@@ -3,6 +3,7 @@ const progresoMusica = document.querySelector('#progresoMusica')
 const controlIcono = document.querySelector('#controlIcon')
 const tiempoInput = document.querySelector('#tiempoInput')
 const iconoMuted = document.querySelector('#iconoMuted')
+const cambiarIcono = document.querySelector('#cambiarIcono')
 
 musica.onloadedmetadata = () => {
     progresoMusica.max = musica.duration;
@@ -47,8 +48,12 @@ const mutearCancion = () => {
     }
 }
 
+const cambiarMusica = () => {
+    window.location.href = window.location.origin + '/pages/canciones/cancionDos.html'
+}
+
 const formatearTiempo = (tiempo) => {
     const minutos = Math.floor(tiempo / 60);
     const segundos = Math.floor(tiempo % 60);
     return `${minutos < 10 ? '0' : ''}${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
-  }
+}
