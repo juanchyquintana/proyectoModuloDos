@@ -222,12 +222,7 @@
                   <button type="button" class="boton m-2" id="boton-borrar">
                     <span class="bn39span">Borrar</span>
                   </button>
-                  <a
-                    type="button"
-                    class="boton m-2"
-                    id="boton-verMas"
-                    href="#"
-                  >
+                  <a type="button" class="boton m-2" id="boton-verMas" href="#">
                     <span class="bn39span">Ver más</span>
                   </a>
                 </td>
@@ -249,12 +244,7 @@
                   <button type="button" class="boton m-2" id="boton-borrar">
                     <span class="bn39span">Borrar</span>
                   </button>
-                  <a
-                    type="button"
-                    class="boton m-2"
-                    id="boton-verMas"
-                    href="#"
-                  >
+                  <a type="button" class="boton m-2" id="boton-verMas" href="#">
                     <span class="bn39span">Ver más</span>
                   </a>
                 </td>
@@ -461,23 +451,24 @@
                   required
                 />
               </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="categoria"
-                  >Categoría</label
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="categoria"
+                  >Categoria</label
                 >
-                <input
-                  type="text"
-                  id="categoria"
-                  class="form-control bg-black color-input"
-                  placeholder="Categoría de la Música"
-                  minlength="1"
-                  maxlength="70"
-                  autocomplete="off"
-                  required
-                />
+                <select class="form-select bg-black color-input" id="categoria">
+                  <option value="1">pop</option>
+                  <option value="2">K-pop</option>
+                  <option value="3">Rock</option>
+                  <option value="4">cumbia</option>
+                  <option value="5">Electronica</option>
+                  <option value="6">folcklore</option>
+                  <option value="7">rap</option>
+                </select>
               </div>
               <div class="my-3">
-                <label class="form-label text-light" for="musica">Insertar Música</label>
+                <label class="form-label text-light" for="musica"
+                  >Insertar Música</label
+                >
                 <input
                   type="file"
                   id="musica"
@@ -502,5 +493,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/app.js"></script>
+    <script src="../js/validaciones.js"></script>
   </body>
 </html>
