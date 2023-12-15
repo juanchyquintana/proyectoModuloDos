@@ -111,8 +111,12 @@ const crearFila = (cancion, fila) => {
 
   window.eliminarCancion = (idCancion) =>{
     const posicionCancionBuscada = musica.findIndex((itemCancion)=> itemCancion.id === idCancion);
+    
     musica.splice(posicionCancionBuscada,1);
     guardarMusicaLocalStorage();
+    const tablaMusica = document.querySelector('tbody');
+    
+    tablaMusica.removeChild(tablaMusica.children[posicionCancionBuscada])
   }
 };
 
