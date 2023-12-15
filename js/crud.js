@@ -78,7 +78,6 @@ const limparFormularioMusicaAdmin = () => {
 
 formularioAgregarMusica.addEventListener("submit", crearMusica);
 
-
 const cargaInicial = () => {
   const musicaAlmacenada = JSON.parse(localStorage.getItem("musicaKey")) || [];
 
@@ -108,6 +107,36 @@ const crearFila = (cancion, fila) => {
      </button>
     </td>
   </tr>`;
+
+  window.eliminarCancion = (idCancion) => {
+    Swal.fire({
+      title: "¿Estás seguro de borrar la canción?",
+      text: "No puedes revertir este paso una vez borrada la canción",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#f18b42",
+      cancelButtonColor: "#272727",
+      confirmButtonText: "Borrar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const posicionCancionBuscada = musica.findIndex(
+          (itemCancion) => itemCancion.id === idCancion
+        );
+
+        musica.splice(posicionCancionBuscada, 1);
+        guardarMusicaLocalStorage();
+        const tablaMusica = document.querySelector("tbody");
+
+        tablaMusica.removeChild(tablaMusica.children[posicionCancionBuscada]);
+        Swal.fire({
+          title: "Canción eliminada",
+          text: "La canción seleccionada fue eliminada correctamente",
+          icon: "success",
+        });
+      }
+    });
+  };
 };
 
 document.addEventListener("DOMContentLoaded", cargaInicial);
