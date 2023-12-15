@@ -1,14 +1,14 @@
-import Usuario from "./classUsuario";
-const iniciarSesion = document.querySelector('#loginAdmin');
-const usuario = new Usuario('administrador','1234');
-
+const iniciarSesion = document.querySelector('#loginForm');
+const obtenerDatos = JSON.parse(localStorage.getItem("UsuarioKey", usuario));
 
 const loginAdministrador = (e) =>{
-    e.addEventListener();
+    e.preventDefault();
+    console.log("estamos en login");
+    console.log(obtenerDatos);
     const usuario = document.querySelector('#usuario');
     const pass = document.querySelector('#contrasena1');
-    for(){
-        if(usuario.value === )
+    if(usuario.value === obtenerDatos.usuario && usuario.value === obtenerDatos.contrasenia){
+        
     }
     
 }

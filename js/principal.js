@@ -1,3 +1,15 @@
+
+const usuario = {
+  usuario: "administrador",
+  contrasenia: "admin1234"
+}
+
+const guardarEnLocal = () =>{
+  localStorage.setItem("UsuarioKey", JSON.stringify(usuario));
+}
+
+guardarEnLocal();
+
 const swiper = new Swiper('.mySwiper', {
     slidesPerView: 3,
     spaceBetween: 10,
@@ -23,3 +35,5 @@ const swiper = new Swiper('.mySwiper', {
       },
     },
   });
+
+
