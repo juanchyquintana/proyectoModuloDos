@@ -108,6 +108,12 @@ const crearFila = (cancion, fila) => {
      </button>
     </td>
   </tr>`;
+
+  window.eliminarCancion = (idCancion) =>{
+    const posicionCancionBuscada = musica.findIndex((itemCancion)=> itemCancion.id === idCancion);
+    musica.splice(posicionCancionBuscada,1);
+    guardarMusicaLocalStorage();
+  }
 };
 
 document.addEventListener("DOMContentLoaded", cargaInicial);
