@@ -14,11 +14,11 @@ function validarCategoria() {
       "pop",
       "k-pop",
       "rap",
-      "Electronica",
+      "electronica",
       "cumbia",
       "folcklore",
     ],
-    valor = categoria.value.trim();
+    valor = categoria.value.trim().toLowerCase();
   let verificacion = false;
   for (let i = 0; i < generos.length; i++) {
     if (valor === generos[i]) {
@@ -28,16 +28,15 @@ function validarCategoria() {
   }
   return verificacion;
 }
-
 function validacionTotal(e) {
   e.preventDefault();
   const nombreBool = validarCaracteres(nombre, 100, 3),
     autorBool = validarCaracteres(autor, 70, 3),
     categoriaBool = validarCategoria();
-  let tituloTexto = "",
-    autorTexto = "",
-    categoriaTexto = "",
-    musicaTexto = "";
+  let tituloTexto = "titulo valida",
+    autorTexto = "autor valida",
+    categoriaTexto = "categoria valida",
+    musicaTexto = "archivo de musica valida";
   if (nombreBool === false) {
     tituloTexto = "<p>El titulo esta incorrecto, vuelve a intentarlo</p>";
   }
@@ -46,7 +45,7 @@ function validacionTotal(e) {
   }
   if (categoriaBool === false) {
     categoriaTexto =
-      "<p>La categoria no esta en el rango que dimos vuelve a intentarlo</p>";
+      "<p>La categoria no esta en el rango que dimos, vuelve a intentarlo</p>";
   }
   if (musica.value === "") {
     musicaTexto = "<p>No hay musica</p>";
@@ -55,24 +54,20 @@ function validacionTotal(e) {
     return true;
   } else {
     Swal.fire({
-      title: "<strong>HTML <u>example</u></strong>",
-      icon: "info",
+      title: "<strong>Opcion invalida</strong>",
+      icon: "error",
       html: `
-        You can use <b>bold text</b>,
-        <a href="#">links</a>,
-        and other HTML tags
+      <p>${tituloTexto}</p>
+      <p>${autorTexto}</p>
+      <p>${categoriaTexto}</p>
+      <p>${musicaTexto}</p>
       `,
-      showCloseButton: true,
-      showCancelButton: true,
+      showCloseButton: false,
+      showCancelButton: false,
       focusConfirm: false,
       confirmButtonText: `
-        <i class="fa fa-thumbs-up"></i> Great!
+        <i class="fa fa-thumbs-up"></i> Aceptar
       `,
-      confirmButtonAriaLabel: "Thumbs up, great!",
-      cancelButtonText: `
-        <i class="fa fa-thumbs-down"></i>
-      `,
-      cancelButtonAriaLabel: "Thumbs down",
     });
   }
 }
