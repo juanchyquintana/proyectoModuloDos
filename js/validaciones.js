@@ -28,11 +28,27 @@ function validarCategoria() {
   }
   return verificacion;
 }
+function validarMusica() {
+  const archivoMusica = musica.files[0];
+  if (!archivoMusica) {
+    return false;
+  }
+  const extensionesPermitidas = [".mp3", ".wav"];
+  const nombreArchivo = archivoMusica.name.toLowerCase();
+  const tieneExtensionPermitida = extensionesPermitidas.some((ext) =>
+    nombreArchivo.endsWith(ext)
+  );
+  if (!tieneExtensionPermitida) {
+    return false;
+  }
+  return true;
+}
 function validacionTotal(e) {
   e.preventDefault();
   const nombreBool = validarCaracteres(nombre, 100, 3),
     autorBool = validarCaracteres(autor, 70, 3),
-    categoriaBool = validarCategoria();
+    categoriaBool = validarCategoria(),
+    musicaBool = validarMusica();
   let tituloTexto = "titulo valida",
     autorTexto = "autor valida",
     categoriaTexto = "categoria valida",
@@ -47,11 +63,11 @@ function validacionTotal(e) {
     categoriaTexto =
       "<p>La categoria no esta en el rango que dimos, vuelve a intentarlo</p>";
   }
-  if (musica.value === "") {
+  if (musicaBool === false) {
     musicaTexto = "<p>No hay musica</p>";
   }
-  if (nombreBool && autorBool && categoriaBool && musica.value !== "") {
-    return true;
+  if (nombreBool && autorBool && categoriaBool && musicaBool) {
+    form.reset();
   } else {
     Swal.fire({
       title: "<strong>Opcion invalida</strong>",
