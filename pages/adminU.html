@@ -212,9 +212,7 @@
             />
           </div>
           <div class="input-group mb-3">
-            <label class="input-group-text" for="categoria"
-              >Categoria</label
-            >
+            <label class="input-group-text" for="categoria">Categoria</label>
             <select class="form-select bg-black color-input" id="categoria">
               <option value="pop">pop</option>
               <option value="k-pop">k-pop</option>
@@ -226,19 +224,26 @@
             </select>
           </div>
           <div class="my-3">
-            <label class="form-label text-light" for="musica">Insertar Música</label>
+            <label class="form-label text-light" for="musica"
+              >Insertar Música</label
+            >
             <input
               type="file"
               id="musica"
               class="form-control bg-black color-input"
-              accept=".wap , .mp3"
+              accept=".wap , .mp3 , .ogg"
               placeholder=""
               required
             />
           </div>
-          <button type="submit" class="boton mt-4" id="boton-editar">
-            <span class="bn39span">Editar</span>
-          </button>
+          <div class="d-flex">
+            <button type="submit" class="boton mt-4" id="boton-editar">
+              <span class="bn39span">Editar</span>
+            </button>
+            <a href="./adminCRD.html" class="boton mt-4 ms-4" id="boton-verMas">
+              <span class="bn39span">Volver</span>
+            </a>
+          </div>
         </form>
       </section>
     </main>

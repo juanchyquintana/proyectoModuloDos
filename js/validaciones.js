@@ -33,7 +33,7 @@ function validarMusica() {
   if (!archivoMusica) {
     return false;
   }
-  const extensionesPermitidas = [".mp3", ".wav"];
+  const extensionesPermitidas = [".mp3", ".wav", ".ogg"];
   const nombreArchivo = archivoMusica.name.toLowerCase();
   const tieneExtensionPermitida = extensionesPermitidas.some((ext) =>
     nombreArchivo.endsWith(ext)
