@@ -84,6 +84,33 @@
   color: var(--colorFondo);
 }
 
+.rotarCentro {
+	-webkit-animation: rotate-center 1s linear NaNs infinite both;
+	        animation: rotate-center 1s linear NaNs infinite both;
+}
+
+@-webkit-keyframes rotarCentro {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotarCentro {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
 @media all and (min-width: 576px){
   .bordePlayer{
     box-shadow: 2px 2px 15px 2px #f1654262;
