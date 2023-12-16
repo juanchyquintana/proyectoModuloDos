@@ -1,0 +1,359 @@
+/*----Banner Principal----*/
+
+#imgC{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url('../img/paginaPrincipal/BannerPrincpal.jpg') center center/cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: color;
+}
+
+#imgC .img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgC .img-container h2{    
+    font-family: 'Kalam', cursive;
+    font-size: 5rem;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #f19842;
+}
+
+#imgC .img-container p{
+    font-family: 'Karla', sans-serif;
+    /*font-family: 'Kalam', sans-serif;*/
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.btn-naranja{
+    background: #f19842;
+    color: white;
+    font-family: 'Karla', sans-serif;
+    text-transform: uppercase;
+    padding: 8px 60px;
+    border: none;
+    border-radius: 20px ;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/*----Artitas Populares----*/
+
+#textArtistas{
+    /*font-family: 'Kanit', sans-serif;*/
+    font-family: 'Kalam', cursive;
+    color: black;
+    font-size: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #f19842;
+}
+.card {
+    position: relative;
+    background: #272727;
+    border-radius: 20px;
+    padding: 20px 60px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .card .image {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border: 3px solid #f19842;
+    background: white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .card h3 {
+    text-align: center;
+    color: #f16642;
+    font-family: 'Kalam', cursive;
+    font-size: 22px;
+  }
+ 
+  .swiper-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .swiper {
+    margin: 0 auto;
+    cursor: grab;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f16642;
+    box-shadow: 0 0 10px black;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+  }
+  .swiper-button-next:hover {
+    transform: scale(1.2) translateX(80%);
+  }
+  .swiper-button-prev:hover {
+    transform: scale(1.2) translateX(-80%);
+  }
+  .swiper-button-next {
+    transform: translateX(100%);
+  }
+  .swiper-button-prev {
+    transform: translateX(-100%);
+  }
+  .swiper-pagination {
+    transform: translateY(200%);
+  }
+  .swiper-pagination-bullet {
+    background: #fff;
+    width: 15px;
+    height: 15px;
+  }
+
+  /*----Álbumes----*/
+
+  .albumPrincipal{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em 0em;
+  }
+
+  .audio{
+    width: 250px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1em;
+    background-color: #272727;
+    color: #f18b42;
+    box-shadow: 1px 1px 20px 1px black;
+    flex: 1 1 250px;
+    margin: 1em;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.audio img{
+    width: 200px;
+    height: 200px;
+    margin: 0.5em;
+}
+
+.audio h2{
+    font-weight: 500;
+    font-size: medium;
+    margin: 0.5em;
+    color: white;
+    font-family: 'Karla', sans-serif;
+}
+
+.audio p{
+    font-size: small;
+    font-weight: 300;
+    text-align: center;
+    margin: 0.5em;
+    
+}
+
+.audio:hover{
+    box-shadow: 10px 10px 20px #f18b42;
+    transform: translateY(-4%);
+}
+
+/*----Podcast----*/
+
+.audio2{
+    width: 250px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1em;
+    background-color: #f19842;
+    color: black;
+    box-shadow: 1px 1px 20px 1px black;
+    flex: 1 1 250px;
+    margin: 1em;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.audio2 img{
+    width: 200px;
+    height: 200px;
+    margin: 0.5em;
+}
+
+.audio2 h2{
+    font-weight: 500;
+    font-size: medium;
+    margin: 0.5em;
+    color: white;
+    font-family: 'Karla', sans-serif;
+}
+
+.audio2 p{
+    font-size: small;
+    font-weight: 300;
+    text-align: center;
+    margin: 0.5em;
+    
+}
+
+.audio2:hover{
+    box-shadow: 10px 10px 20px black;
+    transform: translateY(-4%);
+}
+
+/*----Canciones----*/
+
+.imgCancion{
+    display: flex;
+    background:#272727 ;
+    margin: 20px 0;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 85%;
+    transition: all 0.5s;
+}
+
+.imgCancion:hover{
+    transform: translateY(-8%);
+}
+
+.small-img{
+    position: relative;
+}
+.small-img img{
+    width: 110px;
+}
+
+.imgCancion p{
+    color: white;
+    font-size: 14px;
+}
+
+.small-img .play-btn{
+    width: 35px;
+}
+
+.small-img .play-btn{
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;   
+}
+
+/*----media queries----*/
+@media all and (max-width: 767px){
+    /*----Banner principal----*/
+    #imgC .img-container h2 {
+        font-size: 2rem;
+      
+    }
+    #imgC .img-container p{
+        font-size: 12px;
+        -webkit-text-stroke-width: 0.2px;
+        -webkit-text-stroke-color: black;
+    }
+    .btn-naranja{
+        font-size: 10px;
+    }
+    #textArtistas{
+        font-size: 28px;
+    }
+
+    /*----Canciones mas escuchadas----*/
+    .imgCancion{
+        width: 80%;        
+    }
+    .small-img img{
+        width: 60px;
+    }
+    .imgCancion p{
+        font-size: 10px;
+    }
+    .small-img .play-btn{
+        width: 25px;
+    }
+    .small-img .play-btn{
+        width: 20px;
+    }
+
+    /*----Artistas populares----*/
+    .swiper-button-next,
+    .swiper-button-prev{
+    width:16px;
+    height: 16px;    
+  }
+
+   .swiper-button-next::after,
+   .swiper-button-prev::after {
+    font-size: 6px;
+  }
+  
+  .swiper-button-next:hover {
+    transform: scale(1.2) translateX(60%);
+  }
+
+  .swiper-button-prev:hover {
+    transform: scale(1.2) translateX(-60%);
+  }
+
+  .swiper-button-next {
+    transform: translateX(80%);
+  }
+
+  .swiper-button-prev {
+    transform: translateX(-80%);
+  }
+
+  .swiper-pagination {
+    transform: translateY(30%);
+  }
+  .swiper-pagination-bullet {
+    background: #fff;
+    width: 10px;
+    height: 10px;
+  }
+
+
+}
+    
+
