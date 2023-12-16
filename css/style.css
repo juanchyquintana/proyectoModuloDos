@@ -128,7 +128,7 @@ nav {
 #boton-verMas {
   background-image: linear-gradient(135deg, #2bdddd, #1600df);
 }
-#boton-agregar{
+#boton-agregar, #boton-actualizar{
   background-image: linear-gradient(135deg, #f16642, #1600df);
 }
 

@@ -108,7 +108,7 @@ const crearFila = (cancion, fila) => {
      <span class="bn39span">Borrar</span>
      </button>
      <button class="boton" id="boton-editar" onclick="mostrarModal('${cancion.id}')">
-     <span class="bn39span">editar</span>
+     <span class="bn39span">Editar</span>
      </button>
      <button class="boton" id="boton-verMas" onclick="eliminarCancion('${cancion.id}')">
      <span class="bn39span">Ver mas</span>
@@ -174,7 +174,7 @@ const actualizarMusica = (e) => {
 
   const tablaCanciones = document.querySelector("tbody");
   tablaCanciones.innerHTML = "";
-  for(i=0;i<musica.length;i++){
+  for(let i=0;i<musica.length;i++){
     crearFila(musica[i],i+1);
   }
 
