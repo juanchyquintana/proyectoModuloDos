@@ -1,10 +1,9 @@
 import Musica from "./classMusica.js";
 
-//const myModal = new bootstrap.Modal(document.getElementById('modalActualizar'), options)
-
 const musica = JSON.parse(localStorage.getItem("musicaKey")) || [];
 const formularioAgregarMusica = document.querySelector("#formularioMusica");
-const formularioActualizarMusica = new bootstrap.Modal(document.getElementById('modalActualizar'));
+const modalActualizarMusica = new bootstrap.Modal(document.getElementById('modalActualizar'));
+const formularioActualizarMusica = document.querySelector("#formularioMusicaActualizar")
 const nombreCancion = document.querySelector("#nombre");
 const artista = document.querySelector("#autor");
 const categoria = document.querySelector("#categoria");
@@ -117,10 +116,10 @@ const crearFila = (cancion, fila) => {
   </tr>`;
 };
 
+let idCancion = null;
 
-
-window.mostrarModal = (idCancion) => {
-  console.log("desde aca se llama al modal de actualizar")
+window.mostrarModal = (id) => {
+  idCancion = id;
   console.log(idCancion);
   let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
 
@@ -129,20 +128,20 @@ window.mostrarModal = (idCancion) => {
   categoriaActualizar.value = musica[posicionCancionBuscada].categoria;
   duracionActualizar.value = musica[posicionCancionBuscada].duracion;
 
-  formularioActualizarMusica.show();
+  modalActualizarMusica.show();
 }
-// const actualizarMusica = (e) => {
-//   let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
-
-//   posicionCancionBuscada[musica].titulo = nombreCancion.value;
-//   posicionCancionBuscada[musica].artista = artista.value; 
-//   posicionCancionBuscada[musica].categoria = categoria.value;
-//   posicionCancionBuscada[musica].duracion = duracion.value;
-
-//   crearFila(musicaNueva,musica.length);
-//   myModal.hide();
-// }
+const actualizarMusica = (e) => {
+  e.preventDefault();
+  let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
+  console.log(idCancion)
+  musica[posicionCancionBuscada].titulo = nombreCancionActualizar.value;
+  musica[posicionCancionBuscada].artista = artistaActualizar.value; 
+  musica[posicionCancionBuscada].categoria = categoriaActualizar.value;
+  musica[posicionCancionBuscada].duracion = duracionActualizar.value;
+  
+  guardarMusicaLocalStorage();
+  modalActualizarMusica.hide();
+}
 
 document.addEventListener("DOMContentLoaded", cargaInicial);
-//formularioActualizarMusica.addEventListener("submit", actualizarMusica);
-//document.addEventListener("DOMContentLoaded", actualizarMusica);
+formularioActualizarMusica.addEventListener("submit", actualizarMusica);
