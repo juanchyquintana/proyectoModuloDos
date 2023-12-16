@@ -56,6 +56,8 @@ const crearMusica = (e) => {
 
     limparFormularioMusicaAdmin();
 
+    crearFila(musicaNueva, musica.length);
+
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",
@@ -140,6 +142,13 @@ const actualizarMusica = (e) => {
   musica[posicionCancionBuscada].duracion = duracionActualizar.value;
   
   guardarMusicaLocalStorage();
+
+  const tablaCanciones = document.querySelector("tbody");
+  tablaCanciones.innerHTML = "";
+  for(i=0;i<musica.length;i++){
+    crearFila(musica[i],i+1);
+  }
+
   modalActualizarMusica.hide();
 }
 
