@@ -204,51 +204,7 @@
                 <th>Acción</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Nombre de la Canción 1</td>
-                <td>Autor 1</td>
-                <td>3:45</td>
-                <td class="d-sm-flex">
-                  <a
-                    type="button"
-                    class="boton m-2"
-                    id="boton-editar"
-                    href="./adminU.html"
-                  >
-                    <span class="bn39span">Editar</span>
-                  </a>
-                  <button type="button" class="boton m-2" id="boton-borrar">
-                    <span class="bn39span">Borrar</span>
-                  </button>
-                  <a type="button" class="boton m-2" id="boton-verMas" href="#">
-                    <span class="bn39span">Ver más</span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Nombre de la Canción 2</td>
-                <td>Autor 2</td>
-                <td>4:20</td>
-                <td class="d-sm-flex">
-                  <a
-                    type="button"
-                    class="boton m-2"
-                    id="boton-editar"
-                    href="./adminU.html"
-                  >
-                    <span class="bn39span">Editar</span>
-                  </a>
-                  <button type="button" class="boton m-2" id="boton-borrar">
-                    <span class="bn39span">Borrar</span>
-                  </button>
-                  <a type="button" class="boton m-2" id="boton-verMas" href="#">
-                    <span class="bn39span">Ver más</span>
-                  </a>
-                </td>
-              </tr>
+            <tbody id="tablaMusica">
             </tbody>
           </table>
         </div>
@@ -422,7 +378,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form id="formA">
+            <form id="formularioMusica formA">
               <div class="my-3">
                 <label class="form-label text-light" for="nombre"
                   >Nombre de la Canción</label
@@ -466,16 +422,28 @@
                 </select>
               </div>
               <div class="my-3">
-                <label class="form-label text-light" for="musica"
-                  >Insertar Música</label
+                <label class="form-label text-light" for="categoria"
+                  >Duración</label
                 >
+                <input
+                  type="text"
+                  id="duracion"
+                  class="form-control bg-black color-input"
+                  placeholder="Categoría de la Música"
+                  minlength="5"
+                  maxlength="5"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="my-3">
+                <label class="form-label text-light" for="musica">Insertar Música</label>
                 <input
                   type="file"
                   id="musica"
                   class="form-control bg-black color-input"
                   accept=".wap , .mp3, .ogg"
                   placeholder=""
-                  required
                 />
               </div>
               <button type="submit" class="boton mt-4" id="boton-agregar">
