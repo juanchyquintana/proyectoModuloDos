@@ -17,7 +17,7 @@
     />
     <link
       rel="shortcut icon"
-      href="../img/iconoRitmo.png"
+      href="../../img/iconoRitmo.png"
       type="image/x-icon"
     />
     <link
@@ -36,11 +36,11 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/detalle.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../../css/detalle.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <title>Ritmo Web - Reproductor de Música</title>
   </head>
-
+  
   <body>
     <header>
       <nav
@@ -49,9 +49,9 @@
       >
         <div class="container">
           <div class="rotate-center">
-            <a href="../index.html">
+            <a href="../../index.html">
               <img
-                src="../img/logoSinBarras.png"
+                src="../../img/logoSinBarras.png"
                 alt="Logo"
                 class="img-fluid logoWidth"
               />
@@ -90,21 +90,21 @@
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
                   aria-current="page"
-                  href="../index.html"
+                  href="../../index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./error404.html"
+                  href="../error404.html"
                   >Catalogo</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./premium.html"
+                  href="../premium.html"
                   >Premium</a
                 >
               </li>
@@ -123,14 +123,14 @@
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="./error404.html"
+                      href="../error404.html"
                       >Música</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="./error404.html"
+                      href="../error404.html"
                       >Podcast</a
                     >
                   </li>
@@ -140,7 +140,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./acercaNosotros.html"
+                  href="../acercaNosotros.html"
                   >Nosotros</a
                 >
               </li>
@@ -183,7 +183,7 @@
         <div class="row m-2 p-sm-3 bordePlayer">
           <div class="col-12 col-md-6 p-2 p-md-4 m-0">
             <img
-              src="../img/paginaPrincipal/cancion1.jpg"
+              src="../../img/paginaPrincipal/cancion4.jpg"
               class="tamanioImgCancion rounded-4"
               alt="img-album"
             />
@@ -192,16 +192,16 @@
           <div class="col-12 col-md-6 d-flex justify-content-around flex-column p-2 p-md-4 mt-4 mt-md-0">
             <div>
               <div class="d-flex justify-content-between">
-                <h2 class="fw-bold mb-1">Si No Estás</h2>
+                <h2 class="fw-bold mb-1">Acróstrico</h2>
                 <div class="playerBtnPequenio">
                   <i class="fa-regular fa-heart"></i>
                   <i class="fa-solid fa-heart d-none"></i>
                 </div>
               </div>
               <div class="mb-1">
-                <a href="./error404.html" class="h5 estiloDetalle">Iñigo Quintero</a>
+                <a href="../error404.html" class="h5 estiloDetalle">Shakira</a>
                 <p class="h5 d-inline">/</p>
-                <a href="./error404.html" class="h5 estiloDetalle">Album</a>
+                <a href="../error404.html" class="h5 estiloDetalle">Album</a>
                 <p class="h5 d-inline">/</p>
                 <p class="h5 d-inline">2023</p>
               </div>
@@ -235,24 +235,27 @@
 
               <div class="playerDuracionAudio">
                 <div class="comienzoAudio" id="tiempoInput">00:00</div>
-                <div class="finAudio">03:04</div>
+                <div class="finAudio">02:50</div>
               </div>
 
               <audio id="audio" autoplay="false" preload="auto">
-                <source src="../assets/siNoEstasIñigo.mp3" type="audio/mpeg"/>
+                <source src="../../assets/acrosticroShakira.mp3" id="cancion" type="audio/mpeg"/>
               </audio>
 
               <div class="container">
                 <div class="row justify-content-evenly mb-2">
                   <div class="playerBtn playerBtnMediano">
-                    <i class="fa-solid fa-backward disabled text-secondary "></i>
+                    <a href="./cancionTres.html" class="link-dark">
+                        <i class="fa-solid fa-backward" id="volverIcon"></i>
+                    </a>
                   </div>
                   <div class="playerBtn playerBtnMediano">
                     <i class="fa-solid fa-play text-center" id="controlIcon" onclick="inciarPausar()"></i>
+                    <i class="fa-solid fa-pause pauseBtn d-none"></i>
                   </div>
                   <div class="playerBtn playerBtnMediano">
-                    <a href="./canciones/cancionDos.html" class="link-dark">
-                      <i class="fa-solid fa-forward" id="cambiarIcono"></i>
+                    <a href="./cancionCinco.html" class="link-dark">
+                      <i class="fa-solid fa-forward"></i>
                     </a>
                   </div>
                 </div>
@@ -270,7 +273,7 @@
             class="col-md-12 col-lg-3 text-center text-lg-start my-3 mb-lg-0"
           >
             <img
-              src="../img/logoSinBarras.png"
+              src="../../img/logoSinBarras.png"
               alt="logo de la empresa"
               class="logoWidth"
             />
@@ -281,21 +284,21 @@
             <ul class="list-unstyled">
               <li>
                 <a
-                  href="./error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >Acerca de
                 </a>
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >Empleo
                 </a>
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >For the Record
                 </a>
@@ -308,35 +311,35 @@
             <ul class="list-unstyled">
               <li>
                 <a
-                  href="./error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >Para artistas
                 </a>
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >Desarrolladores
                 </a>
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >Publicidad
                 </a>
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >Inversionistas
                 </a>
               </li>
               <li>
                 <a
-                  href="./error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >Provedores
                 </a>
@@ -349,21 +352,21 @@
             <ul class="list-unstyled">
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >Ayuda
                 </a>
               </li>
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >Reproductor Web
                 </a>
               </li>
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                   >App móvil gratis
                 </a>
@@ -376,7 +379,7 @@
             <ul class="list-unstyled d-flex justify-content-center gap-4">
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-facebook"></i>
@@ -384,7 +387,7 @@
               </li>
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-twitter-x"></i>
@@ -392,7 +395,7 @@
               </li>
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="../error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-instagram"></i>
@@ -419,7 +422,7 @@
       src="https://kit.fontawesome.com/8d7d957392.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/funcionalidadMusica.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="../../js/funcionalidadMusica.js"></script>
+    <script src="../../js/app.js"></script>
   </body>
 </html>
