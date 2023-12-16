@@ -17,6 +17,7 @@ const loginAdministrador = (e) =>{
         window.setInterval(cerrarModal,2000);
     }else{
         alertLoginError();
+        limpiarFormularioInicioSesion();
     }
     
 }
