@@ -1,5 +1,7 @@
 import Musica from "./classMusica.js";
 
+//const myModal = new bootstrap.Modal(document.getElementById('modalCrear'), options)
+
 const musica = JSON.parse(localStorage.getItem("musicaKey")) || [];
 const formularioAgregarMusica = document.querySelector("#formularioMusica");
 const nombreCancion = document.querySelector("#nombre");
@@ -80,10 +82,10 @@ formularioAgregarMusica.addEventListener("submit", crearMusica);
 
 
 const cargaInicial = () => {
-  const musicaAlmacenada = JSON.parse(localStorage.getItem("musicaKey")) || [];
+  ///const musicaAlmacenada = JSON.parse(localStorage.getItem("musicaKey")) || [];
 
-  if (musicaAlmacenada.length > 0) {
-    musicaAlmacenada.map((cancion, posicion) =>
+  if (musica.length > 0) {
+    musica.map((cancion, posicion) =>
       crearFila(cancion, posicion + 1)
     );
   }
@@ -97,10 +99,10 @@ const crearFila = (cancion, fila) => {
     <td>${cancion.artista}</td>
     <td>${cancion.duracion}</td>
     <td class= "d-md-flex gap-3">
-     <button class="boton" id="boton-borrar" onclick="eliminarCancion('${cancion.id}')">
+     <button class="boton" id="boton-borrar" onclick="eliminarCancion('${cancion.id}')"">
      <span class="bn39span">Borrar</span>
      </button>
-     <button class="boton" id="boton-editar" onclick="eliminarCancion('${cancion.id}')">
+     <button class="boton" id="boton-editar" onclick="mostrarModal('${cancion.id}')">
      <span class="bn39span">editar</span>
      </button>
      <button class="boton" id="boton-verMas" onclick="eliminarCancion('${cancion.id}')">
@@ -109,5 +111,33 @@ const crearFila = (cancion, fila) => {
     </td>
   </tr>`;
 };
+/*
+let idCancion = null;
+
+window.mostrarModal = (id) => {
+  console.log(id);
+  idCancion = id;
+  let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
+
+  nombreCancion.value = posicionCancionBuscada[musica].titulo;
+  artista.value = posicionCancionBuscada[musica].artista;
+  categoria.value = posicionCancionBuscada[musica].categoria;
+  duracion.value = posicionCancionBuscada[musica].duracion;
+
+  myModal.show;
+}
+const actualizarMusica = (e) => {
+  let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
+
+  posicionCancionBuscada[musica].titulo = nombreCancion.value;
+  posicionCancionBuscada[musica].artista = artista.value; 
+  posicionCancionBuscada[musica].categoria = categoria.value;
+  posicionCancionBuscada[musica].duracion = duracion.value;
+
+  crearFila(musicaNueva,musica.length);
+  myModal.hide;
+}
+*/
 
 document.addEventListener("DOMContentLoaded", cargaInicial);
+//document.addEventListener("DOMContentLoaded", actualizarMusica);
