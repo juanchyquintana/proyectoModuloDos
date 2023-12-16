@@ -1,4 +1,4 @@
-const form = document.getElementById("formA"),
+const form = document.getElementsByClassName("formA")[0],
   nombre = document.getElementById("nombre"),
   autor = document.getElementById("autor"),
   categoria = document.getElementById("categoria"),
@@ -67,7 +67,7 @@ function validacionTotal(e) {
     musicaTexto = "<p>No hay musica</p>";
   }
   if (nombreBool && autorBool && categoriaBool && musicaBool) {
-    form.reset();
+    return;
   } else {
     Swal.fire({
       title: "<strong>Opcion invalida</strong>",

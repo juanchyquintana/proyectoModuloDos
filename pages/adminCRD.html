@@ -204,8 +204,7 @@
                 <th>Acción</th>
               </tr>
             </thead>
-            <tbody id="tablaMusica">
-            </tbody>
+            <tbody id="tablaMusica"></tbody>
           </table>
         </div>
       </section>
@@ -378,7 +377,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form id="formularioMusica formA">
+            <form class="formA" id="formularioMusica">
               <div class="my-3">
                 <label class="form-label text-light" for="nombre"
                   >Nombre de la Canción</label
@@ -437,7 +436,9 @@
                 />
               </div>
               <div class="my-3">
-                <label class="form-label text-light" for="musica">Insertar Música</label>
+                <label class="form-label text-light" for="musica"
+                  >Insertar Música</label
+                >
                 <input
                   type="file"
                   id="musica"
@@ -460,8 +461,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/app.js"></script>
     <script src="../js/validaciones.js"></script>
+    <script src="../js/crud.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
