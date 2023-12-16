@@ -35,6 +35,8 @@ const alertLoginError = () =>{
         icon: "error",
         title: "Oops...",
         text: "Usuario o contraseña incorrectos! vuelve a intentarlo..",
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: "#f18b42",
       });
 }
 
@@ -44,7 +46,6 @@ const alertLoginOk = () =>{
         position: "top-end",
         showConfirmButton: false,
         timer: 2000,
-        // timerProgressBar: true,
         didOpen: (toast) => {
           toast.onmouseenter = Swal.stopTimer;
           toast.onmouseleave = Swal.resumeTimer;
@@ -52,7 +53,7 @@ const alertLoginOk = () =>{
       });
       Toast.fire({
         icon: "success",
-        title: "Signed in successfully"
+        title: "Bienvenido administrador",
       });
 }
 
