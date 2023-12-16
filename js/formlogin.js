@@ -16,7 +16,7 @@ const loginAdministrador = (e) =>{
         limpiarFormularioInicioSesion();
         window.setInterval(cerrarModal,2000);
     }else{
-        alert('Usuario y contraseña no existentes');
+        alertLoginError();
     }
     
 }
@@ -27,6 +27,14 @@ const cerrarModal = () =>{
 
 const limpiarFormularioInicioSesion = () =>{
     formIniciarSesion.reset();
+}
+
+const alertLoginError = () =>{
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Usuario o contraseña incorrectos! vuelve a intentarlo..",
+      });
 }
 
 const alertLoginOk = () =>{
