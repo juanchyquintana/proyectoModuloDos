@@ -1,4 +1,4 @@
-const form = document.getElementsByClassName("formA")[0],
+const form = document.querySelector(".formA"),
   nombre = document.getElementById("nombre"),
   autor = document.getElementById("autor"),
   categoria = document.getElementById("categoria"),
@@ -45,8 +45,8 @@ function validarMusica() {
 }
 function validacionTotal(e) {
   e.preventDefault();
-  const nombreBool = validarCaracteres(nombre, 100, 3),
-    autorBool = validarCaracteres(autor, 70, 3),
+  const nombreBool = validarCaracteres(nombre, 50, 3),
+    autorBool = validarCaracteres(autor, 35, 3),
     categoriaBool = validarCategoria(),
     musicaBool = validarMusica();
   let tituloTexto = "titulo valida",

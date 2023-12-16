@@ -182,7 +182,7 @@
         <h2 id="admin-titulo" class="text-center">
           Editar la Canción: {nombre de la cancion}
         </h2>
-        <form class="formA my-4" id="formularioMusica"></form>
+        <form class="formA" id="formularioMusica">
           <div class="my-3">
             <label class="form-label text-light" for="nombre"
               >Nombre de la Canción</label
@@ -193,7 +193,7 @@
               class="form-control bg-black color-input"
               placeholder="Título de la Música"
               minlength="3"
-              maxlength="100"
+              maxlength="50"
               autocomplete="off"
               required
             />
@@ -206,14 +206,14 @@
               class="form-control bg-black color-input"
               placeholder="Nombre de la Banda o del Artista"
               minlength="3"
-              maxlength="70"
+              maxlength="35"
               autocomplete="off"
               required
             />
           </div>
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="categoria">Categoria</label>
-            <select class="form-select bg-black color-input" id="categoria">
+          <div class="input-group">
+            <label class="input-group-text my-3" for="categoria">Categoria</label>
+            <select class="form-select bg-black color-input my-3" id="categoria">
               <option value="pop">pop</option>
               <option value="k-pop">k-pop</option>
               <option value="rock">rock</option>
@@ -222,6 +222,21 @@
               <option value="folcklore">folcklore</option>
               <option value="rap">rap</option>
             </select>
+          </div>
+          <div class="my-3">
+            <label class="form-label text-light" for="duracion"
+              >Duración</label
+            >
+            <input
+              type="text"
+              id="duracion"
+              class="form-control bg-black color-input"
+              placeholder="Categoría de la Música"
+              minlength="5"
+              maxlength="5"
+              autocomplete="off"
+              required
+            />
           </div>
           <div class="my-3">
             <label class="form-label text-light" for="musica"
@@ -400,8 +415,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="../js/app.js"></script> -->
     <script src="../js/validaciones.js"></script>
+    <script src="../js/crud.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
