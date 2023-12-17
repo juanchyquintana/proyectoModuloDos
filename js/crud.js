@@ -172,13 +172,17 @@ const actualizarMusica = (e) => {
   
   guardarMusicaLocalStorage();
 
+  recargarTabla();
+
+  modalActualizarMusica.hide();
+}
+
+const recargarTabla = () => {
   const tablaCanciones = document.querySelector("tbody");
   tablaCanciones.innerHTML = "";
   for(let i=0;i<musica.length;i++){
     crearFila(musica[i],i+1);
   }
-
-  modalActualizarMusica.hide();
 }
 
 document.addEventListener("DOMContentLoaded", cargaInicial);
