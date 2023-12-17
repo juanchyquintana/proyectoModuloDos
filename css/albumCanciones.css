@@ -1,0 +1,24 @@
+#fondoAlbum{
+    background: #ffcd9f;
+  }
+
+  #iHeart{
+    color:#f16642;
+  }
+
+  #iHeart:hover{
+    transform: translateY(-10%);
+  }
+
+  li:hover{
+    transform: translateY(-6%);
+  }
+
+  li{
+    transition: all (1.2);
+  }
+
+  #iPlay{
+    color:#f16642;
+  }
+  
