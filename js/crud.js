@@ -112,7 +112,7 @@ const crearFila = (cancion, fila) => {
      <button class="boton" id="boton-borrar" onclick="eliminarCancion('${cancion.id}')"">
      <span class="bn39span">Borrar</span>
      </button>
-     <button class="boton" id="boton-editar" onclick="mostrarModal('${cancion.id}')">
+     <button class="boton" id="boton-editar" onclick="mostrarModalActualizar('${cancion.id}')">
      <span class="bn39span">Editar</span>
      </button>
      <button class="boton" id="boton-verMas" onclick="verMasCancion('${cancion.id}')">
@@ -147,6 +147,7 @@ const crearFila = (cancion, fila) => {
           text: "La canción seleccionada fue eliminada correctamente",
           icon: "success",
         });
+        recargarTabla();
       }
     });
   };
@@ -154,7 +155,7 @@ const crearFila = (cancion, fila) => {
 
 let idCancion = null;
 
-window.mostrarModal = (id) => {
+window.mostrarModalActualizar = (id) => {
   idCancion = id;
   console.log(idCancion);
   let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
