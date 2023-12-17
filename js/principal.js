@@ -1,7 +1,8 @@
 
 const usuario = {
   usuario: "administrador",
-  contrasenia: "admin1234"
+  contrasenia: "admin1234",
+  enSesion: false
 }
 
 const guardarEnLocal = () =>{
