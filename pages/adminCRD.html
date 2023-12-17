@@ -204,8 +204,7 @@
                 <th>Acción</th>
               </tr>
             </thead>
-            <tbody id="tablaMusica">
-            </tbody>
+            <tbody id="tablaMusica"></tbody>
           </table>
         </div>
       </section>
@@ -378,7 +377,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form id="formularioMusica">
+            <form class="formA" id="formularioMusica">
               <div class="my-3">
                 <label class="form-label text-light" for="nombre"
                   >Nombre de la Canción</label
@@ -407,23 +406,22 @@
                   required
                 />
               </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="categoria"
-                  >Categoría</label
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="categoria"
+                  >Categoria</label
                 >
-                <input
-                  type="text"
-                  id="categoria"
-                  class="form-control bg-black color-input"
-                  placeholder="Categoría de la Música"
-                  minlength="1"
-                  maxlength="70"
-                  autocomplete="off"
-                  required
-                />
+                <select class="form-select bg-black color-input" id="categoria">
+                  <option value="pop">pop</option>
+                  <option value="k-pop">k-pop</option>
+                  <option value="rock">rock</option>
+                  <option value="cumbia">cumbia</option>
+                  <option value="electronica">electronica</option>
+                  <option value="folcklore">folcklore</option>
+                  <option value="rap">rap</option>
+                </select>
               </div>
               <div class="my-3">
-                <label class="form-label text-light" for="categoria"
+                <label class="form-label text-light" for="duracion"
                   >Duración</label
                 >
                 <input
@@ -438,12 +436,14 @@
                 />
               </div>
               <div class="my-3">
-                <label class="form-label text-light" for="musica">Insertar Música</label>
+                <label class="form-label text-light" for="musica"
+                  >Insertar Música</label
+                >
                 <input
                   type="file"
                   id="musica"
                   class="form-control bg-black color-input"
-                  accept=".wap , .mp3"
+                  accept=".wap , .mp3, .ogg"
                   placeholder=""
                 />
               </div>
@@ -635,7 +635,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/validaciones.js"></script>
     <script src="../js/crud.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
