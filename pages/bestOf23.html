@@ -36,15 +36,24 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/detalle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/1993cd3f3e.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Ritmo Web - Reproductor de Música</title>
+    <link rel="stylesheet" href="../css/paginaPrincipal.css" />
+    <link rel="stylesheet" href="../css/albumCanciones.css" />
+    <title>Ritmo Web - Inicio</title>
   </head>
 
   <body>
     <header>
       <nav
-        class="navbar bg-dark navbar-light navbar-expand-lg shadow"
+        class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh"
         data-bs-theme="dark"
       >
         <div class="container">
@@ -57,6 +66,7 @@
               />
             </a>
           </div>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -155,7 +165,7 @@
                 >
                   <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-lg-end">
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
@@ -179,203 +189,220 @@
     </header>
 
     <main>
-      <section class="container mt-4 mt-sm-5">
-        <div class="row m-2 p-sm-3 bordePlayer">
-          <div class="col-12 col-md-6 p-2 p-md-4 m-0">
-            <img
-              src="../img/paginaPrincipal/cancion1.jpg"
-              class="tamanioImgCancion rounded-4"
-              alt="img-album"
-            />
-          </div>
-
-          <div class="col-12 col-md-6 d-flex justify-content-around flex-column p-2 p-md-4 mt-4 mt-md-0">
-            <div>
-              <div class="d-flex justify-content-between">
-                <h2 class="fw-bold mb-1">Si No Estás</h2>
-                <div class="playerBtnPequenio">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart d-none"></i>
-                </div>
-              </div>
-              <div class="mb-1">
-                <a href="./error404.html" class="h5 estiloDetalle">Iñigo Quintero</a>
-                <p class="h5 d-inline">/</p>
-                <a href="./error404.html" class="h5 estiloDetalle">Album</a>
-                <p class="h5 d-inline">/</p>
-                <p class="h5 d-inline">2023</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <h6 class="mb-1">Pop</h6>
-                <button class="botonCompartir fw-bold"><i class="fa-solid fa-share me-1"></i>Compartir</button>
-              </div>
-            </div>
-            <div class="d-flex align-items-center flex-column">
-              <div class="container mt-5 px-0">
-                <div class="row mb-2">
-                  <div class="col-6 playerBtn justify-content-start px-0 playerBtnPequenio">
-                    <i class="fa-solid fa-circle-plus ms-3"></i>
-                    <i class="fa-solid fa-circle-check ms-3 d-none"></i>
-                  </div>
-                  <div class="col-6 playerBtn justify-content-end px-0 playerBtnPequenio">
-                    <i class="fa-solid fa-volume-high me-3" id="iconoMuted" onclick="mutearCancion()"></i>
-                    <i class="fa-solid fa-repeat me-3 text-secondary"></i>
-                    <i class="fa-solid fa-shuffle me-3 text-secondary"></i>
-                  </div>
-                </div>
-              </div>
-              <input
-                type="range"
-                class="playerInput"
-                id="progresoMusica"
-                min="0"
-                step="1"
-                value="0"
+      <section class="container my-3 pt-5" id="fondoAlbum">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="../img/paginaPrincipal/best2023poplatino.jpg"
+                class="img-fluid rounded-start"
+                alt="Album Abel Pintos"
               />
-
-              <div class="playerDuracionAudio">
-                <div class="comienzoAudio" id="tiempoInput">00:00</div>
-                <div class="finAudio">03:04</div>
-              </div>
-
-              <audio id="audio" autoplay="false" preload="auto">
-                <source src="../assets/siNoEstasIñigo.mp3" type="audio/mpeg"/>
-              </audio>
-
-              <div class="container">
-                <div class="row justify-content-evenly mb-2">
-                  <div class="playerBtn playerBtnMediano">
-                    <i class="fa-solid fa-backward disabled text-secondary "></i>
-                  </div>
-                  <div class="playerBtn playerBtnMediano">
-                    <i class="fa-solid fa-play text-center" id="controlIcon" onclick="inciarPausar()"></i>
-                  </div>
-                  <div class="playerBtn playerBtnMediano">
-                    <a href="./canciones/cancionDos.html" class="link-dark">
-                      <i class="fa-solid fa-forward" id="cambiarIcono"></i>
-                    </a>
-                  </div>
-                </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="text-light">Álbum</p>
+                <h2 class="card-title text-light">Best Of 2023: Pop Latino</h2>
+                <p class="card-text text-light">
+                  2023 - 16 canciones, 44 min 58 s
+                </p>
+                <a href="#" class="btn fs-3" id="reaccion"
+                  ><i class="fas fa-heart" id="iHeart"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="modal" tabindex="-1" id="loginModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <section class="container d-md-flex justify-content-md-center mt-3 p-lg-2">
-              <div class="login-container h-auto p-lg-4 form-container" id="loginForm">
-                <div class="d-md-flex justify-content-md-center align-items-md-center">
-                  <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
-                  <h3>Iniciar sesión</h3>
+        <div class="container my-4 py-3">
+          <ol class="list-group list-group-numbered">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Shakira:
+                  Bzrp Music Sessions, Vol.53
                 </div>
-                <form class="mt-md-4">
-                  <label for="usuario">Usuario:</label>
-                  <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana23" type="text" id="usuario"
-                    minlength="7" maxlength="20" required>
-                  <label class="mt-1" for="contrasena">Contraseña:</label>
-                  <div class="input-group">
-                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana24d" type="password"
-                      id="contrasena1" minlength="4" maxlength="10" required>
-                    <div class="input-group-append">
-                      <span class="btn-light toggle-password" data-target="contrasena1">
-                        <i class="bi bi-eye-fill"></i>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="form-check  d-flex p-0 mt-2 ">
-                    <input class="mt-2 " type="checkbox">
-                    <label class=" form-check-label" id="recordarlabel" for="recordar">Recordar
-                      usuario</label>
-                  </div>
-                  <button class="btn btn-naranja text-white p-2 w-50 my-3" type="submit">Iniciar
-                    sesión</button>
-                </form>
-                <div class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center">
-                  <a href="#">¿Olvidaste tu contraseña?</a>
-                  <a href="#">¿No eres usuario? ¡Regístrate!</a>
-                </div>
+                Bizarrap & Shakira
               </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="modal" tabindex="-1" id="registerModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <section class="container d-md-flex justify-content-md-center mt-2 p-lg-2">
-              <div class="login-container h-auto p-lg-4 form-container" id="registerForm">
-                <div class="d-md-flex justify-content-md-center align-items-md-center">
-                  <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
-                  <h3>Registrarse</h3>
+              <span class="badge bg-secondary rounded-pill me-3">3.35 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Tenemos
+                  que hablar
                 </div>
-                <form class="mt-md-4">
-                  <label for="nombre">Nombre:</label>
-                  <input class="inputMod border-0 w-100 p-2 rounded" placeholder="luis mario alberto" type="text"
-                    id="nombre" minlength="10" maxlength="20" required>
-
-                  <label class="mt-1" for="email">Correo electrónico:</label>
-                  <input class="inputMod border-0 w-100 p-2 rounded" placeholder="albertoluismario@gmail.com"
-                    type="email" minlength="20" maxlength="35" id="email" required>
-
-                  <label class="mt-1" for="contrasena">Contraseña:</label>
-                  <div class="input-group mt-2">
-                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
-                      id="contrasena2" minlength="4" maxlength="10" required>
-                    <div class="input-group-append">
-                      <span class="btn-light toggle-password" data-target="contrasena2">
-                        <i class="bi bi-eye-fill"></i>
-                      </span>
-                    </div>
-                  </div>
-                  <label class="mt-1" for="contrasena">Confirmar contraseña:</label>
-                  <div class="input-group mt-2">
-                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
-                      id="contrasena2" minlength="4" maxlength="10" required>
-                    <div class="input-group-append">
-                      <span class="btn-light toggle-password" data-target="contrasena2">
-                        <i class="bi bi-eye-fill"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="form-check d-flex p-0 mt-2">
-                    <input class="mt-2" type="checkbox" id="recordar" required>
-                    <label class="form-check-label" id="recordarlabel" for="recordar">Acepto los
-                      términos y
-                      condiciones</label>
-                  </div>
-                  <button class="btn btn-naranja text-white p-2 w-50 my-3" type="submit">Registrarse</button>
-                </form>
-                <div class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center">
-                  <p>o regístrate con:</p>
-                  <div class="redesSociales d-lg-flex flex-lg-row w-100 justify-content-center mb-3">
-                    <a href="./error404.html" class="btn btn-primary text-white me-lg-2 d-none d-md-inline"><i
-                        class="bi bi-facebook"></i> Facebook</a>
-                    <a href="./error404.html" class="btn btn-danger btn-google text-white d-none d-md-inline"> <i
-                        class="bi bi-google"></i> Google</a>
-                  </div>
-                  <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
-                </div>
+                Danna Paola
               </div>
-            </section>
-          </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.10 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Los Babys
+                </div>
+                Aitana
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.34 s</span>
+            </li>
+
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Cupido
+                </div>
+                TINI
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.54 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Plan
+                </div>
+                Alex Ponce
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.19 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Ajedrez
+                </div>
+                Davis Bisbal
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.29 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Nuestra
+                  Canción
+                </div>
+                GALE
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.33 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Coco Loco
+                </div>
+                Maluma
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.47 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Energía
+                  Bacana
+                </div>
+                Sebastián Yatra
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.28 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> TONTA
+                </div>
+                Nathy Peluso
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.24 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Oxígeno
+                </div>
+                Alvaro Soler
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.35 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Todo
+                  Contigo
+                </div>
+                Álvaro De Luna
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.46 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> TUYA
+                </div>
+                Rosalía
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.35 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Corazón
+                  Vacío
+                </div>
+                María Becerra
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.41 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Madrid
+                  City
+                </div>
+                Ana Mena
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.53 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> VAGABUNDO
+                </div>
+                Sebastián Yatra, Manuel Turizo & Beéle
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.36 s</span>
+            </li>
+          </ol>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
     <footer class="bg-dark shadow mt-5 py-5 footerBorder" data-bs-theme="dark">
       <section class="container">
@@ -463,21 +490,21 @@
             <ul class="list-unstyled">
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Ayuda
                 </a>
               </li>
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Reproductor Web
                 </a>
               </li>
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >App móvil gratis
                 </a>
@@ -490,7 +517,7 @@
             <ul class="list-unstyled d-flex justify-content-center gap-4">
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-facebook"></i>
@@ -498,7 +525,7 @@
               </li>
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-twitter-x"></i>
@@ -506,7 +533,7 @@
               </li>
               <li>
                 <a
-                  href="../pages/error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-instagram"></i>
@@ -529,11 +556,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://kit.fontawesome.com/8d7d957392.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../js/funcionalidadMusica.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/principal.js"></script>
   </body>
 </html>
