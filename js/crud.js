@@ -2,11 +2,17 @@ import Musica from "./classMusica.js";
 
 const musica = JSON.parse(localStorage.getItem("musicaKey")) || [];
 const formularioAgregarMusica = document.querySelector("#formularioMusica");
+const modalActualizarMusica = new bootstrap.Modal(document.getElementById('modalActualizar'));
+const formularioActualizarMusica = document.querySelector("#formularioMusicaActualizar")
 const nombreCancion = document.querySelector("#nombre");
 const artista = document.querySelector("#autor");
 const categoria = document.querySelector("#categoria");
 const imagen = document.querySelector("#musica");
 const duracion = document.querySelector("#duracion");
+const nombreCancionActualizar = document.querySelector("#nombreActualizar");
+const artistaActualizar = document.querySelector("#autorActualizar");
+const categoriaActualizar = document.querySelector("#categoriaActualizar");
+const duracionActualizar = document.querySelector("#duracionActualizar");
 let patronDuracionCancion =
   /^(?:(?:(?:(?:[0-5]?[0-9]):)?[0-5]?[0-9])|(?:(?:[0-5]?[0-9])s))$/;
 
@@ -50,6 +56,8 @@ const crearMusica = (e) => {
 
     limparFormularioMusicaAdmin();
 
+    crearFila(musicaNueva, musica.length);
+
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",
@@ -79,10 +87,10 @@ const limparFormularioMusicaAdmin = () => {
 formularioAgregarMusica.addEventListener("submit", crearMusica);
 
 const cargaInicial = () => {
-  const musicaAlmacenada = JSON.parse(localStorage.getItem("musicaKey")) || [];
+  ///const musicaAlmacenada = JSON.parse(localStorage.getItem("musicaKey")) || [];
 
-  if (musicaAlmacenada.length > 0) {
-    musicaAlmacenada.map((cancion, posicion) =>
+  if (musica.length > 0) {
+    musica.map((cancion, posicion) =>
       crearFila(cancion, posicion + 1)
     );
   }
@@ -96,11 +104,11 @@ const crearFila = (cancion, fila) => {
     <td>${cancion.artista}</td>
     <td>${cancion.duracion}</td>
     <td class= "d-md-flex gap-3">
-     <button class="boton" id="boton-borrar" onclick="eliminarCancion('${cancion.id}')">
+     <button class="boton" id="boton-borrar" onclick="eliminarCancion('${cancion.id}')"">
      <span class="bn39span">Borrar</span>
      </button>
-     <button class="boton" id="boton-editar" onclick="eliminarCancion('${cancion.id}')">
-     <span class="bn39span">editar</span>
+     <button class="boton" id="boton-editar" onclick="mostrarModal('${cancion.id}')">
+     <span class="bn39span">Editar</span>
      </button>
      <button class="boton" id="boton-verMas" onclick="eliminarCancion('${cancion.id}')">
      <span class="bn39span">Ver mas</span>
@@ -139,4 +147,43 @@ const crearFila = (cancion, fila) => {
   };
 };
 
+let idCancion = null;
+
+window.mostrarModal = (id) => {
+  idCancion = id;
+  console.log(idCancion);
+  let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
+
+  nombreCancionActualizar.value = musica[posicionCancionBuscada].titulo;
+  artistaActualizar.value = musica[posicionCancionBuscada].artista;
+  categoriaActualizar.value = musica[posicionCancionBuscada].categoria;
+  duracionActualizar.value = musica[posicionCancionBuscada].duracion;
+
+  modalActualizarMusica.show();
+}
+const actualizarMusica = (e) => {
+  e.preventDefault();
+  let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
+  console.log(idCancion)
+  musica[posicionCancionBuscada].titulo = nombreCancionActualizar.value;
+  musica[posicionCancionBuscada].artista = artistaActualizar.value; 
+  musica[posicionCancionBuscada].categoria = categoriaActualizar.value;
+  musica[posicionCancionBuscada].duracion = duracionActualizar.value;
+  
+  guardarMusicaLocalStorage();
+
+  recargarTabla();
+
+  modalActualizarMusica.hide();
+}
+
+const recargarTabla = () => {
+  const tablaCanciones = document.querySelector("tbody");
+  tablaCanciones.innerHTML = "";
+  for(let i=0;i<musica.length;i++){
+    crearFila(musica[i],i+1);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", cargaInicial);
+formularioActualizarMusica.addEventListener("submit", actualizarMusica);

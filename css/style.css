@@ -131,6 +131,10 @@ nav {
 #boton-agregar{
   background-image: linear-gradient(135deg, #f16642, #1600df);
 }
+#boton-actualizar{
+  background-image: linear-gradient(135deg, #f16642, #1600df);
+  width: 6em;
+}
 
 .boton {
   border-radius: 6px;
