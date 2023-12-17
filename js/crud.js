@@ -3,6 +3,7 @@ import Musica from "./classMusica.js";
 const musica = JSON.parse(localStorage.getItem("musicaKey")) || [];
 const formularioAgregarMusica = document.querySelector("#formularioMusica");
 const modalActualizarMusica = new bootstrap.Modal(document.getElementById('modalActualizar'));
+const modalVerMasMusica = new bootstrap.Modal(document.getElementById('modalVerMas'));
 const formularioActualizarMusica = document.querySelector("#formularioMusicaActualizar")
 const nombreCancion = document.querySelector("#nombre");
 const artista = document.querySelector("#autor");
@@ -13,6 +14,10 @@ const nombreCancionActualizar = document.querySelector("#nombreActualizar");
 const artistaActualizar = document.querySelector("#autorActualizar");
 const categoriaActualizar = document.querySelector("#categoriaActualizar");
 const duracionActualizar = document.querySelector("#duracionActualizar");
+const nombreCancionVerMas = document.querySelector("#nombreVerMas");
+const artistaVerMas = document.querySelector("#autorVerMas");
+const categoriaVerMas = document.querySelector("#categoriaVerMas");
+const duracionVerMas = document.querySelector("#duracionVerMas");
 let patronDuracionCancion =
   /^(?:(?:(?:(?:[0-5]?[0-9]):)?[0-5]?[0-9])|(?:(?:[0-5]?[0-9])s))$/;
 
@@ -110,7 +115,7 @@ const crearFila = (cancion, fila) => {
      <button class="boton" id="boton-editar" onclick="mostrarModal('${cancion.id}')">
      <span class="bn39span">Editar</span>
      </button>
-     <button class="boton" id="boton-verMas" onclick="eliminarCancion('${cancion.id}')">
+     <button class="boton" id="boton-verMas" onclick="verMasCancion('${cancion.id}')">
      <span class="bn39span">Ver mas</span>
      </button>
     </td>
@@ -161,6 +166,7 @@ window.mostrarModal = (id) => {
 
   modalActualizarMusica.show();
 }
+
 const actualizarMusica = (e) => {
   e.preventDefault();
   let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
@@ -183,6 +189,19 @@ const recargarTabla = () => {
   for(let i=0;i<musica.length;i++){
     crearFila(musica[i],i+1);
   }
+}
+
+window.verMasCancion = (id) => {
+  idCancion = id;
+  console.log(idCancion);
+  let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
+
+  nombreCancionVerMas.value = musica[posicionCancionBuscada].titulo;
+  artistaVerMas.value = musica[posicionCancionBuscada].artista;
+  categoriaVerMas.value = musica[posicionCancionBuscada].categoria;
+  duracionVerMas.value = musica[posicionCancionBuscada].duracion;
+
+  modalVerMasMusica.show();
 }
 
 document.addEventListener("DOMContentLoaded", cargaInicial);
