@@ -17,7 +17,7 @@
     />
     <link
       rel="shortcut icon"
-      href="../../img/iconoRitmo.png"
+      href="../img/iconoRitmo.png"
       type="image/x-icon"
     />
     <link
@@ -36,27 +36,37 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../css/detalle.css" />
-    <link rel="stylesheet" href="../../css/style.css" />
-    <title>Ritmo Web - Reproductor de Música</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/1993cd3f3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/paginaPrincipal.css" />
+    <link rel="stylesheet" href="../css/albumCanciones.css" />
+    <title>Ritmo Web - Alicia Keys</title>
   </head>
-  
+
   <body>
     <header>
       <nav
-        class="navbar bg-dark navbar-light navbar-expand-lg shadow"
+        class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh"
         data-bs-theme="dark"
       >
         <div class="container">
           <div class="rotate-center">
-            <a href="../../index.html">
+            <a href="../index.html">
               <img
-                src="../../img/logoSinBarras.png"
+                src="../img/logoSinBarras.png"
                 alt="Logo"
                 class="img-fluid logoWidth"
               />
             </a>
           </div>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -90,28 +100,28 @@
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
                   aria-current="page"
-                  href="../../index.html"
+                  href="../index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="../error404.html"
+                  href="./error404.html"
                   >Catalogo</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="../premium.html"
+                  href="./premium.html"
                   >Premium</a
                 >
               </li>
 
               <li class="nav-item dropdown text-center">
                 <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
+                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover colorPrincipal"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -122,15 +132,15 @@
                 <ul class="dropdown-menu">
                   <li>
                     <a
-                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="../error404.html"
-                      >Música</a
+                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover colorPrincipal"
+                      href="./albumeSeccion.html"
+                      >Álbumes</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="../error404.html"
+                      href="./error404.html"
                       >Podcast</a
                     >
                   </li>
@@ -140,7 +150,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="../acercaNosotros.html"
+                  href="./acercaNosotros.html"
                   >Nosotros</a
                 >
               </li>
@@ -155,7 +165,7 @@
                 >
                   <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-lg-end">
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
@@ -179,90 +189,154 @@
     </header>
 
     <main>
-      <section class="container mt-4 mt-sm-5">
-        <div class="row m-2 p-sm-3 bordePlayer">
-          <div class="col-12 col-md-6 p-2 p-md-4 m-0">
-            <img
-              src="../../img/paginaPrincipal/cancion2.jpg"
-              class="tamanioImgCancion rounded-4"
-              alt="img-album"
-            />
-          </div>
-
-          <div class="col-12 col-md-6 d-flex justify-content-around flex-column p-2 p-md-4 mt-4 mt-md-0">
-            <div>
-              <div class="d-flex justify-content-between">
-                <h2 class="fw-bold mb-1">Bailando Bachata</h2>
-                <div class="playerBtnPequenio">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart d-none"></i>
-                </div>
-              </div>
-              <div class="mb-1">
-                <a href="../error404.html" class="h5 estiloDetalle">Chayanne</a>
-                <p class="h5 d-inline">/</p>
-                <a href="../error404.html" class="h5 estiloDetalle">Album</a>
-                <p class="h5 d-inline">/</p>
-                <p class="h5 d-inline">2023</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <h6 class="mb-1">Bachata</h6>
-                <button class="botonCompartir fw-bold"><i class="fa-solid fa-share me-1"></i>Compartir</button>
-              </div>
-            </div>
-            <div class="d-flex align-items-center flex-column">
-              <div class="container mt-5 px-0">
-                <div class="row mb-2">
-                  <div class="col-6 playerBtn justify-content-start px-0 playerBtnPequenio">
-                    <i class="fa-solid fa-circle-plus ms-3"></i>
-                    <i class="fa-solid fa-circle-check ms-3 d-none"></i>
-                  </div>
-                  <div class="col-6 playerBtn justify-content-end px-0 playerBtnPequenio">
-                    <i class="fa-solid fa-volume-high me-3" id="iconoMuted" onclick="mutearCancion()"></i>
-                    <i class="fa-solid fa-repeat me-3 text-secondary"></i>
-                    <i class="fa-solid fa-shuffle me-3 text-secondary"></i>
-                  </div>
-                </div>
-              </div>
-              <input
-                type="range"
-                class="playerInput"
-                id="progresoMusica"
-                min="0"
-                step="1"
-                value="0"
+      <section class="container my-3 pt-5" id="fondoAlbum">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="../img/paginaPrincipal/alicia-keys.jpg"
+                class="img-fluid rounded-start"
+                alt="Album Abel Pintos"
               />
-
-              <div class="playerDuracionAudio">
-                <div class="comienzoAudio" id="tiempoInput">00:00</div>
-                <div class="finAudio">02:50</div>
-              </div>
-
-              <audio id="audio" autoplay="false" preload="auto">
-                <source src="../../assets/bailandoBachata.mp3" type="audio/mpeg"/>
-              </audio>
-
-              <div class="container">
-                <div class="row justify-content-evenly mb-2">
-                  <div class="playerBtn playerBtnMediano">
-                    <a href="../detalle.html" class="link-dark">
-                      <i class="fa-solid fa-backward" id="volverIcon"></i>
-                  </a>
-                  </div>
-
-                  <div class="playerBtn playerBtnMediano">
-                    <i class="fa-solid fa-play text-center" id="controlIcon" onclick="inciarPausar()"></i>
-                  </div>
-
-                  <div class="playerBtn playerBtnMediano">
-                    <a href="./cancionTres.html" class="link-dark">
-                      <i class="fa-solid fa-forward"></i>
-                    </a>
-                  </div>
-                </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="text-light">Álbum</p>
+                <h2 class="card-title text-light">
+                  As I am (Expanded Edition)
+                </h2>
+                <p class="card-text text-light">
+                  Alicia Keys - 2007 - 10 canciones, 40 min 23 s.
+                </p>
+                <a href="#" class="btn fs-3" id="reaccion"
+                  ><i class="fas fa-heart" id="iHeart"></i
+                ></a>
               </div>
             </div>
           </div>
+        </div>
+        <div class="container my-4 py-3">
+          <ol class="list-group list-group-numbered">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> As I am
+                  (Intro)
+                </div>
+                Alicia Keys
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">1.52 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Go Ahead
+                </div>
+                Alicia Keys
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">4.35 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i>
+                  Superwoman
+                </div>
+                Alicia Keys
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">4.34 s</span>
+            </li>
+
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> No One
+                </div>
+                Alicia Keys
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">4.13 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Like
+                  You'll Never See Me Again
+                </div>
+                Alicia Keys
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">5.15 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Lesson
+                  Learned (feat. John Mayer)
+                </div>
+                Alicia Keys, John Mayer
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">4.13 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Wreckless
+                  Love
+                </div>
+                Alicia Keys
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.52 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> The Thing
+                  About Love
+                </div>
+                Alicia Keys
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.49 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Teenage
+                  Love Affair
+                </div>
+                Alicia Keys
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.10 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> I Need
+                  You
+                </div>
+                Alicia Keys
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">5.09 s</span>
+            </li>
+          </ol>
         </div>
       </section>
     </main>
@@ -274,7 +348,7 @@
             class="col-md-12 col-lg-3 text-center text-lg-start my-3 mb-lg-0"
           >
             <img
-              src="../../img/logoSinBarras.png"
+              src="../img/logoSinBarras.png"
               alt="logo de la empresa"
               class="logoWidth"
             />
@@ -285,21 +359,21 @@
             <ul class="list-unstyled">
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Acerca de
                 </a>
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Empleo
                 </a>
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >For the Record
                 </a>
@@ -312,35 +386,35 @@
             <ul class="list-unstyled">
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Para artistas
                 </a>
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Desarrolladores
                 </a>
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Publicidad
                 </a>
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Inversionistas
                 </a>
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Provedores
                 </a>
@@ -353,21 +427,21 @@
             <ul class="list-unstyled">
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Ayuda
                 </a>
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >Reproductor Web
                 </a>
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                   >App móvil gratis
                 </a>
@@ -380,7 +454,7 @@
             <ul class="list-unstyled d-flex justify-content-center gap-4">
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-facebook"></i>
@@ -388,7 +462,7 @@
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-twitter-x"></i>
@@ -396,7 +470,7 @@
               </li>
               <li>
                 <a
-                  href="../error404.html"
+                  href="./error404.html"
                   class="link-secondary text-decoration-none"
                 >
                   <i class="bi bi-instagram"></i>
@@ -419,11 +493,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://kit.fontawesome.com/8d7d957392.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../../js/funcionalidadMusica.js"></script>
-    <script src="../../js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/principal.js"></script>
   </body>
 </html>
