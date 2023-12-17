@@ -1,8 +1,7 @@
 
 const usuario = {
   usuario: "administrador",
-  contrasenia: "admin1234",
-  enSesion: false
+  contrasenia: "admin1234"
 }
 
 const guardarEnLocal = () =>{
@@ -36,5 +35,3 @@ const swiper = new Swiper('.mySwiper', {
       },
     },
   });
-
-
