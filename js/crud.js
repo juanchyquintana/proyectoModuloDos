@@ -92,8 +92,6 @@ const limparFormularioMusicaAdmin = () => {
 formularioAgregarMusica.addEventListener("submit", crearMusica);
 
 const cargaInicial = () => {
-  ///const musicaAlmacenada = JSON.parse(localStorage.getItem("musicaKey")) || [];
-
   if (musica.length > 0) {
     musica.map((cancion, posicion) =>
       crearFila(cancion, posicion + 1)
@@ -157,7 +155,6 @@ let idCancion = null;
 
 window.mostrarModalActualizar = (id) => {
   idCancion = id;
-  console.log(idCancion);
   let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
 
   nombreCancionActualizar.value = musica[posicionCancionBuscada].titulo;
@@ -171,7 +168,6 @@ window.mostrarModalActualizar = (id) => {
 const actualizarMusica = (e) => {
   e.preventDefault();
   let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
-  console.log(idCancion)
   musica[posicionCancionBuscada].titulo = nombreCancionActualizar.value;
   musica[posicionCancionBuscada].artista = artistaActualizar.value; 
   musica[posicionCancionBuscada].categoria = categoriaActualizar.value;
@@ -194,7 +190,6 @@ const recargarTabla = () => {
 
 window.verMasCancion = (id) => {
   idCancion = id;
-  console.log(idCancion);
   let posicionCancionBuscada = musica.findIndex((cancion) => cancion.id === idCancion);
 
   nombreCancionVerMas.value = musica[posicionCancionBuscada].titulo;
