@@ -1,17 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     const obtenerDatos = JSON.parse(localStorage.getItem("UsuarioKey")) || {};
-    const formIniciarSesion = document.querySelector("#loginFormario");
+    const formIniciarSesion = document.querySelector("#loginFormulario");
     const enSesion = JSON.parse(localStorage.getItem("EstadoEnSesion")) || false;
     const sesionUsuarioAdmin = document.querySelector("#sesionActiva");
   
     const loginAdministrador = (e) => {
       e.preventDefault();
-      console.log("estamos en login");
-      console.log(obtenerDatos);
       if (validarUsuario()) {
         console.log("usuario en sesion");
       } else {
-        console.log("usuario");
+        
         const usuario = document.querySelector("#usuario").value;
         const pass = document.querySelector("#contrasena1").value;
         if (
@@ -33,19 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
       return enSesion;
     };
   
-    console.log("en sesion", enSesion);
-  
     const sesionActiva = () => {
-      console.log(sesionUsuarioAdmin);
-      console.log(sesionUsuarioAdmin.children[0]);
       sesionUsuarioAdmin.innerHTML = `<a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="../pages/adminCRD.html"
       >Administrar música</a>
     <button type="button" class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" onclick="cerrarSesion()">Cerrar Sesión</button>`;
     };
-    // const cerrarModal = () =>{
-    //     window.location.href = window.location.href;
-  
-    // }
+    
   
     window.cerrarSesion = () => {
       localStorage.setItem("EstadoEnSesion", JSON.stringify(false));
