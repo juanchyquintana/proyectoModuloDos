@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginAdministrador = (e) => {
       e.preventDefault();
       if (validarUsuario()) {
-        console.log("usuario en sesion");
       } else {
         
         const usuario = document.querySelector("#usuario").value;

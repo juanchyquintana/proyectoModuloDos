@@ -54,7 +54,6 @@ const crearMusica = (e) => {
       showConfirmButton: false,
       timer: 1500,
     });
-    console.log(nombreCancion);
   } else {
     musica.push(musicaNueva);
 
