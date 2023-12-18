@@ -36,6 +36,7 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/formlogin.css">
     <link rel="stylesheet" href="../css/detalle.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Ritmo Web - Reproductor de Música</title>
@@ -151,18 +152,20 @@
                 >
                   <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-lg-end" id="sesionActiva" >
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="#"
+                      href="#" data-bs-toggle="modal"
+                      data-bs-target="#loginModal"
                       >Iniciar Sesión</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="#"
+                      href="#" data-bs-toggle="modal"
+                      data-bs-target="#registerModal"
                       >Registrarse</a
                     >
                   </li>
@@ -270,7 +273,7 @@
                   <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
                   <h3>Iniciar sesión</h3>
                 </div>
-                <form class="mt-md-4">
+                <form class="mt-md-4" id="loginFormulario">
                   <label for="usuario">Usuario:</label>
                   <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana23" type="text" id="usuario"
                     minlength="7" maxlength="20" required>
@@ -293,8 +296,8 @@
                     sesión</button>
                 </form>
                 <div class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center">
-                  <a href="#">¿Olvidaste tu contraseña?</a>
-                  <a href="#">¿No eres usuario? ¡Regístrate!</a>
+                  <a href="./error404.html">¿Olvidaste tu contraseña?</a>
+                  <a href="./error404.html">¿No eres usuario? ¡Regístrate!</a>
                 </div>
               </div>
             </section>
@@ -338,9 +341,9 @@
                   <label class="mt-1" for="contrasena">Confirmar contraseña:</label>
                   <div class="input-group mt-2">
                     <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
-                      id="contrasena2" minlength="4" maxlength="10" required>
+                      id="contrasena3" minlength="4" maxlength="10" required>
                     <div class="input-group-append">
-                      <span class="btn-light toggle-password" data-target="contrasena2">
+                      <span class="btn-light toggle-password" data-target="contrasena3">
                         <i class="bi bi-eye-fill"></i>
                       </span>
                     </div>
@@ -362,7 +365,7 @@
                     <a href="./error404.html" class="btn btn-danger btn-google text-white d-none d-md-inline"> <i
                         class="bi bi-google"></i> Google</a>
                   </div>
-                  <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
+                  <a href="./error404.html">¿Ya tienes una cuenta? Inicia sesión</a>
                 </div>
               </div>
             </section>
@@ -528,7 +531,10 @@
       src="https://kit.fontawesome.com/8d7d957392.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/funcionalidadMusica.js"></script>
+    <script src="../js/formlogin.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/filtrobuscar.js"></script>
   </body>

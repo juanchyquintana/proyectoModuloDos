@@ -70,11 +70,11 @@
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="./pages/error404.html">Música</a>
+                    href="./pages/albumeSeccion.html">Álbumes</a>
                 </li>
                 <li>
                   <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="./pages/error404.html">Podcast</a>
+                    href="./pages/sessionPodcast.html">Podcast</a>
                 </li>
               </ul>
             </li>
@@ -89,7 +89,7 @@
                 aria-expanded="false">
                 <i class="bi bi-person-fill fs-4 hoverLinks"></i>
               </a>
-              <ul class="dropdown-menu dropdown-menu-lg-end">
+              <ul class="dropdown-menu dropdown-menu-lg-end" id="sesionActiva">
                 <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#" data-bs-toggle="modal"
                   data-bs-target="#loginModal">Iniciar Sesión</a>
                 <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#" data-bs-toggle="modal"
@@ -175,8 +175,11 @@
       </div>
     </section>
 
-    <section class="container-fluid">
-      <h2 class="my-4 ms-4" id="textArtistas">Álbumes</h2>
+    <section class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 class="my-4" id="textArtistas">Álbumes</h2>
+        <a href="./pages/albumeSeccion.html" class="link-secondary fw-bold h5">Ver Más</a>
+      </div>
 
       <div class="albumPrincipal">
         <div class="audio audio1 dark">
@@ -184,80 +187,25 @@
           <h2>Abel Pintos</h2>
           <p>Artista</p>
         </div>
+
         <div class="audio audio1 dark">
           <img src="img/paginaPrincipal/alicia-keys.jpg" alt="Alicia Keys" />
           <h2>Alicia Keys</h2>
           <p>Artista</p>
         </div>
+
         <div class="audio audio1 dark">
           <img src="./img/paginaPrincipal/babasonicos.jpg" alt="Babasónicos" />
           <h2>Babasónicos</h2>
           <p>Artista</p>
         </div>
+
         <div class="audio audio1 dark">
           <img src="./img/paginaPrincipal/best2023poplatino.jpg" alt="Pop Latino 2023" />
           <h2>Best of 2023:POP LATINO</h2>
           <p>
             Nuestra selección de las mejores canciones de pop latino de 2023
           </p>
-        </div>
-        <div class="audio dark">
-          <img src="./img/paginaPrincipal/imagine-dragons.jpg" alt="Imagine Dragons" />
-          <h2>Imagine Dragons</h2>
-          <p>Artista</p>
-        </div>
-        <div class="audio audio1 dark">
-          <img src="./img/paginaPrincipal/loescuchadohoy.jpg" alt="Hits de hoy" />
-          <h2>Hits de hoy</h2>
-          <p>Las canciones más escuchadas</p>
-        </div>
-        <div class="audio dark">
-          <img src="./img/paginaPrincipal/maria-becerra.jpg" alt="Maria Becerra" />
-          <h2>María Becerra</h2>
-          <p>Artista</p>
-        </div>
-        <div class="audio audio1 dark">
-          <img src="./img/paginaPrincipal/bad-bunny.jpg" alt="Bad Bunny" />
-          <h2>Bad Bunny</h2>
-          <p>Artista</p>
-        </div>
-        <div class="audio audio1 dark">
-          <img src="./img/paginaPrincipal/clasicos90.jpg" alt="Clasicos de los 90" />
-          <h2>Clásicos españoles de los 90</h2>
-          <p>
-            Una selección con las mejores canciones españolas de la década de
-            los 90
-          </p>
-        </div>
-        <div class="audio dark">
-          <img src="./img/paginaPrincipal/pablo-lopez.jpg" alt="Pablo Lopez" />
-          <h2>Pablo Lopez</h2>
-          <p>Artista</p>
-        </div>
-        <div class="audio audio1 dark">
-          <img src="./img/paginaPrincipal/love80s.jpg" alt="80s Love Songs" />
-          <h2>REDISCOVER The '80s: Love Songs</h2>
-          <p>Get lost in love with the most romantic songs of the '80s</p>
-        </div>
-        <div class="audio dark">
-          <img src="./img/paginaPrincipal/tini-triple-t.jpg" alt="Tini" />
-          <h2>Tini</h2>
-          <p>Artista</p>
-        </div>
-        <div class="audio audio1 dark">
-          <img src="./img/paginaPrincipal/ariana-grande.jpg" alt="Ariana Grande" />
-          <h2>Ariana Grande</h2>
-          <p>Artista</p>
-        </div>
-        <div class="audio dark">
-          <img src="./img/paginaPrincipal/mix-kepers-lakonga-luckra.jpg" alt="Mix Cuarteto" />
-          <h2>Mix Cuarteto</h2>
-          <p>Lo más escuchado</p>
-        </div>
-        <div class="audio audio1 dark">
-          <img src="./img/paginaPrincipal/mixnavideño.jpg" alt="Mix Navideño" />
-          <h2>Mix Navideño</h2>
-          <p>Éxitos navideños y nuevos hits envueltos para regalo</p>
         </div>
       </div>
     </section>
@@ -335,9 +283,11 @@
       </div>
     </section>
 
-    <section class="container-fluid">
-      <h2 class="mb-5 ms-4" id="textArtistas">Podcast del momento</h2>
-
+    <section class="container"> 
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 class="my-4" id="textArtistas">Podcast del momento</h2>
+        <a href="./pages/sessionPodcast.html" class="link-secondary fw-bold h5">Ver Más</a>
+      </div>
       <div class="albumPrincipal">
         <div class="audio2 audio1 dark">
           <img src="./img/paginaPrincipal/podcast1.jpg" alt="Mario Alonso Puig" />
@@ -359,38 +309,8 @@
           <h2>Biciescapa</h2>
           <p>Biciescapa</p>
         </div>
-        <div class="audio2 dark">
-          <img src="./img/paginaPrincipal/podcast5.jpg" alt="Muy Historia" />
-          <h2>Muy Historia - Grandes reportajes</h2>
-          <p>Muy Interesante</p>
-        </div>
-        <div class="audio2 audio1 dark">
-          <img src="./img/paginaPrincipal/podcast6.jpg" alt="Locura Compartida" />
-          <h2>Locura Compartida</h2>
-          <p>Noemi Oleva</p>
-        </div>
-        <div class="audio2 dark">
-          <img src="./img/paginaPrincipal/podcast7.jpg" alt="Un tema Al Día" />
-          <h2>Un tema Al Día</h2>
-          <p>elDiario.es</p>
-        </div>
-        <div class="audio2 audio1 dark">
-          <img src="./img/paginaPrincipal/podcast8.jpeg" alt="Somos estupendas" />
-          <h2>Somos Estupendas</h2>
-          <p>Somos estupendas</p>
-        </div>
-        <div class="audio2 audio1 dark">
-          <img src="./img/paginaPrincipal/podcast9.jpg" alt="Un dia eres joven" />
-          <h2>Un día eres joven</h2>
-          <p>Cloe Pueyo y Ana de la Haz</p>
-        </div>
-        <div class="audio2 dark">
-          <img src="./img/paginaPrincipal/podcast10.jpg" alt="Universo Alex" />
-          <h2>Universo Álex</h2>
-          <p>Abbcast</p>
-        </div>
-      </div>
     </section>
+
     <section class="modal" tabindex="-1" id="loginModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -404,7 +324,7 @@
                   <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
                   <h3>Iniciar sesión</h3>
                 </div>
-                <form class="mt-md-4">
+                <form class="mt-md-4" id="loginFormulario">
                   <label for="usuario">Usuario:</label>
                   <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana23" type="text" id="usuario"
                     minlength="7" maxlength="20" required>
@@ -427,8 +347,8 @@
                     sesión</button>
                 </form>
                 <div class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center">
-                  <a href="#">¿Olvidaste tu contraseña?</a>
-                  <a href="#">¿No eres usuario? ¡Regístrate!</a>
+                  <a href="./pages/error404.html">¿Olvidaste tu contraseña?</a>
+                  <a href="./pages/error404.html">¿No eres usuario? ¡Regístrate!</a>
                 </div>
               </div>
             </section>
@@ -461,8 +381,8 @@
 
                   <label class="mt-1" for="contrasena">Contraseña:</label>
                   <div class="input-group mt-2">
-                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
-                      id="contrasena2" minlength="4" maxlength="10" required>
+                    <input class="inputMod border-0 w-100 p-2 rounded " placeholder="Marito2024a" type="password"
+                       minlength="4" maxlength="10" required id="contrasena2">
                     <div class="input-group-append">
                       <span class="btn-light toggle-password" data-target="contrasena2">
                         <i class="bi bi-eye-fill"></i>
@@ -609,9 +529,10 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/formlogin.js"></script>
-  <script src="./js/principal.js"></script>
   <script src="./js/filtrobuscar.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
