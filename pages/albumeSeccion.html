@@ -49,7 +49,7 @@
   <body>
     <header>
       <nav
-        class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh"
+        class="navbar bg-dark navbar-light navbar-expand-lg shadow"
         data-bs-theme="dark"
       >
         <div class="container">
@@ -62,7 +62,6 @@
               />
             </a>
           </div>
-
           <button
             class="navbar-toggler"
             type="button"
@@ -103,21 +102,21 @@
               <li class="nav-item">
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./pages/error404.html"
+                  href="./error404.html"
                   >Catalogo</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./pages/premium.html"
+                  href="./premium.html"
                   >Premium</a
                 >
               </li>
 
               <li class="nav-item dropdown text-center">
                 <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover colorPrincipal"
+                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -128,15 +127,15 @@
                 <ul class="dropdown-menu">
                   <li>
                     <a
-                      class="dropdown-item text-uppercase fw-bold hoverLinks colorPrincipal lineaHover"
-                      href="./albumeSeccion.html"
-                      >Álbumes</a
+                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                      href="./error404.html"
+                      >Música</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="./pages/error404.html"
+                      href="./error404.html"
                       >Podcast</a
                     >
                   </li>
@@ -146,7 +145,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./pages/acercaNosotros.html"
+                  href="./acercaNosotros.html"
                   >Nosotros</a
                 >
               </li>
@@ -161,21 +160,28 @@
                 >
                   <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-lg-end">
-                  <a
-                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#loginModal"
-                    >Iniciar Sesión</a
-                  >
-                  <a
-                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#registerModal"
-                    >Registrarse</a
-                  >
+                <ul
+                  class="dropdown-menu dropdown-menu-lg-end"
+                  id="sesionActiva"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#loginModal"
+                      >Iniciar Sesión</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#registerModal"
+                      >Registrarse</a
+                    >
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -347,7 +353,7 @@
                     <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
                     <h3>Iniciar sesión</h3>
                   </div>
-                  <form class="mt-md-4">
+                  <form class="mt-md-4" id="loginFormulario">
                     <label for="usuario">Usuario:</label>
                     <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana23" type="text" id="usuario"
                       minlength="7" maxlength="20" required>
@@ -370,8 +376,8 @@
                       sesión</button>
                   </form>
                   <div class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center">
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                    <a href="#">¿No eres usuario? ¡Regístrate!</a>
+                    <a href="./error404.html">¿Olvidaste tu contraseña?</a>
+                    <a href="./error404.html">¿No eres usuario? ¡Regístrate!</a>
                   </div>
                 </div>
               </section>
@@ -439,7 +445,7 @@
                       <a href="./pages/error404.html" class="btn btn-danger btn-google text-white d-none d-md-inline"> <i
                           class="bi bi-google"></i> Google</a>
                     </div>
-                    <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
+                    <a href="./error404.html">¿Ya tienes una cuenta? Inicia sesión</a>
                   </div>
                 </div>
               </section>
@@ -602,7 +608,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/formlogin.js"></script>
-    <script src="./js/principal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/formlogin.js"></script>
   </body>
 </html>
