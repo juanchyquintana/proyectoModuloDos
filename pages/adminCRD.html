@@ -72,8 +72,9 @@
             class="collapse navbar-collapse mt-sm-3"
             id="navbarSupportedContent"
           >
-            <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+            <form class="d-flex ms-auto mb-2 mb-lg-0" role="search" id="buscar">
               <input
+              id="buscarInput"
                 class="form-control me-2 focusNaranja"
                 type="search"
                 placeholder="Buscar una canción"
@@ -335,12 +336,12 @@
                     <h3>Registrarse</h3>
                   </div>
                   <form class="mt-md-4">
-                    <label for="nombre">Nombre:</label>
+                    <label for="nombreNuevo">Nombre:</label>
                     <input
                       class="inputMod border-0 w-100 p-2 rounded"
                       placeholder="luis mario alberto"
                       type="text"
-                      id="nombre"
+                      id="nombreNuevo"
                       minlength="10"
                       maxlength="20"
                       required
@@ -885,6 +886,7 @@
     <script src="../js/validaciones.js"></script>
     <script src="../js/crud.js" type="module"></script>
     <script src="../js/formlogin.js"></script>
+    <script src="../js/filtrobuscar.js"></script>
     <script src="../js/app.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const form = document.getElementById("buscar"),
+const formBuscar = document.getElementById("buscar"),
   input = document.getElementById("buscarInput");
 
 function buscar(e) {
@@ -7,4 +7,4 @@ function buscar(e) {
   console.log("Valor del parámetro 'value':", input.value);
 }
 
-form.addEventListener("submit", buscar);
+formBuscar.addEventListener("submit", buscar);

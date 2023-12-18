@@ -43,13 +43,19 @@
                 </button>
 
                 <div class="collapse navbar-collapse mt-sm-3" id="navbarSupportedContent">
-                    <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
-                        <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción"
-                            aria-label="Search" />
-                        <button class="btn colorPrincipal botonBusqueda" type="submit">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </form>
+                    
+            <form class="d-flex ms-auto mb-2 mb-lg-0" role="search" id="buscar">
+                <input
+                id="buscarInput"
+                  class="form-control me-2 focusNaranja"
+                  type="search"
+                  placeholder="Buscar una canción"
+                  aria-label="Search"
+                />
+                <button class="btn colorPrincipal botonBusqueda" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </form>
 
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                         <li class="nav-item">
@@ -92,7 +98,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-lg-end">
+                            <ul class="dropdown-menu dropdown-menu-lg-end" id="sesionActiva">
                                 <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#"
                                     data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</a>
                                 <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#"
@@ -177,7 +183,7 @@
                                     <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
                                     <h3>Iniciar sesión</h3>
                                 </div>
-                                <form class="mt-md-4">
+                                <form class="mt-md-4" id="loginFormulario">
                                     <label for="usuario">Usuario:</label>
                                     <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana23"
                                         type="text" id="usuario" minlength="7" maxlength="20" required>
@@ -386,8 +392,8 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/formlogin.js"></script>
-    <script src="./js/principal.js"></script>
+    <script src="../js/formlogin.js"></script>
+    <script src="../js/filtrobuscar.js"></script>
 </body>
 
 </html>
