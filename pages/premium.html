@@ -40,8 +40,8 @@
         </button>
 
         <div class="collapse navbar-collapse mt-sm-3" id="navbarSupportedContent">
-          <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
-            <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción"
+          <form id="buscar" class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+            <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción" id="buscarInput"
               aria-label="Search" />
             <button class="btn colorPrincipal botonBusqueda" type="submit">
               <i class="bi bi-search"></i>
@@ -69,11 +69,11 @@
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="./error404.html">Música</a>
+                    href="./albumeSeccion.html">Álbumes</a>
                 </li>
                 <li>
                   <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="./error404.html">Podcast</a>
+                    href="./sessionPodcast.html">Podcast</a>
                 </li>
               </ul>
             </li>
@@ -87,7 +87,7 @@
                 aria-expanded="false">
                 <i class="bi bi-person-fill fs-4 hoverLinks"></i>
               </a>
-              <ul class="dropdown-menu dropdown-menu-lg-end">
+              <ul class="dropdown-menu dropdown-menu-lg-end" id="sesionActiva">
                 <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#" data-bs-toggle="modal"
                   data-bs-target="#loginModal">Iniciar Sesión</a>
                 <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#" data-bs-toggle="modal"
@@ -104,7 +104,7 @@
     <section class="backgroundTerciario py-5">
       <div class="container">
         <div>
-          <h2 class="fw-bold display-5 tituloPremium">Escuchá música in límites...</h2>
+          <h2 class="fw-bold display-5 tituloPremium">Escuchá música sin límites...</h2>
           <p class="fs-4 lead ">
             Reproducí millones de canciones sin anuncios, on-demand y en modo
             offline.
@@ -113,7 +113,7 @@
 
         <div class="d-flex flex-column flex-md-row pb-3 gap-3">
           <a href="./error404.html" class="btn btn-dark mb-2">Empezar</a>
-          <a href="./error404.html" class="btn btn-outline-light mb-2">Ver Planes</a>
+          <a href="#verPlanes" class="btn btn-outline-light mb-2">Ver Planes</a>
         </div>
 
         <div class="terminosFuente">
@@ -175,7 +175,7 @@
       </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-5" id="verPlanes">
 
       <div class="pb-5 text-center">
         <h2 class="fw-bold display-5 tituloPremium">Elegí tu plan Premium</h2>
@@ -299,6 +299,7 @@
         </div>
       </div>
     </section>
+    
     <section class="modal" tabindex="-1" id="loginModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -312,7 +313,7 @@
                   <img class="img-fluid" src="../img/PandaRitmoWeb.png" alt="panda">
                   <h3>Iniciar sesión</h3>
                 </div>
-                <form class="mt-md-4">
+                <form class="mt-md-4" id="loginFormulario">
                   <label for="usuario">Usuario:</label>
                   <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Mariana23" type="text" id="usuario"
                     minlength="7" maxlength="20" required>
@@ -369,8 +370,8 @@
 
                   <label class="mt-1" for="contrasena">Contraseña:</label>
                   <div class="input-group mt-2">
-                    <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
-                      id="contrasena2" minlength="4" maxlength="10" required>
+                    <input class="inputMod border-0 w-100 p-2 rounded " placeholder="Marito2024a" type="password" id="contrasena2"
+                       minlength="4" maxlength="10" required>
                     <div class="input-group-append">
                       <span class="btn-light toggle-password" data-target="contrasena2">
                         <i class="bi bi-eye-fill"></i>
@@ -380,9 +381,9 @@
                   <label class="mt-1" for="contrasena">Confirmar contraseña:</label>
                   <div class="input-group mt-2">
                     <input class="inputMod border-0 w-100 p-2 rounded" placeholder="Marito2024a" type="password"
-                      id="contrasena2" minlength="4" maxlength="10" required>
+                      id="contrasena3" minlength="4" maxlength="10" required>
                     <div class="input-group-append">
-                      <span class="btn-light toggle-password" data-target="contrasena2">
+                      <span class="btn-light toggle-password" data-target="contrasena3">
                         <i class="bi bi-eye-fill"></i>
                       </span>
                     </div>
@@ -404,7 +405,7 @@
                     <a href="./error404.html" class="btn btn-danger btn-google text-white d-none d-md-inline"> <i
                         class="bi bi-google"></i> Google</a>
                   </div>
-                  <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
+                  <a href="./error404.html">¿Ya tienes una cuenta? Inicia sesión</a>
                 </div>
               </div>
             </section>
@@ -516,8 +517,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-  <script src="../js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/formlogin.js"></script>
+  <script src="../js/filtrobuscar.js"></script>
 </body>
 
 </html>

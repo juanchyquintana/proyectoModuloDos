@@ -36,10 +36,16 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/123585edb8.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../css/formlogin.css" />
+    <link rel="stylesheet" href="../css/acercaNosotros.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Ritmo Web - Administrador</title>
+    <title>Ritmo Web - Buscar</title>
   </head>
+
   <body>
     <header>
       <nav
@@ -186,32 +192,20 @@
 
     <main class="bg-black">
       <section class="container my-5">
-        <div class="d-flex justify-content-center flex-column">
-          <h2 class="text-center display-4" id="admin-titulo">
-            Página Administrador
-          </h2>
-          <button
-            type="button"
-            class="btn btn-primary boton my-3"
-            id="boton-agregar"
-            data-bs-toggle="modal"
-            data-bs-target="#modalCrear"
-          >
-            <span class="bn39span">Añadir</span>
-          </button>
-        </div>
+        <h2 class="text-center display-4" id="admin-titulo">
+          No Se Encontraron Resultados
+        </h2>
         <div class="table-responsive mt-5">
           <table class="table table-dark table-hover">
             <thead>
               <tr>
-                <th>N°</th>
                 <th>Canción</th>
                 <th>Autor</th>
                 <th>Duración</th>
-                <th>Acción</th>
+                <th>Categoria</th>
               </tr>
             </thead>
-            <tbody id="tablaMusica"></tbody>
+            <tbody id="musicasEncontradas"></tbody>
           </table>
         </div>
       </section>
@@ -599,282 +593,6 @@
       </section>
     </footer>
 
-    <div
-      class="modal"
-      id="modalCrear"
-      tabindex="-1"
-      aria-labelledby="modalCrearLabel"
-      aria-hidden="true"
-      data-bs-theme="dark"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Añadir Canción Nueva</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form class="formA" id="formularioMusica">
-              <div class="my-3">
-                <label class="form-label text-light" for="nombre"
-                  >Nombre de la Canción</label
-                >
-                <input
-                  type="text"
-                  id="nombre"
-                  class="form-control bg-black color-input"
-                  placeholder="Título de la Música"
-                  minlength="1"
-                  maxlength="100"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="autor">Autor</label>
-                <input
-                  type="text"
-                  id="autor"
-                  class="form-control bg-black color-input"
-                  placeholder="Nombre de la Banda o del Artista"
-                  minlength="1"
-                  maxlength="70"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-
-              <div class="input-group mb-3">
-                <label class="input-group-text" for="categoria"
-                  >Categoria</label
-                >
-                <select class="form-select bg-black color-input" id="categoria">
-                  <option value="pop">pop</option>
-                  <option value="k-pop">k-pop</option>
-                  <option value="rock">rock</option>
-                  <option value="cumbia">cumbia</option>
-                  <option value="electronica">electronica</option>
-                  <option value="folcklore">folcklore</option>
-                  <option value="rap">rap</option>
-                </select>
-              </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="duracion"
-                  >Duración</label
-                >
-                <input
-                  type="text"
-                  id="duracion"
-                  class="form-control bg-black color-input"
-                  placeholder="Categoría de la Música"
-                  minlength="5"
-                  maxlength="5"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="musica"
-                  >Insertar Música</label
-                >
-                <input
-                  type="file"
-                  id="musica"
-                  class="form-control bg-black color-input"
-                  accept=".wap , .mp3, .ogg"
-                  placeholder=""
-                  required
-                />
-              </div>
-              <button type="submit" class="boton mt-4" id="boton-agregar">
-                <span class="bn39span">Añadir</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal"
-      id="modalActualizar"
-      tabindex="-1"
-      aria-labelledby="modalActualizarLabel"
-      aria-hidden="true"
-      data-bs-theme="dark"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Editar Canción</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form id="formularioMusicaActualizar">
-              <div class="my-3">
-                <label class="form-label text-light" for="nombre"
-                  >Nombre de la Canción</label
-                >
-                <input
-                  type="text"
-                  id="nombreActualizar"
-                  class="form-control bg-black color-input"
-                  placeholder="Título de la Música"
-                  minlength="1"
-                  maxlength="100"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="autor">Autor</label>
-                <input
-                  type="text"
-                  id="autorActualizar"
-                  class="form-control bg-black color-input"
-                  placeholder="Nombre de la Banda o del Artista"
-                  minlength="1"
-                  maxlength="70"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="categoria"
-                  >Categoría</label
-                >
-                <input
-                  type="text"
-                  id="categoriaActualizar"
-                  class="form-control bg-black color-input"
-                  placeholder="Categoría de la Música"
-                  minlength="1"
-                  maxlength="70"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="categoria"
-                  >Duración</label
-                >
-                <input
-                  type="text"
-                  id="duracionActualizar"
-                  class="form-control bg-black color-input"
-                  placeholder="Categoría de la Música"
-                  minlength="5"
-                  maxlength="5"
-                  autocomplete="off"
-                  required
-                />
-              </div>
-              <button type="submit" class="boton mt-4" id="boton-actualizar">
-                <span class="bn39span">Actualizar</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal"
-      id="modalVerMas"
-      tabindex="-1"
-      aria-labelledby="modalVerMasLabel"
-      aria-hidden="true"
-      data-bs-theme="dark"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Ver Más</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form id="formularioMusicaVerMas">
-              <div class="my-3">
-                <label class="form-label text-light" for="nombre"
-                  >Nombre de la Canción</label
-                >
-                <input
-                  type="text"
-                  id="nombreVerMas"
-                  class="form-control bg-secondary-subtle color-input"
-                  placeholder="Título de la Música"
-                  minlength="1"
-                  maxlength="100"
-                  autocomplete="off"
-                  required
-                  disabled
-                />
-              </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="autor">Autor</label>
-                <input
-                  type="text"
-                  id="autorVerMas"
-                  class="form-control bg-secondary-subtle color-input"
-                  placeholder="Nombre de la Banda o del Artista"
-                  minlength="1"
-                  maxlength="70"
-                  autocomplete="off"
-                  required
-                  disabled
-                />
-              </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="categoria"
-                  >Categoría</label
-                >
-                <input
-                  type="text"
-                  id="categoriaVerMas"
-                  class="form-control bg-secondary-subtle color-input"
-                  placeholder="Categoría de la Música"
-                  minlength="1"
-                  maxlength="70"
-                  autocomplete="off"
-                  required
-                  disabled
-                />
-              </div>
-              <div class="my-3">
-                <label class="form-label text-light" for="categoria"
-                  >Duración</label
-                >
-                <input
-                  type="text"
-                  id="duracionVerMas"
-                  class="form-control bg-secondary-subtle color-input"
-                  placeholder="Categoría de la Música"
-                  minlength="5"
-                  maxlength="5"
-                  autocomplete="off"
-                  required
-                  disabled
-                />
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -882,8 +600,8 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/validaciones.js"></script>
-    <script src="../js/crud.js" type="module"></script>
+    <script src="../js/filtrobuscar.js"></script>
+    <script src="../js/filtroLogica.js"></script>
     <script src="../js/formlogin.js"></script>
     <script src="../js/app.js"></script>
   </body>
