@@ -49,14 +49,6 @@ const mutearCancion = () => {
     }
 }
 
-const cambiarMusica = () => {
-    window.location.href = window.location.origin + '/pages/canciones/cancionDos.html'
-}
-
-const volverCancion = () => {
-    window.location.href = window.location.origin + '/pages/detalle.html'
-}
-
 const formatearTiempo = (tiempo) => {
     const minutos = Math.floor(tiempo / 60);
     const segundos = Math.floor(tiempo % 60);

@@ -36,15 +36,25 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Kanit:wght@300;400;700&family=Karla:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/1993cd3f3e.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../css/formlogin.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Ritmo Web - Administrador</title>
+    <link rel="stylesheet" href="../css/paginaPrincipal.css" />
+    <link rel="stylesheet" href="../css/albumCanciones.css" />
+    <title>Ritmo Web - Babasónicos</title>
   </head>
 
   <body>
     <header>
       <nav
-        class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh"
+        class="navbar bg-dark navbar-light navbar-expand-lg shadow"
         data-bs-theme="dark"
       >
         <div class="container">
@@ -56,9 +66,7 @@
                 class="img-fluid logoWidth"
               />
             </a>
-<<<<<<< HEAD
           </div>
-
           <button
             class="navbar-toggler"
             type="button"
@@ -157,21 +165,28 @@
                 >
                   <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-lg-end">
-                  <a
-                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#loginModal"
-                    >Iniciar Sesión</a
-                  >
-                  <a
-                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#registerModal"
-                    >Registrarse</a
-                  >
+                <ul
+                  class="dropdown-menu dropdown-menu-lg-end"
+                  id="sesionActiva"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#loginModal"
+                      >Iniciar Sesión</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#registerModal"
+                      >Registrarse</a
+                    >
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -180,287 +195,232 @@
       </nav>
     </header>
 
-    <main class="bg-black">
-      <section class="my-5 container">
-        <h2 id="admin-titulo" class="text-center">
-          Editar la Canción: {nombre de la cancion}
-        </h2>
-        <form class="my-4">
-          <div class="my-3">
-            <label class="form-label text-light" for="nombre"
-              >Nombre de la Canción</label
+    <main>
+      <section class="container my-3 pt-5" id="fondoAlbum">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="../img/paginaPrincipal/babasonicos.jpg"
+                class="img-fluid rounded-start"
+                alt="Album Abel Pintos"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="text-light">Álbum</p>
+                <h2 class="card-title text-light">
+                  Desde Adentro - Impuesto de Fe(En vivo)
+                </h2>
+                <p class="card-text text-light">
+                  Babasónicos - 2016 - 16 canciones, 1 h.
+                </p>
+                <a href="#" class="btn fs-3" id="reaccion"
+                  ><i class="fas fa-heart" id="iHeart"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container my-4 py-3">
+          <ol class="list-group list-group-numbered">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
             >
-            <input
-              type="text"
-              id="nombre"
-              class="form-control bg-black color-input"
-              placeholder="Título de la Música"
-              minlength="1"
-              maxlength="100"
-              autocomplete="off"
-              required
-            />
-          </div>
-          <div class="my-3">
-            <label class="form-label text-light" for="autor">Autor</label>
-            <input
-              type="text"
-              id="autor"
-              class="form-control bg-black color-input"
-              placeholder="Nombre de la Banda o del Artista"
-              minlength="1"
-              maxlength="70"
-              autocomplete="off"
-              required
-            />
-          </div>
-          <div class="my-3">
-            <label class="form-label text-light" for="categoria"
-              >Categoría</label
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> El Colmo
+                  - En vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.59 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
             >
-            <input
-              type="text"
-              id="categoria"
-              class="form-control bg-black color-input"
-              placeholder="Categoría de la Música"
-              minlength="1"
-              maxlength="70"
-              autocomplete="off"
-              required
-            />
-          </div>
-          <div class="my-3">
-            <label class="form-label text-light" for="musica"
-              >Insertar Música</label
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i>
+                  Irresponsables
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.43 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
             >
-            <input
-              type="file"
-              id="musica"
-              class="form-control bg-black color-input"
-              accept=".wap , .mp3"
-              placeholder=""
-              required
-            />
-          </div>
-          <button type="submit" class="boton mt-4" id="boton-editar">
-            <span class="bn39span">Editar</span>
-          </button>
-        </form>
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Yegua -
+                  En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.24 s</span>
+            </li>
+
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Puesto -
+                  En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.59 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Vampi -
+                  En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.00 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Putita -
+                  En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.41 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Cómo Eran
+                  las Cosas - En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.57 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> El
+                  Maestro - En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">2.50 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Sin Mi
+                  Diablo - En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.09 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Rubí - En
+                  Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">3.50 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Natural -
+                  En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">4.00 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Muñeco /
+                  Deléctrico - En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">4.02 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Los
+                  Calientes - En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">4.01 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Camarín -
+                  En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">5.37 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Zumba/
+                  Yoli/ Viva Satana/ La Roncha - En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">6.08 s</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              <div class="ms-3 me-auto">
+                <div class="fw-bold">
+                  <i class="fa-regular fa-circle-play" id="iPlay"></i> Su Ciervo
+                  - En Vivo
+                </div>
+                Babasónicos
+              </div>
+              <span class="badge bg-secondary rounded-pill me-3">4.00 s</span>
+            </li>
+          </ol>
+        </div>
       </section>
       <section class="modal" tabindex="-1" id="loginModal">
-=======
-          </div>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse mt-sm-3"
-            id="navbarSupportedContent"
-          >
-            <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
-              <input
-                class="form-control me-2 focusNaranja"
-                type="search"
-                placeholder="Buscar una canción"
-                aria-label="Search"
-              />
-              <button class="btn colorPrincipal botonBusqueda" type="submit">
-                <i class="bi bi-search"></i>
-              </button>
-            </form>
-
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-              <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  aria-current="page"
-                  href="../index.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./error404.html"
-                  >Catalogo</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./premium.html"
-                  >Premium</a
-                >
-              </li>
-
-              <li class="nav-item dropdown text-center">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Biblioteca
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a
-                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="./error404.html"
-                      >Música</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="./error404.html"
-                      >Podcast</a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./acercaNosotros.html"
-                  >Nosotros</a
-                >
-              </li>
-
-              <li class="nav-item dropdown text-center">
-                <a
-                  class="nav-link dropdown-toggle hoverLinks"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="bi bi-person-fill fs-4 hoverLinks"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-lg-end">
-                  <a
-                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#loginModal"
-                    >Iniciar Sesión</a
-                  >
-                  <a
-                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#registerModal"
-                    >Registrarse</a
-                  >
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main class="bg-black">
-      <section class="my-5 container">
-        <h2 id="admin-titulo" class="text-center">
-          Editar la Canción: {nombre de la cancion}
-        </h2>
-        <form class="formA" id="formularioMusica">
-          <div class="my-3">
-            <label class="form-label text-light" for="nombre"
-              >Nombre de la Canción</label
-            >
-            <input
-              type="text"
-              id="nombre"
-              class="form-control bg-black color-input"
-              placeholder="Título de la Música"
-              minlength="3"
-              maxlength="50"
-              autocomplete="off"
-              required
-            />
-          </div>
-          <div class="my-3">
-            <label class="form-label text-light" for="autor">Autor</label>
-            <input
-              type="text"
-              id="autor"
-              class="form-control bg-black color-input"
-              placeholder="Nombre de la Banda o del Artista"
-              minlength="3"
-              maxlength="35"
-              autocomplete="off"
-              required
-            />
-          </div>
-          <div class="input-group">
-            <label class="input-group-text my-3" for="categoria"
-              >Categoria</label
-            >
-            <select
-              class="form-select bg-black color-input my-3"
-              id="categoria"
-            >
-              <option value="pop">pop</option>
-              <option value="k-pop">k-pop</option>
-              <option value="rock">rock</option>
-              <option value="cumbia">cumbia</option>
-              <option value="electronica">electronica</option>
-              <option value="folcklore">folcklore</option>
-              <option value="rap">rap</option>
-            </select>
-          </div>
-          <div class="my-3">
-            <label class="form-label text-light" for="duracion">Duración</label>
-            <input
-              type="text"
-              id="duracion"
-              class="form-control bg-black color-input"
-              placeholder="Categoría de la Música"
-              minlength="5"
-              maxlength="5"
-              autocomplete="off"
-              required
-            />
-          </div>
-          <div class="my-3">
-            <label class="form-label text-light" for="musica"
-              >Insertar Música</label
-            >
-            <input
-              type="file"
-              id="musica"
-              class="form-control bg-black color-input"
-              accept=".wap , .mp3 , .ogg"
-              placeholder=""
-              required
-            />
-          </div>
-          <div class="d-flex">
-            <button type="submit" class="boton mt-4" id="boton-editar">
-              <span class="bn39span">Editar</span>
-            </button>
-            <a href="./adminCRD.html" class="boton mt-4 ms-4" id="boton-verMas">
-              <span class="bn39span">Volver</span>
-            </a>
-          </div>
-        </form>
-      </section>
-      <section class="modal" tabindex="-1" id="registerModal">
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -473,19 +433,11 @@
             </div>
             <div class="modal-body">
               <section
-<<<<<<< HEAD
                 class="container d-md-flex justify-content-md-center mt-3 p-lg-2"
               >
                 <div
                   class="login-container h-auto p-lg-4 form-container"
                   id="loginForm"
-=======
-                class="container d-md-flex justify-content-md-center mt-2 p-lg-2"
-              >
-                <div
-                  class="login-container h-auto p-lg-4 form-container"
-                  id="registerForm"
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
                 >
                   <div
                     class="d-md-flex justify-content-md-center align-items-md-center"
@@ -495,10 +447,9 @@
                       src="../img/PandaRitmoWeb.png"
                       alt="panda"
                     />
-<<<<<<< HEAD
                     <h3>Iniciar sesión</h3>
                   </div>
-                  <form class="mt-md-4">
+                  <form class="mt-md-4" id="loginFormulario">
                     <label for="usuario">Usuario:</label>
                     <input
                       class="inputMod border-0 w-100 p-2 rounded"
@@ -516,7 +467,75 @@
                         placeholder="Mariana24d"
                         type="password"
                         id="contrasena1"
-=======
+                        minlength="4"
+                        maxlength="10"
+                        required
+                      />
+                      <div class="input-group-append">
+                        <span
+                          class="btn-light toggle-password"
+                          data-target="contrasena1"
+                        >
+                          <i class="bi bi-eye-fill"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-check d-flex p-0 mt-2">
+                      <input class="mt-2" type="checkbox" />
+                      <label
+                        class="form-check-label"
+                        id="recordarlabel"
+                        for="recordar"
+                        >Recordar usuario</label
+                      >
+                    </div>
+                    <button
+                      class="btn btn-naranja text-white p-2 w-50 my-3"
+                      type="submit"
+                    >
+                      Iniciar sesión
+                    </button>
+                  </form>
+                  <div
+                    class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center"
+                  >
+                    <a href="./error404.html">¿Olvidaste tu contraseña?</a>
+                    <a href="./error404.html">¿No eres usuario? ¡Regístrate!</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="modal" tabindex="-1" id="registerModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <section
+                class="container d-md-flex justify-content-md-center mt-2 p-lg-2"
+              >
+                <div
+                  class="login-container h-auto p-lg-4 form-container"
+                  id="registerForm"
+                >
+                  <div
+                    class="d-md-flex justify-content-md-center align-items-md-center"
+                  >
+                    <img
+                      class="img-fluid"
+                      src="../img/PandaRitmoWeb.png"
+                      alt="panda"
+                    />
                     <h3>Registrarse</h3>
                   </div>
                   <form class="mt-md-4">
@@ -549,7 +568,6 @@
                         placeholder="Marito2024a"
                         type="password"
                         id="contrasena2"
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
                         minlength="4"
                         maxlength="10"
                         required
@@ -557,27 +575,12 @@
                       <div class="input-group-append">
                         <span
                           class="btn-light toggle-password"
-<<<<<<< HEAD
-                          data-target="contrasena1"
-=======
                           data-target="contrasena2"
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
                         >
                           <i class="bi bi-eye-fill"></i>
                         </span>
                       </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="form-check d-flex p-0 mt-2">
-                      <input class="mt-2" type="checkbox" />
-                      <label
-                        class="form-check-label"
-                        id="recordarlabel"
-                        for="recordar"
-                        >Recordar usuario</label
-                      >
-                    </div>
-=======
                     <label class="mt-1" for="contrasena"
                       >Confirmar contraseña:</label
                     >
@@ -615,161 +618,6 @@
                         >Acepto los términos y condiciones</label
                       >
                     </div>
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
-                    <button
-                      class="btn btn-naranja text-white p-2 w-50 my-3"
-                      type="submit"
-                    >
-<<<<<<< HEAD
-                      Iniciar sesión
-=======
-                      Registrarse
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
-                    </button>
-                  </form>
-                  <div
-                    class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center"
-                  >
-<<<<<<< HEAD
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                    <a href="#">¿No eres usuario? ¡Regístrate!</a>
-=======
-                    <p>o regístrate con:</p>
-                    <div
-                      class="redesSociales d-lg-flex flex-lg-row w-100 justify-content-center mb-3"
-                    >
-                      <a
-                        href="./error404.html"
-                        class="btn btn-primary text-white me-lg-2 d-none d-md-inline"
-                        ><i class="bi bi-facebook"></i> Facebook</a
-                      >
-                      <a
-                        href="./error404.html"
-                        class="btn btn-danger btn-google text-white d-none d-md-inline"
-                      >
-                        <i class="bi bi-google"></i> Google</a
-                      >
-                    </div>
-                    <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-
-      <section class="modal" tabindex="-1" id="registerModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <section
-                class="container d-md-flex justify-content-md-center mt-2 p-lg-2"
-              >
-                <div
-                  class="login-container h-auto p-lg-4 form-container"
-                  id="registerForm"
-                >
-                  <div
-                    class="d-md-flex justify-content-md-center align-items-md-center"
-                  >
-                    <img
-                      class="img-fluid"
-                      src="../img/PandaRitmoWeb.png"
-                      alt="panda"
-                    />
-                    <h3>Registrarse</h3>
-                  </div>
-                  <form class="mt-md-4">
-                    <label for="nombre">Nombre:</label>
-                    <input
-                      class="inputMod border-0 w-100 p-2 rounded"
-                      placeholder="luis mario alberto"
-                      type="text"
-                      id="nombre"
-                      minlength="10"
-                      maxlength="20"
-                      required
-                    />
-
-                    <label class="mt-1" for="email">Correo electrónico:</label>
-                    <input
-                      class="inputMod border-0 w-100 p-2 rounded"
-                      placeholder="albertoluismario@gmail.com"
-                      type="email"
-                      minlength="20"
-                      maxlength="35"
-                      id="email"
-                      required
-                    />
-
-                    <label class="mt-1" for="contrasena">Contraseña:</label>
-                    <div class="input-group mt-2">
-                      <input
-                        class="inputMod border-0 w-100 p-2 rounded"
-                        placeholder="Marito2024a"
-                        type="password"
-                        id="contrasena2"
-                        minlength="4"
-                        maxlength="10"
-                        required
-                      />
-                      <div class="input-group-append">
-                        <span
-                          class="btn-light toggle-password"
-                          data-target="contrasena2"
-                        >
-                          <i class="bi bi-eye-fill"></i>
-                        </span>
-                      </div>
-                    </div>
-                    <label class="mt-1" for="contrasena"
-                      >Confirmar contraseña:</label
-                    >
-                    <div class="input-group mt-2">
-                      <input
-                        class="inputMod border-0 w-100 p-2 rounded"
-                        placeholder="Marito2024a"
-                        type="password"
-                        id="contrasena2"
-                        minlength="4"
-                        maxlength="10"
-                        required
-                      />
-                      <div class="input-group-append">
-                        <span
-                          class="btn-light toggle-password"
-                          data-target="contrasena2"
-                        >
-                          <i class="bi bi-eye-fill"></i>
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="form-check d-flex p-0 mt-2">
-                      <input
-                        class="mt-2"
-                        type="checkbox"
-                        id="recordar"
-                        required
-                      />
-                      <label
-                        class="form-check-label"
-                        id="recordarlabel"
-                        for="recordar"
-                        >Acepto los términos y condiciones</label
-                      >
-                    </div>
                     <button
                       class="btn btn-naranja text-white p-2 w-50 my-3"
                       type="submit"
@@ -796,7 +644,9 @@
                         <i class="bi bi-google"></i> Google</a
                       >
                     </div>
-                    <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
+                    <a href="./error404.html"
+                      >¿Ya tienes una cuenta? Inicia sesión</a
+                    >
                   </div>
                 </div>
               </section>
@@ -806,11 +656,7 @@
       </section>
     </main>
 
-=======
-    </main>
-
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
-    <footer class="bg-dark shadow py-5 footerBorder" data-bs-theme="dark">
+    <footer class="bg-dark shadow mt-5 py-5 footerBorder" data-bs-theme="dark">
       <section class="container">
         <div class="row">
           <div
@@ -956,24 +802,15 @@
         </div>
       </section>
     </footer>
-<<<<<<< HEAD
 
-=======
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/formlogin.js"></script>
     <script src="../js/app.js"></script>
-=======
-    <script src="../js/validaciones.js"></script>
-    <script src="../js/crud.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
->>>>>>> a8c919520325e0e6045850634bc510fec0a8287f
   </body>
 </html>

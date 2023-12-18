@@ -1,8 +1,8 @@
 # Ritmo web
 
-Este proyecto esta realizado con html , css y JavaScript. Se trata de un Streming de musica en el que puedes escuchar musica y añadir a tu lista
+En este proyecto se trabajó en grupo y nos dividimos las tareas necesarias para diseñar un sitio que permita administrar canciones. El alcance de este proyecto se centró en cómo realizar todos los pasos del CRUD y mostrará los datos en forma de un catálogo de música. Por otro lado, se cumplieron otros requisitos solicitados.
 
-### Link del Proyecto: [Ritmo web](https://link.com)
+### Link del Proyecto: [Ritmo web](https://ritmoweb.netlify.app/)
 
 ![logo](./img/Logo_sin_Barras.png)
 
