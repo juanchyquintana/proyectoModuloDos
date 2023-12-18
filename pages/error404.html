@@ -44,126 +44,72 @@
 
   <body>
     <header>
-      <nav
-        class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh"
-        data-bs-theme="dark"
-      >
+      <nav class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh" data-bs-theme="dark">
         <div class="container">
           <div class="rotate-center">
             <a href="../index.html">
-              <img
-                src="../img/logoSinBarras.png"
-                alt="Logo"
-                class="img-fluid logoWidth"
-              />
+              <img src="../img/logoSinBarras.png" alt="Logo" class="img-fluid logoWidth" />
             </a>
           </div>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <form id="buscar" class="d-flex ms-auto mb-2 mb-lg-0" role="search">
-            <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción" id="buscarInput"
-              aria-label="Search" />
-            <button class="btn colorPrincipal botonBusqueda" type="submit">
-              <i class="bi bi-search"></i>
-            </button>
-          </form>
-
+  
+          <div class="collapse navbar-collapse mt-sm-3" id="navbarSupportedContent">
+            <form id="buscar" class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+              <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción" id="buscarInput"
+                aria-label="Search" />
+              <button class="btn colorPrincipal botonBusqueda" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+  
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
               <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  aria-current="page"
-                  href="../index.html"
-                  >Inicio</a
-                >
+                <a class="nav-link text-uppercase fw-bold hoverLinks colorPrincipal lineaHover" aria-current="page"
+                  href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./error404.html"
-                  >Catalogo</a
-                >
+                <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="../pages/error404.html">Catalogo</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./premium.html"
-                  >Premium</a
-                >
+                <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="../pages/premium.html">Premium</a>
               </li>
-
+  
               <li class="nav-item dropdown text-center">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
                   Biblioteca
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a
-                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="./error404.html"
-                      >Música</a
-                    >
+                    <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                      href="../pages/albumeSeccion.html">Álbumes</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="./error404.html"
-                      >Podcast</a
-                    >
+                    <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                      href="../pages/sessionPodcast.html">Podcast</a>
                   </li>
                 </ul>
               </li>
-
+  
               <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
-                  href="./acercaNosotros.html"
-                  >Nosotros</a
-                >
+                <a class="nav-link text-uppercase fw-bold hoverLinks lineaHover"
+                  href="../pages/acercaNosotros.html">Nosotros</a>
               </li>
-
+  
               <li class="nav-item dropdown text-center">
-                <a
-                  class="nav-link dropdown-toggle hoverLinks"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <a class="nav-link dropdown-toggle hoverLinks" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg-end" id="sesionActiva">
-                  <a
-                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#loginModal"
-                    >Iniciar Sesión</a
-                  >
-                  <a
-                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#registerModal"
-                    >Registrarse</a
-                  >
+                  <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Iniciar Sesión</a>
+                  <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#" data-bs-toggle="modal"
+                    data-bs-target="#registerModal">Registrarse</a>
                 </ul>
               </li>
             </ul>
@@ -178,9 +124,9 @@
           <h1>ERROR 404</h1>
           <p>
             "¡Uh-oh! Parece que te has perdido en el compás. 🎵 Vuelve al ritmo
-            de la fiesta haciendo clic en pagina principal.
+            de la fiesta haciendo clic en página principal.
           </p>
-          <a href="../index.html" class="boton-error">Pagina Principal</a>
+          <a href="../index.html" class="boton-error">Página Principal</a>
         </div>
         <video muted autoplay loop>
           <source src="../video/142052 (720p).mp4" type="video/mp4" />
