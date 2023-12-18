@@ -34,7 +34,6 @@ function pasoSiguiente(actualModal, siguienteModal) {
             localStorage.setItem('saltarTutorial', 'true');
         }
         alert('Tutorial completado. Redirigiendo...');
-        // window.location.href = 'index.html'; 
     }
 }
 
