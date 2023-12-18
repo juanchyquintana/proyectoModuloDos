@@ -429,6 +429,158 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <div
+        class="modal fade text-light"
+        id="modalStep1"
+        aria-hidden="true"
+        aria-labelledby="modalStep1Label"
+        tabindex="-1"
+        data-bs-theme="dark"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalStep1Label">
+                Bienvenidos a Ritmo Web
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="cerrarModal('modalStep1')"
+              ></button>
+            </div>
+  
+            <div class="modal-body">
+              <img src="./img/PandaRitmoWeb.png" alt="logoPanda" class="img-fluid">
+              <h3 class="text-center text-uppercase fw-bold">
+                Bienvenido a la aplicación. Esta es la primera vez que la
+                utilizas.
+              </h3>
+            </div>
+  
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-naranja w-100"
+                onclick="pasoSiguiente('modalStep1', 'modalStep2')"
+              >
+                Siguiente
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div
+        class="modal fade text-light"
+        id="modalStep2"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalStep2Label"
+        aria-hidden="true"
+        data-bs-theme="dark"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalStep2Label">Tutorial</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="cerrarModal('modalStep2')"
+              ></button>
+            </div>
+  
+            <div class="modal-body">
+              <img src="./img/tutorialPasoUno.PNG" alt="primerPaso" class="img-fluid border border-secondary shadow">
+              <p class="fw-bold text-uppercase text-center mt-4">
+                Aquí hay una característica interesante. Asegúrate de prestar atención: <span class="colorPrincipal">podras registrate y administrar tus canciones</span>
+              </p>
+            </div>
+  
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn colorPrincipal"
+                onclick="pasoAnterior('modalStep2', 'modalStep1')"
+              >
+                Anterior
+              </button>
+  
+              <button
+                type="button"
+                class="btn colorPrincipal"
+                onclick="pasoSiguiente('modalStep2', 'modalStep3')"
+              >
+                Siguiente
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div
+        class="modal fade text-light"
+        id="modalStep3"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalStep3Label"
+        aria-hidden="true"
+        data-bs-theme="dark"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalStep3Label">Tutorial</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="cerrarModal('modalStep3')"
+              ></button>
+            </div>
+  
+            <div class="modal-body">
+              <img src="./img/tutorialPasoDos.PNG" alt="tutorialPasoDos" class="img-fluid border border-secondary shadow">
+              <p class="fw-bold text-uppercase text-center mt-4">
+                Aquí hay otro paso emocionante. ¡Casi has completado el tutorial! <span class="colorPrincipal">Podrás disfrutar y escuchar las canciones del momento</span>
+              </p>
+            </div>
+  
+            <div class="modal-footer d-flex justify-content-center gap-lg-5">
+              <label>
+                <input type="checkbox" id="saltarTutorialCheckbox" /> No mostrar
+                nuevamente
+              </label>
+  
+              <div>
+                <button
+                  type="button"
+                  class="btn colorPrincipal"
+                  onclick="pasoAnterior('modalStep3', 'modalStep2')"
+                >
+                  Anterior
+                </button>
+                <button
+                  type="button"
+                  class="btn colorPrincipal"
+                  onclick="tutorialCompletado()"
+                >
+                  Finalizar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="bg-dark shadow mt-5 py-5 footerBorder" data-bs-theme="dark">
@@ -536,6 +688,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/formlogin.js"></script>
+  <script src="./js/tutorial.js"></script>
   <script src="./js/filtrobuscar.js"></script>
   <script src="js/app.js"></script>
 </body>
