@@ -74,17 +74,13 @@
             class="collapse navbar-collapse mt-sm-3"
             id="navbarSupportedContent"
           >
-            <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
-              <input
-                class="form-control me-2 focusNaranja"
-                type="search"
-                placeholder="Buscar una canción"
-                aria-label="Search"
-              />
-              <button class="btn colorPrincipal botonBusqueda" type="submit">
-                <i class="bi bi-search"></i>
-              </button>
-            </form>
+          <form id="buscar" class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+            <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción" id="buscarInput"
+              aria-label="Search" />
+            <button class="btn colorPrincipal botonBusqueda" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
 
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
               <li class="nav-item">
@@ -263,7 +259,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
     <section class="modal" tabindex="-1" id="loginModal">
       <div class="modal-dialog">
@@ -541,5 +536,6 @@
     <script src="../js/funcionalidadMusica.js"></script>
     <script src="../js/formlogin.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/filtrobuscar.js"></script>
   </body>
 </html>

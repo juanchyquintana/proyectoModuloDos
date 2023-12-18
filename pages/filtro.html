@@ -43,18 +43,18 @@
     <link rel="stylesheet" href="../css/formlogin.css" />
     <link rel="stylesheet" href="../css/acercaNosotros.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Ritmo Web - Acerca de nosotros</title>
+    <title>Ritmo Web - Buscar</title>
   </head>
 
   <body>
     <header>
       <nav
-        class="navbar bg-dark navbar-light navbar-expand-lg shadow"
+        class="navbar bg-dark navbar-light navbar-expand-lg shadow navWitdh"
         data-bs-theme="dark"
       >
         <div class="container">
           <div class="rotate-center">
-            <a href="../index.html">
+            <a href="./index.html">
               <img
                 src="../img/logoSinBarras.png"
                 alt="Logo"
@@ -62,6 +62,7 @@
               />
             </a>
           </div>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -74,14 +75,22 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-        <div class="collapse navbar-collapse mt-sm-3" id="navbarSupportedContent">
-          <form id="buscar" class="d-flex ms-auto mb-2 mb-lg-0" role="search">
-            <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción" id="buscarInput"
-              aria-label="Search" />
-            <button class="btn colorPrincipal botonBusqueda" type="submit">
-              <i class="bi bi-search"></i>
-            </button>
-          </form>
+          <div
+            class="collapse navbar-collapse mt-sm-3"
+            id="navbarSupportedContent"
+          >
+            <form id="buscar" class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+              <input
+                class="form-control me-2 focusNaranja"
+                type="search"
+                placeholder="Buscar una canción"
+                id="buscarInput"
+                aria-label="Search"
+              />
+              <button class="btn colorPrincipal botonBusqueda" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
 
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
               <li class="nav-item">
@@ -153,28 +162,21 @@
                 >
                   <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                 </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-lg-end"
-                  id="sesionActiva"
-                >
-                  <li>
-                    <a
-                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="#"
-                      data-bs-toggle="modal"
-                      data-bs-target="#loginModal"
-                      >Iniciar Sesión</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="#"
-                      data-bs-toggle="modal"
-                      data-bs-target="#registerModal"
-                      >Registrarse</a
-                    >
-                  </li>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                  <a
+                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                    >Iniciar Sesión</a
+                  >
+                  <a
+                    class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#registerModal"
+                    >Registrarse</a
+                  >
                 </ul>
               </li>
             </ul>
@@ -183,160 +185,24 @@
       </nav>
     </header>
 
-    <main class="mt-4">
-      <section class="container">
-        <h1 class="text-center fw-bold" id="acercaNosotrosTitulo">
-          Acerca de Nosotros
-        </h1>
-        <article>
-          <p id="acercaNosotrosInfo">
-            Somos un grupo de estudiantes Desarrolladores Web formandonos en
-            Rolling Code School que ofrecen un servicio personalizado,
-            profesional y de confianza.
-          </p>
-        </article>
-        <article>
-          <h2 class="text-center my-4 fw-bold" id="nuestroEquipo">
-            Nuestro Equipo
-          </h2>
-          <div class="container text-center" data-bs-theme="dark">
-            <div class="row">
-              <div class="my-3 col-lg-4 col-sm-12 col-md-6">
-                <div
-                  class="py-4 card border-0 d-flex flex-column align-items-center div-nosotros"
-                >
-                  <img
-                    src="../img/imgThiago.jpeg"
-                    alt="imagen Thiago Fiol"
-                    class="rotate-center img-fluid rounded-circle w-50 border border-warning imgEquipo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title cardNosotros">Thiago Fiol</h5>
-                    <a href="./error404.html"
-                      ><i class="fa-brands fa-linkedin fa-2xl mx-1"></i
-                    ></a>
-                    <a href="https://github.com/elFiol"
-                      ><i class="fa-brands fa-github fa-2xl mx-1"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="my-3 col-lg-4 col-sm-12 col-md-6">
-                <div
-                  class="py-4 card border-0 d-flex flex-column align-items-center div-nosotros"
-                >
-                  <img
-                    src="../img/imgSheyla.jpeg"
-                    alt="imagen Sheyla Astorga"
-                    class="rotate-center img-fluid rounded-circle w-50 border border-warning imgEquipo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title cardNosotros">Sheyla Astorga</h5>
-                    <a href="./error404.html"
-                      ><i class="fa-brands fa-linkedin fa-2xl mx-1"></i
-                    ></a>
-                    <a href="https://github.com/sheyla23a"
-                      ><i class="fa-brands fa-github fa-2xl mx-1"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="my-3 col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center"
-              >
-                <div
-                  class="py-4 card border-0 d-flex flex-column align-items-center div-nosotros"
-                  id="cardDiego"
-                >
-                  <img
-                    src="../img/imgJuan.jpeg"
-                    alt="imagen de Juan Quintana"
-                    class="rotate-center img-fluid rounded-circle w-50 border border-warning imgEquipo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title cardNosotros">Juan Diego Quintana</h5>
-                    <a href="./error404.html"
-                      ><i class="fa-brands fa-linkedin fa-2xl mx-1"></i
-                    ></a>
-                    <a href="https://github.com/juanchyquintana"
-                      ><i class="fa-brands fa-github fa-2xl mx-1"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="my-3 col-lg-4 col-sm-12 col-md-6">
-                <div
-                  class="py-4 card border-0 d-flex flex-column align-items-center div-nosotros"
-                >
-                  <img
-                    src="../img/imgVeronica5.jpg"
-                    alt="imagen Veronica Soria"
-                    class="rotate-center img-fluid rounded-circle w-50 border border-warning imgEquipo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title cardNosotros">Veronica Soria</h5>
-                    <a href="./error404.html"
-                      ><i class="fa-brands fa-linkedin fa-2xl mx-1"></i
-                    ></a>
-                    <a href="https://github.com/05Vero-S"
-                      ><i class="fa-brands fa-github fa-2xl mx-1"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="my-3 col-lg-4 col-sm-12 col-md-6">
-                <div
-                  class="py-4 card border-0 d-flex flex-column align-items-center div-nosotros"
-                >
-                  <img
-                    src="../img/imgJulian.jpg"
-                    alt="imagen Julian Aballay"
-                    class="rotate-center img-fluid rounded-circle w-50 border border-warning imgEquipo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title cardNosotros">Julian Aballay</h5>
-                    <a href="./error404.html"
-                      ><i class="fa-brands fa-linkedin fa-2xl mx-1"></i
-                    ></a>
-                    <a href="https://github.com/julianDev94"
-                      ><i class="fa-brands fa-github fa-2xl mx-1"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="my-3 my-sm-3 col-lg-4 col-sm-12 col-md-12 d-flex justify-content-center"
-              >
-                <div
-                  class="py-4 card border-0 d-flex flex-column align-items-center div-nosotros"
-                  id="cardNatalia"
-                >
-                  <img
-                    src="../img/imgNatalia.jpeg"
-                    alt="imagen Natalia"
-                    class="rotate-center img-fluid rounded-circle w-50 border border-warning imgEquipo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title cardNosotros">Natalia Morales</h5>
-                    <a href="./error404.html"
-                      ><i class="fa-brands fa-linkedin fa-2xl mx-1"></i
-                    ></a>
-                    <a href="https://github.com/NatiMorales"
-                      ><i class="fa-brands fa-github fa-2xl mx-1"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+    <main class="bg-black">
+      <section class="container my-5">
+        <h2 class="text-center display-4" id="admin-titulo">
+          no se encontraron resultados
+        </h2>
+        <div class="table-responsive mt-5">
+          <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <th>Canción</th>
+                <th>Autor</th>
+                <th>Duración</th>
+                <th>Categoria</th>
+              </tr>
+            </thead>
+            <tbody id="musicasEncontradas"></tbody>
+          </table>
+        </div>
       </section>
       <section class="modal" tabindex="-1" id="loginModal">
         <div class="modal-dialog">
@@ -367,7 +233,7 @@
                     />
                     <h3>Iniciar sesión</h3>
                   </div>
-                  <form class="mt-md-4" id="loginFormulario">
+                  <form class="mt-md-4">
                     <label for="usuario">Usuario:</label>
                     <input
                       class="inputMod border-0 w-100 p-2 rounded"
@@ -417,10 +283,9 @@
                   <div
                     class="olvideContraseña d-lg-flex flex-lg-column justify-content-lg-center"
                   >
-                    <a href="./error404.html">¿Olvidaste tu contraseña?</a>
-                    <a href="./error404.html">¿No eres usuario? ¡Regístrate!</a>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <a href="#">¿No eres usuario? ¡Regístrate!</a>
                   </div>
-
                 </div>
               </section>
             </div>
@@ -484,9 +349,9 @@
                     <div class="input-group mt-2">
                       <input
                         class="inputMod border-0 w-100 p-2 rounded"
-                        id="contrasena2"
                         placeholder="Marito2024a"
                         type="password"
+                        id="contrasena2"
                         minlength="4"
                         maxlength="10"
                         required
@@ -505,10 +370,10 @@
                     >
                     <div class="input-group mt-2">
                       <input
-                        class="inputMod border-0 w-100 p-2 rounded "
-                        id="contrasena3"
+                        class="inputMod border-0 w-100 p-2 rounded"
                         placeholder="Marito2024a"
                         type="password"
+                        id="contrasena3"
                         minlength="4"
                         maxlength="10"
                         required
@@ -572,7 +437,7 @@
         </div>
       </section>
     </main>
-    <footer class="bg-dark shadow mt-5 py-5 footerBorder" data-bs-theme="dark">
+    <footer class="bg-dark shadow py-5 footerBorder" data-bs-theme="dark">
       <section class="container">
         <div class="row">
           <div
@@ -718,11 +583,14 @@
         </div>
       </section>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-crossorigin="anonymous"></script>
-<script src="../js/formlogin.js"></script>
-<script src="../js/app.js"></script>
-<script src="../js/filtrobuscar.js"></script>
-</body>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/formlogin.js"></script>
+    <script src="../js/filtrobuscar.js"></script>
+    <script src="../js/filtroLogica.js"></script>
+  </body>
 </html>
