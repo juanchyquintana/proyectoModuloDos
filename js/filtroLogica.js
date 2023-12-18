@@ -4,12 +4,16 @@ const musicas = JSON.parse(localStorage.getItem("musicaKey")) || [];
 const musicasEncontradas = [];
 const tabla = document.querySelector("table");
 let encontro = false;
+const valorLowercase = valor.toLowerCase();
 
 for (let i = 0; i < musicas.length; i++) {
+  const titulo = musicas[i].titulo;
+  const artista = musicas[i].artista;
+  const categoria = musicas[i].categoria;
   if (
-    valor === musicas[i].titulo ||
-    valor === musicas[i].artista ||
-    valor === musicas[i].categoria
+    valorLowercase === titulo.toLowerCase() ||
+    valorLowercase === artista.toLowerCase() ||
+    valorLowercase === categoria.toLowerCase()
   ) {
     encontro = true;
     musicasEncontradas.push(musicas[i]);
