@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
           data-bs-target="#loginModal">Iniciar Sesión</a>
         <a class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover" href="#" data-bs-toggle="modal"
           data-bs-target="#registerModal">Registrarse</a>`
+        window.location.href = '../index.html';
     };
     const limpiarFormularioInicioSesion = () => {
       formIniciarSesion.reset();
