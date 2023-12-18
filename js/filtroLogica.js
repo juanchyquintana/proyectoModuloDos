@@ -8,7 +8,8 @@ let encontro = false;
 for (let i = 0; i < musicas.length; i++) {
   if (
     valor === musicas[i].titulo ||
-    (valor === musicas[i].artista && valor === musicas[i].categoria)
+    valor === musicas[i].artista ||
+    valor === musicas[i].categoria
   ) {
     encontro = true;
     musicasEncontradas.push(musicas[i]);
@@ -17,7 +18,7 @@ for (let i = 0; i < musicas.length; i++) {
 
 if (encontro) {
   const titulo = document.getElementById("admin-titulo");
-  titulo.innerHTML = "Total de resultados: "+ musicasEncontradas.length;
+  titulo.innerHTML = "Total de resultados: " + musicasEncontradas.length;
   for (let i = 0; i < musicasEncontradas.length; i++) {
     tabla.innerHTML += `<tr><td>${musicasEncontradas[i].titulo}</td><td>${musicasEncontradas[i].artista}</td><td>${musicasEncontradas[i].duracion}</td><td>${musicasEncontradas[i].categoria}</td></tr>`;
   }
