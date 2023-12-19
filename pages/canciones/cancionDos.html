@@ -74,17 +74,13 @@
             class="collapse navbar-collapse mt-sm-3"
             id="navbarSupportedContent"
           >
-            <form class="d-flex ms-auto mb-2 mb-lg-0" role="search">
-              <input
-                class="form-control me-2 focusNaranja"
-                type="search"
-                placeholder="Buscar una canción"
-                aria-label="Search"
-              />
-              <button class="btn colorPrincipal botonBusqueda" type="submit">
-                <i class="bi bi-search"></i>
-              </button>
-            </form>
+          <form id="buscar" class="d-flex ms-auto mb-2 mb-lg-0" role="search">
+            <input class="form-control me-2 focusNaranja" type="search" placeholder="Buscar una canción" id="buscarInput"
+              aria-label="Search" />
+            <button class="btn colorPrincipal botonBusqueda" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
 
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
               <li class="nav-item">
@@ -156,12 +152,11 @@
                 >
                   <i class="bi bi-person-fill fs-4 hoverLinks"></i>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-lg-end">
+                <ul class="dropdown-menu dropdown-menu-lg-end" id="sesionActiva" >
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="#"
-                      data-bs-toggle="modal"
+                      href="#" data-bs-toggle="modal"
                       data-bs-target="#loginModal"
                       >Iniciar Sesión</a
                     >
@@ -169,8 +164,7 @@
                   <li>
                     <a
                       class="dropdown-item text-uppercase fw-bold hoverLinks lineaHover"
-                      href="#"
-                      data-bs-toggle="modal"
+                      href="#" data-bs-toggle="modal"
                       data-bs-target="#registerModal"
                       >Registrarse</a
                     >
@@ -542,6 +536,7 @@
       src="https://kit.fontawesome.com/8d7d957392.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../js/funcionalidadMusica.js"></script>
     <script src="../../js/filtrobuscar.js"></script>
     <script src="../../js/formlogin.js"></script>
